@@ -10,806 +10,1076 @@
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #111111;
-    line-height: 1.5;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#0a0b0d;
+    color:#ffffff;
+    line-height:1.5;
 }
 
-:root {
-    --red: #ed1c24;
-    --dark: #08090b;
-    --dark2: #121417;
-    --light: #f4f4f4;
-    --grey: #777;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-/* =========================
-   GENERAL
-========================= */
-
-.container {
-    width: 92%;
-    max-width: 1200px;
-    margin: auto;
+img{
+    max-width:100%;
+    display:block;
 }
 
-.red {
-    color: var(--red);
-}
-
-.btn {
-    display: inline-block;
-    padding: 16px 28px;
-    background: var(--red);
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .3px;
-    border-radius: 2px;
-    transition: .25s ease;
-    border: 2px solid var(--red);
-}
-
-.btn:hover {
-    background: #c81018;
-    border-color: #c81018;
-    transform: translateY(-2px);
-}
-
-.btn-outline {
-    display: inline-block;
-    padding: 16px 28px;
-    background: transparent;
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    text-transform: uppercase;
-    border: 2px solid white;
-    border-radius: 2px;
-    margin-left: 8px;
-    transition: .25s ease;
-}
-
-.btn-outline:hover {
-    background: white;
-    color: #111;
+:root{
+    --red:#ed171f;
+    --dark:#08090b;
+    --dark2:#111317;
+    --dark3:#191c21;
+    --light:#f4f4f4;
+    --grey:#b8bbc0;
 }
 
 /* =========================
-   HEADER
+   TOP HEADER
 ========================= */
 
-header {
-    background: #070809;
-    color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #292929;
+.header{
+    background:#07080a;
+    border-bottom:1px solid #333;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-.navbar {
-    min-height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+.header-inner{
+    max-width:1400px;
+    margin:auto;
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:10px 30px;
 }
 
-.logo {
-    text-decoration: none;
-    color: white;
-    line-height: .85;
-    font-style: italic;
-    font-weight: 900;
-    min-width: 190px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
-.logo-main {
-    font-size: 45px;
-    letter-spacing: -4px;
+.logo-mark{
+    width:170px;
 }
 
-.logo-main span {
-    color: var(--red);
+.logo-symbol{
+    font-size:42px;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:-5px;
 }
 
-.logo-sub {
-    font-size: 17px;
-    letter-spacing: -1px;
+.logo-symbol .amp{
+    color:var(--red);
 }
 
-.logo-tag {
-    color: var(--red);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .5px;
-    margin-top: 4px;
+.logo-text{
+    font-weight:900;
+    font-style:italic;
+    font-size:20px;
+    letter-spacing:-1px;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    gap: 28px;
+.logo-sub{
+    font-size:13px;
+    color:var(--red);
+    font-weight:bold;
+    letter-spacing:.5px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 35px 0;
-    border-bottom: 3px solid transparent;
+.nav{
+    display:flex;
+    align-items:center;
+    gap:28px;
 }
 
-nav a:hover,
-nav a.active {
-    color: var(--red);
-    border-bottom-color: var(--red);
+.nav a{
+    font-size:13px;
+    font-weight:bold;
+    text-transform:uppercase;
+    transition:.2s;
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+.nav a:hover{
+    color:var(--red);
 }
 
-.phone {
-    color: white;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 14px;
+.header-contact{
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
 
-.emergency {
-    font-size: 11px;
-    color: #ddd;
-    white-space: nowrap;
+.emergency{
+    font-size:13px;
+    font-weight:bold;
 }
 
-.header-btn {
-    padding: 13px 20px;
-    font-size: 12px;
+.phone{
+    font-size:20px;
+    font-weight:900;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px 25px;
+    background:var(--red);
+    color:white;
+    font-weight:900;
+    text-transform:uppercase;
+    border:2px solid var(--red);
+    transition:.2s;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#fff;
+    color:#111;
+}
+
+.btn-outline{
+    background:transparent;
+    border-color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#111;
 }
 
 /* =========================
    HERO
 ========================= */
 
-.hero {
-    min-height: 530px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-
+.hero{
+    min-height:620px;
+    position:relative;
+    display:flex;
+    align-items:center;
     background:
-        linear-gradient(90deg,
-        rgba(0,0,0,.93) 0%,
-        rgba(0,0,0,.78) 38%,
-        rgba(0,0,0,.35) 72%,
-        rgba(0,0,0,.72) 100%),
-        url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1800&q=85");
-
-    background-size: cover;
-    background-position: center;
+        linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.2) 100%),
+        url("https://images.unsplash.com/photo-1603328203114-8b9c370b374d?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    width: 62%;
-    padding: 70px 0;
+.hero-inner{
+    max-width:1400px;
+    width:100%;
+    margin:auto;
+    padding:80px 30px;
 }
 
-.eyebrow {
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 700;
-    margin-bottom: 8px;
+.hero-content{
+    max-width:820px;
 }
 
-.hero h1 {
-    font-size: clamp(42px, 5vw, 70px);
-    line-height: .96;
-    text-transform: uppercase;
-    font-weight: 900;
-    margin-bottom: 20px;
+.eyebrow{
+    font-size:15px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:10px;
 }
 
-.hero h1 span {
-    color: var(--red);
+.hero h1{
+    font-size:clamp(45px,6vw,82px);
+    line-height:.94;
+    text-transform:uppercase;
+    font-weight:950;
+    letter-spacing:-3px;
 }
 
-.hero-location {
-    font-size: 17px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+.hero h1 span{
+    color:var(--red);
 }
 
-.hero-text {
-    max-width: 620px;
-    font-size: 17px;
-    color: #e5e5e5;
-    margin-bottom: 28px;
+.hero-location{
+    font-size:18px;
+    font-weight:900;
+    margin-top:20px;
+    letter-spacing:2px;
 }
 
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.hero-location span{
+    color:var(--red);
+    margin:0 7px;
+}
+
+.hero p{
+    font-size:18px;
+    max-width:700px;
+    margin:18px 0 28px;
+    color:#e6e6e6;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.hero-side{
+    position:absolute;
+    right:30px;
+    top:50%;
+    transform:translateY(-50%);
+    width:220px;
+}
+
+.side-card{
+    background:rgba(5,6,8,.9);
+    border:1px solid #555;
+    padding:22px;
+    margin-bottom:10px;
+}
+
+.side-icon{
+    font-size:28px;
+    color:var(--red);
+    margin-bottom:8px;
+}
+
+.side-card strong{
+    display:block;
+    font-size:15px;
+}
+
+.side-card small{
+    color:#bbb;
 }
 
 /* =========================
-   TRUST STRIP
+   FEATURE STRIP
 ========================= */
 
-.trust-strip {
-    background: #101214;
-    color: white;
+.features{
+    background:#111317;
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
 }
 
-.trust-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+.features-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
 }
 
-.trust-item {
-    padding: 25px 18px;
-    border-right: 1px solid #444;
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
+.feature{
+    padding:28px 22px;
+    border-right:1px solid #444;
 }
 
-.trust-icon {
-    font-size: 30px;
-    color: white;
+.feature:last-child{
+    border-right:none;
 }
 
-.trust-item h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
+.feature-icon{
+    font-size:34px;
+    color:white;
+    margin-bottom:10px;
 }
 
-.trust-item p {
-    color: #bbb;
-    font-size: 12px;
+.feature h3{
+    font-size:15px;
+    text-transform:uppercase;
+}
+
+.feature p{
+    color:#aaa;
+    font-size:13px;
+    margin-top:6px;
 }
 
 /* =========================
    EXPERIENCE
 ========================= */
 
-.experience {
-    padding: 65px 0;
-    background: white;
+.experience{
+    background:#fff;
+    color:#151515;
 }
 
-.experience-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.15fr 1fr;
-    min-height: 390px;
+.experience-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1.1fr 1fr;
 }
 
-.van-image {
+.experience-image{
+    min-height:430px;
     background:
         linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
-        url("https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1000&q=85");
-    background-size: cover;
-    background-position: center;
-    min-height: 390px;
+        url("https://images.unsplash.com/photo-1706792957128-ffbf1ad5301e?auto=format&fit=crop&w=1400&q=85")
+        center/cover no-repeat;
 }
 
-.experience-content {
-    padding: 35px;
-    background: #f4f4f4;
+.experience-copy{
+    padding:45px 40px;
 }
 
-.experience-content h2,
-.before-after h2 {
-    font-size: 27px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 14px;
+.section-title{
+    font-size:35px;
+    line-height:1;
+    font-weight:950;
+    text-transform:uppercase;
 }
 
-.experience-content p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    color: #333;
+.section-title span{
+    color:var(--red);
 }
 
-.tick-list {
-    list-style: none;
+.experience-copy p{
+    margin:15px 0;
+    color:#444;
 }
 
-.tick-list li {
-    margin: 7px 0;
-    font-size: 14px;
-    font-weight: 600;
+.check-list{
+    list-style:none;
+    margin-top:20px;
 }
 
-.tick-list li::before {
-    content: "✓";
-    background: var(--red);
-    color: white;
-    width: 20px;
-    height: 20px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    margin-right: 9px;
-    font-weight: 900;
+.check-list li{
+    margin:8px 0;
+    font-weight:bold;
 }
 
-.before-after {
-    padding: 35px;
+.check-list li::before{
+    content:"✓";
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:var(--red);
+    color:white;
+    margin-right:10px;
+    font-size:12px;
 }
 
-.before-after-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
+.results{
+    padding:40px 30px;
 }
 
-.ba {
-    height: 235px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+.results h2{
+    font-size:30px;
+    text-transform:uppercase;
+    margin-bottom:15px;
 }
 
-.ba.before {
-    background-image:
-        url("https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?auto=format&fit=crop&w=800&q=85");
+.before-after{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
 }
 
-.ba.after {
-    background-image:
-        url("https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=800&q=85");
+.ba-box{
+    position:relative;
 }
 
-.ba-label {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    color: white;
-    font-weight: 900;
-    background: rgba(0,0,0,.85);
+.ba-box img{
+    height:270px;
+    width:100%;
+    object-fit:cover;
 }
 
-.ba.after .ba-label {
-    background: var(--red);
+.ba-label{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    text-align:center;
+    padding:9px;
+    background:#111;
+    font-weight:900;
+}
+
+.ba-after .ba-label{
+    background:var(--red);
 }
 
 /* =========================
-   PROCESS
+   THREE STEP
 ========================= */
 
-.process {
+.process{
     background:
-        linear-gradient(rgba(10,10,10,.95),rgba(10,10,10,.95)),
-        url("https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1800&q=85");
-    background-size: cover;
-    color: white;
-    padding: 45px 0;
+        linear-gradient(rgba(8,9,11,.93),rgba(8,9,11,.93)),
+        url("https://images.unsplash.com/photo-1603328203114-8b9c370b374d?auto=format&fit=crop&w=2000&q=80")
+        center/cover;
+    padding:55px 30px;
 }
 
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr) 230px;
-    gap: 20px;
-    align-items: center;
+.process-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr) 260px;
+    gap:30px;
+    align-items:center;
 }
 
-.process-step {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border-right: 1px solid #555;
-    padding-right: 20px;
+.step{
+    display:flex;
+    gap:18px;
+    align-items:flex-start;
 }
 
-.number {
-    min-width: 55px;
-    height: 55px;
-    border: 4px solid var(--red);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
+.step-number{
+    min-width:58px;
+    height:58px;
+    border:4px solid var(--red);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:900;
 }
 
-.process-step h3 {
-    text-transform: uppercase;
-    font-size: 20px;
+.step h3{
+    font-size:22px;
+    text-transform:uppercase;
 }
 
-.process-step p {
-    color: #bbb;
-    font-size: 12px;
+.step p{
+    color:#aaa;
+    font-size:14px;
 }
 
-.process-tagline {
-    font-size: 20px;
-    text-align: center;
-    font-weight: 900;
-    text-transform: uppercase;
-    font-style: italic;
+.process-tag{
+    border-left:1px solid #666;
+    padding-left:30px;
+    font-size:28px;
+    font-weight:900;
+    font-style:italic;
+    text-transform:uppercase;
+}
+
+.process-tag span{
+    color:var(--red);
 }
 
 /* =========================
    SECTORS
 ========================= */
 
-.sectors {
-    padding: 50px 0;
-    background: #f5f5f5;
+.sectors{
+    background:#fff;
+    color:#111;
+    padding:55px 30px;
 }
 
-.section-title {
-    font-size: 32px;
-    text-transform: uppercase;
-    line-height: 1;
-    margin-bottom: 5px;
+.container{
+    max-width:1400px;
+    margin:auto;
 }
 
-.section-intro {
-    margin-bottom: 25px;
-    color: #444;
+.sectors-intro{
+    margin-bottom:25px;
 }
 
-.sector-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 7px;
+.sectors-intro p{
+    color:#555;
 }
 
-.sector {
-    background: #111418;
-    color: white;
-    padding: 25px 10px;
-    text-align: center;
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: .2s ease;
+.sector-grid{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:8px;
 }
 
-.sector:hover {
-    background: var(--red);
-    transform: translateY(-3px);
+.sector{
+    background:#15171b;
+    color:#fff;
+    min-height:140px;
+    padding:20px 10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    transition:.2s;
 }
 
-.sector-icon {
-    font-size: 30px;
-    margin-bottom: 10px;
+.sector:hover{
+    background:var(--red);
+    transform:translateY(-4px);
 }
 
-.sector h3 {
-    font-size: 11px;
-    text-transform: uppercase;
+.sector-icon{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.sector strong{
+    font-size:12px;
+    text-transform:uppercase;
 }
 
 /* =========================
-   CTA
+   PHOTO CTA
 ========================= */
 
-.cta {
-    color: white;
-    min-height: 330px;
-    display: flex;
-    align-items: center;
-
+.photo-cta{
+    min-height:420px;
+    display:flex;
+    align-items:center;
     background:
-        linear-gradient(90deg,
-        rgba(0,0,0,.94),
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.85)),
-        url("https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1800&q=85");
-
-    background-size: cover;
-    background-position: center;
+        linear-gradient(90deg,rgba(0,0,0,.95) 0%,rgba(0,0,0,.8) 45%,rgba(0,0,0,.2) 100%),
+        url("https://images.unsplash.com/photo-1601647027864-2d0521ffe66c?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
 }
 
-.cta-content {
-    width: 65%;
+.photo-inner{
+    max-width:1400px;
+    width:100%;
+    margin:auto;
+    padding:60px 30px;
 }
 
-.cta h2 {
-    font-size: clamp(42px, 5vw, 64px);
-    line-height: .9;
-    text-transform: uppercase;
+.photo-copy{
+    max-width:700px;
 }
 
-.cta h2 span {
-    color: var(--red);
+.photo-copy h2{
+    font-size:clamp(45px,6vw,72px);
+    line-height:.9;
+    text-transform:uppercase;
+    font-weight:950;
 }
 
-.cta p {
-    font-size: 17px;
-    margin: 15px 0 25px;
+.photo-copy h2 span{
+    color:var(--red);
 }
 
-.whatsapp {
-    background: #16a34a;
-    border-color: #16a34a;
+.photo-copy p{
+    font-size:18px;
+    margin:15px 0 25px;
 }
 
-.whatsapp:hover {
-    background: #12863d;
+.cta-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.whatsapp{
+    background:#20c463;
+    border-color:#20c463;
+}
+
+.whatsapp:hover{
+    background:#fff;
+    color:#111;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#0d0f12;
+    padding:65px 30px;
+}
+
+.services-heading{
+    text-align:center;
+    max-width:800px;
+    margin:0 auto 45px;
+}
+
+.services-heading p{
+    color:#aaa;
+    margin-top:12px;
+}
+
+.service-grid{
+    max-width:1400px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service-card{
+    background:#17191d;
+    border:1px solid #333;
+    padding:35px;
+    transition:.2s;
+}
+
+.service-card:hover{
+    border-color:var(--red);
+    transform:translateY(-4px);
+}
+
+.service-number{
+    color:var(--red);
+    font-size:15px;
+    font-weight:900;
+}
+
+.service-card h3{
+    font-size:23px;
+    margin:10px 0;
+    text-transform:uppercase;
+}
+
+.service-card p{
+    color:#aaa;
+}
+
+/* =========================
+   COMPLIANCE
+========================= */
+
+.compliance{
+    background:#f5f5f5;
+    color:#111;
+    padding:60px 30px;
+}
+
+.compliance-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:45px;
+    align-items:center;
+}
+
+.compliance-box{
+    background:white;
+    padding:35px;
+    border-left:6px solid var(--red);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.compliance-box h3{
+    text-transform:uppercase;
+    font-size:25px;
+    margin-bottom:15px;
+}
+
+.compliance-box p{
+    color:#555;
+}
+
+.credentials{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.credential{
+    padding:15px;
+    background:#15171b;
+    color:white;
+    font-weight:bold;
+    font-size:13px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:#090a0c;
+    padding:70px 30px;
+}
+
+.contact-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-copy h2{
+    font-size:48px;
+    text-transform:uppercase;
+    line-height:.95;
+}
+
+.contact-copy h2 span{
+    color:var(--red);
+}
+
+.contact-copy p{
+    color:#aaa;
+    margin:20px 0;
+}
+
+.contact-details{
+    margin-top:25px;
+}
+
+.contact-details div{
+    margin:13px 0;
+    font-size:17px;
+}
+
+.contact-details strong{
+    color:var(--red);
+    margin-right:8px;
+}
+
+.contact-form{
+    background:#15171b;
+    padding:35px;
+}
+
+.contact-form h3{
+    font-size:28px;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+    width:100%;
+    padding:15px;
+    border:1px solid #444;
+    background:#08090b;
+    color:#fff;
+    font-family:inherit;
+}
+
+.form-group textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.form-submit{
+    width:100%;
 }
 
 /* =========================
    FOOTER
 ========================= */
 
-footer {
-    background: #070809;
-    color: white;
+.footer{
+    background:#050608;
+    border-top:1px solid #333;
 }
 
-.footer-main {
-    padding: 30px 0;
-    border-bottom: 1px solid #333;
+.footer-top{
+    max-width:1400px;
+    margin:auto;
+    padding:35px 30px;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:30px;
 }
 
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr 1fr;
-    gap: 35px;
+.footer-brand h3{
+    font-size:25px;
 }
 
-footer h3 {
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 12px;
+.footer-brand span{
+    color:var(--red);
 }
 
-footer p,
-footer a {
-    color: #aaa;
-    font-size: 13px;
-    text-decoration: none;
+.footer-brand p{
+    color:#888;
+    font-size:13px;
+    margin-top:8px;
 }
 
-footer a:hover {
-    color: white;
+.footer-col h4{
+    color:white;
+    text-transform:uppercase;
+    margin-bottom:10px;
 }
 
-.footer-bottom {
-    padding: 18px 0;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    color: #777;
-    font-size: 11px;
+.footer-col a{
+    display:block;
+    color:#aaa;
+    font-size:13px;
+    margin:6px 0;
 }
 
-.footer-logo {
-    color: white;
-    font-size: 28px;
-    font-weight: 900;
-    font-style: italic;
-}
-
-.footer-logo span {
-    color: var(--red);
+.footer-bottom{
+    border-top:1px solid #222;
+    padding:18px 30px;
+    text-align:center;
+    color:#777;
+    font-size:12px;
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-.mobile-menu {
-    display: none;
+@media(max-width:1100px){
+
+    .header-inner{
+        padding:12px 20px;
+    }
+
+    .nav{
+        display:none;
+    }
+
+    .header-contact .emergency{
+        display:none;
+    }
+
+    .phone{
+        font-size:15px;
+    }
+
+    .header-contact{
+        gap:10px;
+    }
+
+    .header-contact .btn{
+        padding:10px 12px;
+        font-size:10px;
+    }
+
+    .features-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature{
+        border-bottom:1px solid #444;
+    }
+
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .experience-image{
+        min-height:300px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-tag{
+        border-left:none;
+        border-top:1px solid #555;
+        padding:25px 0 0;
+    }
+
+    .sector-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .compliance-grid{
+        grid-template-columns:1fr;
+    }
+
 }
 
-@media (max-width: 1000px) {
+@media(max-width:700px){
 
-    nav {
-        display: none;
+    .header-inner{
+        min-height:75px;
     }
 
-    .header-right .emergency {
-        display: none;
+    .logo-symbol{
+        font-size:32px;
     }
 
-    .mobile-menu {
-        display: block;
-        font-size: 30px;
-        color: white;
+    .logo-text{
+        font-size:15px;
     }
 
-    .trust-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .logo-sub{
+        font-size:9px;
     }
 
-    .experience-grid {
-        grid-template-columns: 1fr;
+    .logo-mark{
+        width:120px;
     }
 
-    .van-image {
-        min-height: 300px;
+    .hero{
+        min-height:680px;
+        background:
+            linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.72)),
+            url("https://images.unsplash.com/photo-1603328203114-8b9c370b374d?auto=format&fit=crop&w=1200&q=80")
+            center/cover;
     }
 
-    .process-grid {
-        grid-template-columns: 1fr 1fr;
+    .hero-inner{
+        padding:55px 20px;
     }
 
-    .process-tagline {
-        display: none;
+    .hero h1{
+        font-size:48px;
+        letter-spacing:-2px;
     }
 
-    .sector-grid {
-        grid-template-columns: repeat(4, 1fr);
+    .hero-location{
+        font-size:13px;
+        line-height:2;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
+    .hero p{
+        font-size:15px;
     }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        width:100%;
+    }
+
+    .hero-side{
+        display:none;
+    }
+
+    .features-grid{
+        grid-template-columns:1fr;
+    }
+
+    .feature{
+        border-right:none;
+    }
+
+    .experience-copy{
+        padding:35px 22px;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .results{
+        padding:30px 20px;
+    }
+
+    .before-after{
+        grid-template-columns:1fr;
+    }
+
+    .process{
+        padding:45px 20px;
+    }
+
+    .step{
+        gap:12px;
+    }
+
+    .step h3{
+        font-size:19px;
+    }
+
+    .sectors{
+        padding:45px 15px;
+    }
+
+    .sector-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .sector{
+        min-height:125px;
+    }
+
+    .photo-cta{
+        min-height:500px;
+    }
+
+    .photo-inner{
+        padding:50px 20px;
+    }
+
+    .photo-copy h2{
+        font-size:48px;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .cta-buttons .btn{
+        width:100%;
+    }
+
+    .services{
+        padding:50px 20px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .compliance{
+        padding:45px 20px;
+    }
+
+    .credentials{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        padding:50px 20px;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-copy h2{
+        font-size:42px;
+    }
+
+    .footer-top{
+        grid-template-columns:1fr;
+        padding:35px 20px;
+    }
+
 }
 
-@media (max-width: 650px) {
+/* =========================
+   ACCESSIBILITY
+========================= */
 
-    .container {
-        width: 90%;
-    }
+:focus{
+    outline:3px solid var(--red);
+    outline-offset:3px;
+}
 
-    header {
-        position: relative;
-    }
-
-    .navbar {
-        min-height: 80px;
-    }
-
-    .logo-main {
-        font-size: 38px;
-    }
-
-    .logo-sub {
-        font-size: 14px;
-    }
-
-    .logo-tag {
-        font-size: 10px;
-    }
-
-    .phone {
-        font-size: 11px;
-    }
-
-    .header-btn {
-        display: none;
-    }
-
-    .hero {
-        min-height: 650px;
-        background-position: 65% center;
-    }
-
-    .hero-content {
-        width: 100%;
-        padding: 50px 0;
-    }
-
-    .eyebrow {
-        font-size: 12px;
-        letter-spacing: 2px;
-    }
-
-    .hero h1 {
-        font-size: 43px;
-    }
-
-    .hero-location {
-        font-size: 13px;
-    }
-
-    .hero-text {
-        font-size: 15px;
-    }
-
-    .btn,
-    .btn-outline {
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    .trust-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .trust-item {
-        border-right: none;
-        border-bottom: 1px solid #333;
-    }
-
-    .experience {
-        padding: 35px 0;
-    }
-
-    .experience-content,
-    .before-after {
-        padding: 25px 15px;
-    }
-
-    .before-after-images {
-        grid-template-columns: 1fr;
-    }
-
-    .ba {
-        height: 240px;
-    }
-
-    .process {
-        padding: 35px 0;
-    }
-
-    .process-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .process-step {
-        border-right: none;
-        border-bottom: 1px solid #444;
-        padding: 15px 0;
-    }
-
-    .sector-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .sector {
-        min-height: 110px;
-    }
-
-    .cta {
-        min-height: 500px;
-    }
-
-    .cta-content {
-        width: 100%;
-    }
-
-    .cta h2 {
-        font-size: 45px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-    }
+::selection{
+    background:var(--red);
+    color:#fff;
 }
 
 </style>
@@ -821,37 +1091,57 @@ footer a:hover {
      HEADER
 ========================= -->
 
-<header>
+<header class="header">
 
-<div class="container navbar">
+<div class="header-inner">
 
-<a href="#home" class="logo">
-    <div class="logo-main">S<span>&</span>K</div>
-    <div class="logo-sub">SPECIALIST</div>
-    <div class="logo-tag">GRAFFITI RESPONSE</div>
-</a>
+<a href="#top" class="logo">
 
-<nav>
-    <a href="#home" class="active">Home</a>
-    <a href="#services">Services</a>
-    <a href="#process">Our Process</a>
-    <a href="#commercial">Commercial</a>
-    <a href="#compliance">Compliance</a>
-    <a href="#contact">Contact</a>
-</nav>
+<div class="logo-mark">
 
-<div class="header-right">
+<div class="logo-symbol">
+S<span class="amp">&</span>K
+</div>
 
-    <div>
-        <div class="emergency">☎ 24/7 EMERGENCY RESPONSE</div>
-        <a class="phone" href="tel:07488296220">07488 296220</a>
-    </div>
+<div class="logo-text">
+SPECIALIST
+</div>
 
-    <a href="#contact" class="btn header-btn">Request a Quote</a>
+<div class="logo-sub">
+GRAFFITI RESPONSE
+</div>
 
 </div>
 
-<div class="mobile-menu">☰</div>
+</a>
+
+<nav class="nav">
+
+<a href="#top">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#process">Our Process</a>
+<a href="#commercial">Commercial</a>
+<a href="#compliance">Compliance</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="header-contact">
+
+<div class="emergency">
+☎ 24/7 EMERGENCY RESPONSE
+</div>
+
+<div class="phone">
+07488 296220
+</div>
+
+<a href="#contact" class="btn">
+Request a Quote
+</a>
+
+</div>
 
 </div>
 
@@ -862,38 +1152,86 @@ footer a:hover {
      HERO
 ========================= -->
 
-<section class="hero" id="home">
+<section class="hero" id="top">
 
-<div class="container hero-content">
+<div class="hero-inner">
+
+<div class="hero-content">
 
 <div class="eyebrow">
-Commercial Graffiti Removal Specialists
+COMMERCIAL GRAFFITI REMOVAL SPECIALISTS
 </div>
 
 <h1>
-Professional<br>
-<span>Graffiti Removal</span><br>
-& Prevention
+PROFESSIONAL
+<span>GRAFFITI REMOVAL</span>
+& PREVENTION
 </h1>
 
 <div class="hero-location">
-North Wales &nbsp; | &nbsp; Cheshire &nbsp; | &nbsp; North West
+NORTH WALES
+<span>|</span>
+CHESHIRE
+<span>|</span>
+NORTH WEST
 </div>
 
-<p class="hero-text">
-Rapid response. Specialist treatment. Proven results.<br>
+<p>
+Rapid response. Specialist treatment. Proven results.
 Keeping your sites, properties and public spaces graffiti free.
 </p>
 
 <div class="hero-buttons">
 
 <a href="#contact" class="btn">
-Request a Quote →
+REQUEST A QUOTE →
 </a>
 
-<a href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Enquiry" class="btn-outline">
-📷 Send Us a Photo
+<a href="#contact" class="btn btn-outline">
+📷 SEND US A PHOTO
 </a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-side">
+
+<div class="side-card">
+
+<div class="side-icon">◷</div>
+
+<strong>24/7</strong>
+
+<small>
+EMERGENCY RESPONSE
+</small>
+
+</div>
+
+<div class="side-card">
+
+<div class="side-icon">✓</div>
+
+<strong>£5 MILLION</strong>
+
+<small>
+PUBLIC LIABILITY INSURANCE
+</small>
+
+</div>
+
+<div class="side-card">
+
+<div class="side-icon">⌖</div>
+
+<strong>LOCAL RESPONSE</strong>
+
+<small>
+NORTH WALES • CHESHIRE • NORTH WEST
+</small>
 
 </div>
 
@@ -903,51 +1241,85 @@ Request a Quote →
 
 
 <!-- =========================
-     TRUST STRIP
+     FEATURES
 ========================= -->
 
-<section class="trust-strip" id="services">
+<section class="features">
 
-<div class="container trust-grid">
+<div class="features-grid">
 
-<div class="trust-item">
-<div class="trust-icon">⚗</div>
-<div>
-<h3>Specialist Treatment</h3>
-<p>Surface specific solutions using professional products.</p>
-</div>
-</div>
+<div class="feature">
 
-<div class="trust-item">
-<div class="trust-icon">ϟ</div>
-<div>
-<h3>Rapid Response</h3>
-<p>Fast, reliable and discreet service when you need it most.</p>
-</div>
+<div class="feature-icon">♙</div>
+
+<h3>
+Specialist Treatment
+</h3>
+
+<p>
+Surface specific solutions using professional products.
+</p>
+
 </div>
 
-<div class="trust-item">
-<div class="trust-icon">♢</div>
-<div>
-<h3>Surface Protection</h3>
-<p>Anti-graffiti coatings help reduce future incidents.</p>
-</div>
+
+<div class="feature">
+
+<div class="feature-icon">ϟ</div>
+
+<h3>
+Rapid Response
+</h3>
+
+<p>
+Fast, reliable and discreet service when you need it most.
+</p>
+
 </div>
 
-<div class="trust-item" id="compliance">
-<div class="trust-icon">☑</div>
-<div>
-<h3>Professional Compliance</h3>
-<p>RAMS, COSHH, SDS and full documentation.</p>
-</div>
+
+<div class="feature">
+
+<div class="feature-icon">♢</div>
+
+<h3>
+Surface Protection
+</h3>
+
+<p>
+Anti-graffiti coatings to help reduce future incidents.
+</p>
+
 </div>
 
-<div class="trust-item">
-<div class="trust-icon">♧</div>
-<div>
-<h3>Responsible Waste</h3>
-<p>Registered Waste Carrier (NRW) – 00824939.</p>
+
+<div class="feature">
+
+<div class="feature-icon">☷</div>
+
+<h3>
+Professional Compliance
+</h3>
+
+<p>
+RAMS, COSHH, SDS and full documentation.
+</p>
+
 </div>
+
+
+<div class="feature">
+
+<div class="feature-icon">♧</div>
+
+<h3>
+Responsible Waste
+</h3>
+
+<p>
+Registered Waste Carrier – 00824939.
+</p>
+
 </div>
 
 </div>
@@ -959,66 +1331,91 @@ Request a Quote →
      EXPERIENCE
 ========================= -->
 
-<section class="experience" id="commercial">
+<section class="experience" id="about">
 
-<div class="container experience-grid">
+<div class="experience-grid">
 
-<div class="van-image"></div>
+<div class="experience-image"></div>
 
-<div class="experience-content">
 
-<h2>
-Experience You Can <span class="red">Trust</span>
+<div class="experience-copy">
+
+<h2 class="section-title">
+EXPERIENCE YOU CAN
+<span>TRUST</span>
 </h2>
 
 <p>
-With over 20 years' experience in Facilities Management,
-including senior operational management across commercial
-environments, S&K Specialist Graffiti Response brings a
-professional, facilities-management approach to graffiti
-removal and prevention.
+With over 20 years' experience in Facilities Management, including senior operational management across commercial environments, S&K Specialist Graffiti Response brings a professional, facilities-management approach to graffiti removal and prevention.
 </p>
 
-<ul class="tick-list">
+<ul class="check-list">
 
 <li>20+ years in Facilities Management</li>
+
 <li>Managed 300+ sites and 400+ staff</li>
+
 <li>BICS Registered</li>
+
 <li>ILM Leadership & Management</li>
+
 <li>IOSH Managing Safely</li>
+
 <li>Specialist Graffiti Removal Training</li>
+
 <li>Registered Waste Carrier (NRW) – 00824939</li>
+
 <li>£5 Million Public Liability Insurance</li>
+
 <li>Fully Insured</li>
 
 </ul>
 
 </div>
 
-<div class="before-after">
+
+<div class="results">
 
 <h2>
-Before & <span class="red">After</span> Results
+Before & After
 </h2>
 
-<div class="before-after-images">
+<div class="before-after">
 
-<div class="ba before">
-<div class="ba-label">BEFORE</div>
+<div class="ba-box">
+
+<img
+src="https://images.unsplash.com/photo-1603328203114-8b9c370b374d?auto=format&fit=crop&w=1000&q=85"
+alt="Graffiti covered wall"
+>
+
+<div class="ba-label">
+BEFORE
 </div>
 
-<div class="ba after">
-<div class="ba-label">AFTER</div>
+</div>
+
+
+<div class="ba-box ba-after">
+
+<img
+src="https://images.unsplash.com/photo-1601647027864-2d0521ffe66c?auto=format&fit=crop&w=1000&q=85"
+alt="Clean wall surface"
+>
+
+<div class="ba-label">
+AFTER
 </div>
 
 </div>
 
-<p style="margin-top:18px;font-style:italic;color:#555;">
-“Professional service, great communication and excellent results.
-Highly recommended.”
+</div>
+
+<p style="margin-top:18px;font-style:italic;">
+“Professional service, great communication and excellent results. Highly recommended.”
 </p>
 
-<p style="margin-top:5px;font-weight:bold;">
+<p style="font-weight:bold;">
 — Facilities Manager
 </p>
 
@@ -1035,55 +1432,86 @@ Highly recommended.”
 
 <section class="process" id="process">
 
-<div class="container process-grid">
+<div class="process-grid">
 
-<div class="process-step">
 
-<div class="number">01</div>
+<div class="step">
+
+<div class="step-number">
+01
+</div>
 
 <div>
-<h3>Remove</h3>
+
+<h3>
+Remove
+</h3>
+
 <p>
 Professional graffiti removal using the correct treatment for the surface.
 </p>
-</div>
 
 </div>
 
+</div>
 
-<div class="process-step">
 
-<div class="number">02</div>
+<div class="step">
+
+<div class="step-number">
+02
+</div>
 
 <div>
-<h3>Restore</h3>
+
+<h3>
+Restore
+</h3>
+
 <p>
 Careful treatment to return surfaces to an acceptable condition.
 </p>
-</div>
 
 </div>
 
+</div>
 
-<div class="process-step">
 
-<div class="number">03</div>
+<div class="step">
+
+<div class="step-number">
+03
+</div>
 
 <div>
-<h3>Protect</h3>
+
+<h3>
+Protect
+</h3>
+
 <p>
-Anti-graffiti coatings make future incidents easier and cheaper to remove.
+Anti-graffiti coatings to make future incidents easier and cheaper to remove.
 </p>
-</div>
 
 </div>
 
-
-<div class="process-tagline">
-More than a cleaner.<br>
-A safer, brighter<br>
-tomorrow.
 </div>
+
+
+<div class="process-tag">
+
+MORE THAN
+<br>
+A CLEANER.
+<br>
+A <span>SAFER</span>,
+<br>
+BRIGHTER
+<br>
+TOMORROW.
+
+</div>
+
 
 </div>
 
@@ -1094,54 +1522,166 @@ tomorrow.
      SECTORS
 ========================= -->
 
-<section class="sectors">
+<section class="sectors" id="commercial">
 
 <div class="container">
 
+<div class="sectors-intro">
+
 <h2 class="section-title">
-Built For <span class="red">Property Teams</span>
+BUILT FOR <span>PROPERTY TEAMS</span>
 </h2>
 
-<p class="section-intro">
+<p>
 A specialist contractor supporting commercial, public sector and private clients.
 </p>
+
+</div>
 
 
 <div class="sector-grid">
 
-<div class="sector">
-<div class="sector-icon">▦</div>
-<h3>Commercial<br>& Industrial</h3>
-</div>
 
 <div class="sector">
-<div class="sector-icon">⌂</div>
-<h3>Housing & Social<br>Landlords</h3>
-</div>
 
-<div class="sector">
-<div class="sector-icon">♜</div>
-<h3>Local Authorities<br>& Councils</h3>
-</div>
-
-<div class="sector">
-<div class="sector-icon">▱</div>
-<h3>Retail & Leisure</h3>
-</div>
-
-<div class="sector">
 <div class="sector-icon">▥</div>
-<h3>Property<br>Management</h3>
+
+<strong>
+Commercial
+<br>
+& Industrial
+</strong>
+
 </div>
 
+
 <div class="sector">
+
+<div class="sector-icon">⌂</div>
+
+<strong>
+Housing & Social
+<br>
+Landlords
+</strong>
+
+</div>
+
+
+<div class="sector">
+
+<div class="sector-icon">♜</div>
+
+<strong>
+Local Authorities
+<br>
+& Councils
+</strong>
+
+</div>
+
+
+<div class="sector">
+
+<div class="sector-icon">▤</div>
+
+<strong>
+Retail & Leisure
+</strong>
+
+</div>
+
+
+<div class="sector">
+
+<div class="sector-icon">▥</div>
+
+<strong>
+Property
+<br>
+Management
+</strong>
+
+</div>
+
+
+<div class="sector">
+
 <div class="sector-icon">⌑</div>
-<h3>Schools &<br>Education</h3>
+
+<strong>
+Schools &
+<br>
+Education
+</strong>
+
 </div>
 
+
 <div class="sector">
+
 <div class="sector-icon">▣</div>
-<h3>Transport &<br>Infrastructure</h3>
+
+<strong>
+Transport &
+<br>
+Infrastructure
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO CTA
+========================= -->
+
+<section class="photo-cta">
+
+<div class="photo-inner">
+
+<div class="photo-copy">
+
+<h2>
+GRAFFITI?
+<br>
+<span>SEND US A PHOTO.</span>
+</h2>
+
+<p>
+Get a fast, no obligation assessment and quotation.
+</p>
+
+<div class="cta-buttons">
+
+<a
+href="https://wa.me/447488296220"
+class="btn whatsapp"
+target="_blank"
+>
+☏ SEND ON WHATSAPP
+</a>
+
+<a
+href="#contact"
+class="btn btn-outline"
+>
+📷 SEND A PHOTO
+</a>
+
+<a
+href="#contact"
+class="btn"
+>
+REQUEST A QUOTE →
+</a>
+
 </div>
 
 </div>
@@ -1152,38 +1692,363 @@ A specialist contractor supporting commercial, public sector and private clients
 
 
 <!-- =========================
-     CONTACT CTA
+     SERVICES
 ========================= -->
 
-<section class="cta" id="contact">
+<section class="services" id="services">
 
-<div class="container cta-content">
+<div class="services-heading">
 
-<h2>
-Graffiti?<br>
-<span>Send Us A Photo.</span>
+<h2 class="section-title">
+SPECIALIST <span>SERVICES</span>
 </h2>
 
 <p>
-Get a fast, no obligation assessment and quotation.
+Professional graffiti removal, restoration and surface protection designed for commercial and public environments.
 </p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-number">
+01 — REMOVAL
+</div>
+
+<h3>
+Graffiti Removal
+</h3>
+
+<p>
+Professional removal of spray paint, marker pen and other graffiti from brick, concrete, masonry and other suitable surfaces.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+02 — RESTORATION
+</div>
+
+<h3>
+Surface Restoration
+</h3>
+
+<p>
+Careful cleaning and restoration treatments selected according to the surface, substrate and type of graffiti.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+03 — PROTECTION
+</div>
+
+<h3>
+Anti-Graffiti Coatings
+</h3>
+
+<p>
+Protective coatings can make future graffiti incidents easier, faster and more cost-effective to remove.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+04 — EMERGENCY
+</div>
+
+<h3>
+Reactive Response
+</h3>
+
+<p>
+Rapid response for unwanted graffiti affecting commercial premises, public areas, managed property and infrastructure.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+05 — COMMERCIAL
+</div>
+
+<h3>
+Planned Programmes
+</h3>
+
+<p>
+Ongoing graffiti management programmes for property managers, facilities teams, landlords and organisations with multiple locations.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-number">
+06 — DOCUMENTATION
+</div>
+
+<h3>
+Professional Compliance
+</h3>
+
+<p>
+RAMS, COSHH information, SDS documentation and professional reporting to support responsible contractor management.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     COMPLIANCE
+========================= -->
+
+<section class="compliance" id="compliance">
+
+<div class="compliance-grid">
+
 
 <div>
 
-<a href="https://wa.me/447488296220?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20quote."
-class="btn whatsapp">
-☘ Send on WhatsApp
-</a>
+<h2 class="section-title">
+PROFESSIONAL
+<br>
+<span>COMPLIANCE</span>
+</h2>
 
-<a href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote"
-class="btn-outline">
-📷 Send A Photo
-</a>
+<p style="margin-top:15px;color:#555;">
+A professional service built around safe systems of work, appropriate products and clear documentation.
+</p>
 
-<a href="tel:07488296220"
-class="btn">
-Request A Quote →
-</a>
+</div>
+
+
+<div class="compliance-box">
+
+<h3>
+Credentials & Assurance
+</h3>
+
+<p>
+We understand the requirements of professional facilities and property teams and provide documentation to support safe and compliant delivery.
+</p>
+
+<div class="credentials">
+
+<div class="credential">
+BICS Registered
+</div>
+
+<div class="credential">
+ILM Leadership
+</div>
+
+<div class="credential">
+IOSH Managing Safely
+</div>
+
+<div class="credential">
+Specialist Training
+</div>
+
+<div class="credential">
+Waste Carrier
+</div>
+
+<div class="credential">
+£5m Public Liability
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="contact-grid">
+
+
+<div class="contact-copy">
+
+<h2>
+GET YOUR
+<br>
+<span>GRAFFITI</span>
+<br>
+SORTED.
+</h2>
+
+<p>
+Send us a photograph of the graffiti, tell us where it is and we'll provide a fast assessment and quotation.
+</p>
+
+<div class="contact-details">
+
+<div>
+<strong>PHONE</strong>
+07488 296220
+</div>
+
+<div>
+<strong>EMAIL</strong>
+info@skspecialistgraffitiresponse.co.uk
+</div>
+
+<div>
+<strong>AREA</strong>
+North Wales | Cheshire | North West
+</div>
+
+<div>
+<strong>RESPONSE</strong>
+24/7 Emergency Response
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<h3>
+Request a Quote
+</h3>
+
+<form
+action="mailto:info@skspecialistgraffitiresponse.co.uk"
+method="post"
+enctype="text/plain"
+>
+
+<div class="form-group">
+
+<input
+type="text"
+name="Name"
+placeholder="Your Name"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+type="text"
+name="Company"
+placeholder="Company / Organisation"
+>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+type="tel"
+name="Phone"
+placeholder="Telephone Number"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<input
+type="email"
+name="Email"
+placeholder="Email Address"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<select name="Service">
+
+<option value="">
+What do you need help with?
+</option>
+
+<option>
+Graffiti Removal
+</option>
+
+<option>
+Emergency Response
+</option>
+
+<option>
+Surface Restoration
+</option>
+
+<option>
+Anti-Graffiti Protection
+</option>
+
+<option>
+Planned Graffiti Management
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<textarea
+name="Message"
+placeholder="Tell us about the graffiti, location and approximate size..."
+></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="btn form-submit"
+>
+REQUEST MY QUOTE →
+</button>
+
+</form>
 
 </div>
 
@@ -1196,91 +2061,103 @@ Request A Quote →
      FOOTER
 ========================= -->
 
-<footer>
+<footer class="footer">
 
-<div class="container footer-main">
+<div class="footer-top">
 
-<div class="footer-grid">
 
-<div>
+<div class="footer-brand">
 
-<div class="footer-logo">
-S<span>&</span>K
-</div>
+<h3>
+S<span>&</span>K SPECIALIST
+</h3>
 
-<p style="margin-top:10px;">
-S&K Specialist Graffiti Response Ltd
+<p>
+GRAFFITI RESPONSE
 </p>
 
 <p>
 Remove | Restore | Protect
 </p>
 
+<p>
+Professional graffiti removal and reactive response across North Wales, Cheshire and the North West.
+</p>
+
 </div>
 
 
-<div>
+<div class="footer-col">
 
-<h3>Contact</h3>
+<h4>
+Quick Links
+</h4>
 
-<p>
+<a href="#top">
+Home
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#process">
+Our Process
+</a>
+
+<a href="#compliance">
+Compliance
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>
+Contact
+</h4>
+
 <a href="tel:07488296220">
 07488 296220
 </a>
-</p>
 
-<p>
 <a href="mailto:info@skspecialistgraffitiresponse.co.uk">
 info@skspecialistgraffitiresponse.co.uk
 </a>
-</p>
+
+<a href="#contact">
+North Wales
+</a>
+
+<a href="#contact">
+Cheshire
+</a>
+
+<a href="#contact">
+North West
+</a>
 
 </div>
 
 
-<div>
-
-<h3>Coverage</h3>
-
-<p>North Wales</p>
-<p>Cheshire</p>
-<p>North West</p>
-
 </div>
 
 
-<div>
+<div class="footer-bottom">
 
-<h3>Company</h3>
-
-<p>
-24/7 Emergency Response
-</p>
-
-<p>
-Registered Waste Carrier
-</p>
-
-<p>
-NRW – 00824939
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="container footer-bottom">
-
-<div>
-© 2026 S&K Specialist Graffiti Response Ltd. All rights reserved.
-</div>
-
-<div>
-A Cleaner. Safer. Brighter Tomorrow.
-</div>
+© 2026 S&K Specialist Graffiti Response Ltd.
+All rights reserved.
+<br><br>
+REMOVE | RESTORE | PROTECT
 
 </div>
 
