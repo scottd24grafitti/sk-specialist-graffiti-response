@@ -1,7 +1,9 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>S&K Specialist Graffiti Response | North Wales, Cheshire & North West</title>
@@ -9,13 +11,19 @@
 <meta name="description" content="S&K Specialist Graffiti Response Ltd. Professional graffiti removal, restoration and anti-graffiti protection across North Wales, Cheshire and the North West. 24/7 emergency response.">
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
-html,body{
+html{
+    scroll-behavior:smooth;
+}
+
+html,
+body{
     width:100%;
     min-height:100%;
     background:#050608;
@@ -32,12 +40,6 @@ body{
     background:#050608;
 }
 
-.hero-image{
-    width:100%;
-    display:block;
-    height:auto;
-}
-
 .buttons{
     position:relative;
     width:100%;
@@ -45,14 +47,106 @@ body{
     margin:0 auto;
 }
 
+.hero-image{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* ---------------------------------
+   ALL CLICKABLE AREAS
+--------------------------------- */
+
 .hotspot{
     position:absolute;
     display:block;
+    z-index:20;
     text-decoration:none;
     cursor:pointer;
+    background:transparent;
 }
 
-/* Main Request a Quote button */
+/* ---------------------------------
+   HEADER NAVIGATION
+--------------------------------- */
+
+/* HOME */
+.home{
+    left:22.8%;
+    top:3.2%;
+    width:3.8%;
+    height:4%;
+}
+
+/* SERVICES */
+.services{
+    left:28.2%;
+    top:3.2%;
+    width:6.5%;
+    height:4%;
+}
+
+/* ABOUT */
+.about{
+    left:36.4%;
+    top:3.2%;
+    width:4.2%;
+    height:4%;
+}
+
+/* OUR PROCESS */
+.process{
+    left:42.2%;
+    top:3.2%;
+    width:7.2%;
+    height:4%;
+}
+
+/* COMMERCIAL */
+.commercial{
+    left:51.8%;
+    top:3.2%;
+    width:7%;
+    height:4%;
+}
+
+/* COMPLIANCE */
+.compliance{
+    left:61.2%;
+    top:3.2%;
+    width:7%;
+    height:4%;
+}
+
+/* CONTACT */
+.contact-nav{
+    left:70.5%;
+    top:3.2%;
+    width:5.2%;
+    height:4%;
+}
+
+/* HEADER QUOTE */
+.header-quote{
+    right:2.5%;
+    top:3%;
+    width:16.5%;
+    height:4.2%;
+}
+
+/* PHONE */
+.phone{
+    right:2%;
+    top:0;
+    width:15%;
+    height:5%;
+}
+
+/* ---------------------------------
+   MAIN HERO BUTTONS
+--------------------------------- */
+
+/* REQUEST A QUOTE */
 .quote{
     left:3.2%;
     top:27.3%;
@@ -60,7 +154,7 @@ body{
     height:3.2%;
 }
 
-/* Send a Photo button */
+/* SEND A PHOTO */
 .photo{
     left:22.8%;
     top:27.3%;
@@ -68,7 +162,11 @@ body{
     height:3.2%;
 }
 
-/* WhatsApp button */
+/* ---------------------------------
+   BOTTOM CTA BUTTONS
+--------------------------------- */
+
+/* WHATSAPP */
 .whatsapp{
     left:3.5%;
     top:78.1%;
@@ -76,7 +174,7 @@ body{
     height:3.1%;
 }
 
-/* Bottom Send Photo */
+/* BOTTOM SEND PHOTO */
 .bottom-photo{
     left:23.5%;
     top:78.1%;
@@ -84,7 +182,7 @@ body{
     height:3.1%;
 }
 
-/* Bottom quote */
+/* BOTTOM QUOTE */
 .bottom-quote{
     left:42.5%;
     top:78.1%;
@@ -92,21 +190,50 @@ body{
     height:3.1%;
 }
 
-/* Header quote */
-.header-quote{
-    right:2.5%;
-    top:3%;
-    width:16.5%;
-    height:4%;
+/* ---------------------------------
+   INVISIBLE SECTION TARGETS
+--------------------------------- */
+
+.section-target{
+    position:absolute;
+    left:0;
+    width:1px;
+    height:1px;
+    scroll-margin-top:20px;
+    z-index:1;
 }
 
-/* Phone */
-.phone{
-    right:2%;
+#home{
     top:0;
-    width:15%;
-    height:5%;
 }
+
+#services{
+    top:31%;
+}
+
+#about{
+    top:37%;
+}
+
+#process-section{
+    top:56%;
+}
+
+#commercial-section{
+    top:65%;
+}
+
+#compliance-section{
+    top:42%;
+}
+
+#contact-section{
+    top:76%;
+}
+
+/* ---------------------------------
+   MOBILE
+--------------------------------- */
 
 @media(max-width:700px){
 
@@ -115,57 +242,126 @@ body{
         height:auto;
     }
 
+    .home{
+        left:22.5%;
+        top:3%;
+        width:4%;
+        height:4.5%;
+    }
+
+    .services{
+        left:27.8%;
+        top:3%;
+        width:7%;
+        height:4.5%;
+    }
+
+    .about{
+        left:36%;
+        top:3%;
+        width:4.8%;
+        height:4.5%;
+    }
+
+    .process{
+        left:41.8%;
+        top:3%;
+        width:7.8%;
+        height:4.5%;
+    }
+
+    .commercial{
+        left:51.5%;
+        top:3%;
+        width:7.5%;
+        height:4.5%;
+    }
+
+    .compliance{
+        left:60.8%;
+        top:3%;
+        width:7.5%;
+        height:4.5%;
+    }
+
+    .contact-nav{
+        left:70%;
+        top:3%;
+        width:6%;
+        height:4.5%;
+    }
+
+    .header-quote{
+        right:2%;
+        top:3%;
+        width:17%;
+        height:4.5%;
+    }
+
+    .phone{
+        right:1.5%;
+        top:0;
+        width:16%;
+        height:5%;
+    }
+
     .quote{
         left:3%;
         top:27%;
         width:19%;
-        height:3%;
+        height:3.2%;
     }
 
     .photo{
         left:23%;
         top:27%;
         width:18%;
-        height:3%;
+        height:3.2%;
     }
 
     .whatsapp{
         left:3%;
         top:78%;
-        width:18%;
-        height:3%;
+        width:19%;
+        height:3.2%;
     }
 
     .bottom-photo{
         left:23%;
         top:78%;
-        width:18%;
-        height:3%;
+        width:19%;
+        height:3.2%;
     }
 
     .bottom-quote{
         left:42%;
         top:78%;
         width:19%;
-        height:3%;
+        height:3.2%;
     }
 
 }
 
+/* ---------------------------------
+   ACCESSIBILITY
+--------------------------------- */
+
+.hotspot:focus{
+    outline:2px solid #ff1018;
+    outline-offset:2px;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="page">
 
-    <!--
-    IMPORTANT:
-    Upload the approved landing-page.webp image
-    into the same GitHub repository as this index.html file.
-    -->
-
     <div class="buttons">
+
+        <!-- MAIN LANDING PAGE IMAGE -->
 
         <img
             src="landing-page.webp"
@@ -173,78 +369,173 @@ body{
             class="hero-image"
         >
 
-        <!-- Header quote -->
+        <!-- =================================
+             SECTION TARGETS
+        ================================== -->
+
+        <div id="home" class="section-target"></div>
+
+        <div id="services" class="section-target"></div>
+
+        <div id="about" class="section-target"></div>
+
+        <div id="process-section" class="section-target"></div>
+
+        <div id="commercial-section" class="section-target"></div>
+
+        <div id="compliance-section" class="section-target"></div>
+
+        <div id="contact-section" class="section-target"></div>
+
+
+        <!-- =================================
+             HEADER NAVIGATION
+        ================================== -->
+
+        <!-- HOME -->
+
+        <a
+            class="hotspot home"
+            href="#home"
+            aria-label="Home">
+        </a>
+
+
+        <!-- SERVICES -->
+
+        <a
+            class="hotspot services"
+            href="#services"
+            aria-label="Services">
+        </a>
+
+
+        <!-- ABOUT -->
+
+        <a
+            class="hotspot about"
+            href="#about"
+            aria-label="About S&K Specialist Graffiti Response">
+        </a>
+
+
+        <!-- OUR PROCESS -->
+
+        <a
+            class="hotspot process"
+            href="#process-section"
+            aria-label="Our Process">
+        </a>
+
+
+        <!-- COMMERCIAL -->
+
+        <a
+            class="hotspot commercial"
+            href="#commercial-section"
+            aria-label="Commercial Services">
+        </a>
+
+
+        <!-- COMPLIANCE -->
+
+        <a
+            class="hotspot compliance"
+            href="#compliance-section"
+            aria-label="Compliance">
+        </a>
+
+
+        <!-- CONTACT -->
+
+        <a
+            class="hotspot contact-nav"
+            href="#contact-section"
+            aria-label="Contact S&K Specialist Graffiti Response">
+        </a>
+
+
+        <!-- =================================
+             HEADER QUOTE
+        ================================== -->
+
         <a
             class="hotspot header-quote"
-            href="#contact"
+            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
             aria-label="Request a quote">
         </a>
 
-        <!-- Emergency phone -->
+
+        <!-- =================================
+             PHONE
+        ================================== -->
+
         <a
             class="hotspot phone"
             href="tel:07488296220"
             aria-label="Call S&K Specialist Graffiti Response">
         </a>
 
-        <!-- Main quote -->
+
+        <!-- =================================
+             MAIN HERO QUOTE
+        ================================== -->
+
         <a
             class="hotspot quote"
-            href="#contact"
+            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
             aria-label="Request a quote">
         </a>
 
-        <!-- Main send photo -->
+
+        <!-- =================================
+             MAIN SEND PHOTO
+        ================================== -->
+
         <a
             class="hotspot photo"
-            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Enquiry"
+            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Photo"
             aria-label="Send a photo">
         </a>
 
-        <!-- WhatsApp -->
+
+        <!-- =================================
+             WHATSAPP
+        ================================== -->
+
         <a
             class="hotspot whatsapp"
             href="https://wa.me/447488296220?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20graffiti%20removal%20quote."
-            aria-label="Contact S&K on WhatsApp">
+            target="_blank"
+            rel="noopener"
+            aria-label="Contact S&K Specialist Graffiti Response on WhatsApp">
         </a>
 
-        <!-- Bottom send photo -->
+
+        <!-- =================================
+             BOTTOM SEND PHOTO
+        ================================== -->
+
         <a
             class="hotspot bottom-photo"
             href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Photo"
             aria-label="Send a photo">
         </a>
 
-        <!-- Bottom quote -->
+
+        <!-- =================================
+             BOTTOM QUOTE
+        ================================== -->
+
         <a
             class="hotspot bottom-quote"
-            href="#contact"
+            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
             aria-label="Request a quote">
         </a>
 
     </div>
 
 </div>
-
-<!-- Contact anchor -->
-<div id="contact"></div>
-
-<script>
-
-document.querySelectorAll('a[href="#contact"]').forEach(function(button){
-
-    button.addEventListener('click', function(e){
-
-        e.preventDefault();
-
-        window.location.href =
-        'mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request';
-
-    });
-
-});
-
-</script>
 
 </body>
 </html>
