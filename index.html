@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>S&K Specialist Graffiti Response | North Wales, Cheshire & North West</title>
 
-<meta name="description" content="S&K Specialist Graffiti Response Ltd. Professional graffiti removal, restoration and anti-graffiti protection across North Wales, Cheshire and the North West. 24/7 emergency response.">
+<meta name="description"
+content="S&K Specialist Graffiti Response Ltd. Professional graffiti removal, restoration and anti-graffiti protection across North Wales, Cheshire and the North West. 24/7 emergency response.">
 
 <style>
 
@@ -53,10 +56,6 @@ body{
     display:block;
 }
 
-/* ---------------------------------
-   ALL CLICKABLE AREAS
---------------------------------- */
-
 .hotspot{
     position:absolute;
     display:block;
@@ -66,11 +65,10 @@ body{
     background:transparent;
 }
 
-/* ---------------------------------
+/* ================================
    HEADER NAVIGATION
---------------------------------- */
+================================ */
 
-/* HOME */
 .home{
     left:22.8%;
     top:3.2%;
@@ -78,7 +76,6 @@ body{
     height:4%;
 }
 
-/* SERVICES */
 .services{
     left:28.2%;
     top:3.2%;
@@ -86,7 +83,6 @@ body{
     height:4%;
 }
 
-/* ABOUT */
 .about{
     left:36.4%;
     top:3.2%;
@@ -94,7 +90,6 @@ body{
     height:4%;
 }
 
-/* OUR PROCESS */
 .process{
     left:42.2%;
     top:3.2%;
@@ -102,7 +97,6 @@ body{
     height:4%;
 }
 
-/* COMMERCIAL */
 .commercial{
     left:51.8%;
     top:3.2%;
@@ -110,7 +104,6 @@ body{
     height:4%;
 }
 
-/* COMPLIANCE */
 .compliance{
     left:61.2%;
     top:3.2%;
@@ -118,7 +111,6 @@ body{
     height:4%;
 }
 
-/* CONTACT */
 .contact-nav{
     left:70.5%;
     top:3.2%;
@@ -126,7 +118,10 @@ body{
     height:4%;
 }
 
-/* HEADER QUOTE */
+/* ================================
+   HEADER BUTTONS
+================================ */
+
 .header-quote{
     right:2.5%;
     top:3%;
@@ -134,7 +129,6 @@ body{
     height:4.2%;
 }
 
-/* PHONE */
 .phone{
     right:2%;
     top:0;
@@ -142,11 +136,10 @@ body{
     height:5%;
 }
 
-/* ---------------------------------
-   MAIN HERO BUTTONS
---------------------------------- */
+/* ================================
+   MAIN BUTTONS
+================================ */
 
-/* REQUEST A QUOTE */
 .quote{
     left:3.2%;
     top:27.3%;
@@ -154,7 +147,6 @@ body{
     height:3.2%;
 }
 
-/* SEND A PHOTO */
 .photo{
     left:22.8%;
     top:27.3%;
@@ -162,11 +154,10 @@ body{
     height:3.2%;
 }
 
-/* ---------------------------------
-   BOTTOM CTA BUTTONS
---------------------------------- */
+/* ================================
+   BOTTOM BUTTONS
+================================ */
 
-/* WHATSAPP */
 .whatsapp{
     left:3.5%;
     top:78.1%;
@@ -174,7 +165,6 @@ body{
     height:3.1%;
 }
 
-/* BOTTOM SEND PHOTO */
 .bottom-photo{
     left:23.5%;
     top:78.1%;
@@ -182,7 +172,6 @@ body{
     height:3.1%;
 }
 
-/* BOTTOM QUOTE */
 .bottom-quote{
     left:42.5%;
     top:78.1%;
@@ -190,57 +179,97 @@ body{
     height:3.1%;
 }
 
-/* ---------------------------------
-   INVISIBLE SECTION TARGETS
---------------------------------- */
+/* ================================
+   MODAL
+================================ */
 
-.section-target{
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    background:rgba(0,0,0,0.82);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-box{
+    width:100%;
+    max-width:620px;
+    max-height:90vh;
+    overflow:auto;
+    background:#111316;
+    border:2px solid #e50914;
+    border-radius:12px;
+    padding:30px;
+    color:white;
+    position:relative;
+    box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+.modal-box h2{
+    font-size:30px;
+    margin-bottom:20px;
+    color:white;
+}
+
+.modal-box h2 span{
+    color:#e50914;
+}
+
+.modal-box p{
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:15px;
+    color:#e5e5e5;
+}
+
+.modal-box ul{
+    margin:15px 0 20px 20px;
+}
+
+.modal-box li{
+    margin-bottom:10px;
+    font-size:16px;
+    line-height:1.4;
+}
+
+.close-modal{
     position:absolute;
-    left:0;
-    width:1px;
-    height:1px;
-    scroll-margin-top:20px;
-    z-index:1;
+    top:10px;
+    right:15px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:32px;
+    cursor:pointer;
 }
 
-#home{
-    top:0;
+.modal-button{
+    display:inline-block;
+    padding:14px 20px;
+    margin:8px 8px 0 0;
+    background:#e50914;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
 }
 
-#services{
-    top:31%;
+.modal-button.whatsapp-button{
+    background:#16a34a;
 }
 
-#about{
-    top:37%;
-}
-
-#process-section{
-    top:56%;
-}
-
-#commercial-section{
-    top:65%;
-}
-
-#compliance-section{
-    top:42%;
-}
-
-#contact-section{
-    top:76%;
-}
-
-/* ---------------------------------
+/* ================================
    MOBILE
---------------------------------- */
+================================ */
 
 @media(max-width:700px){
-
-    .hero-image{
-        width:100%;
-        height:auto;
-    }
 
     .home{
         left:22.5%;
@@ -340,11 +369,19 @@ body{
         height:3.2%;
     }
 
+    .modal-box{
+        padding:25px 20px;
+    }
+
+    .modal-box h2{
+        font-size:25px;
+    }
+
 }
 
-/* ---------------------------------
+/* ================================
    ACCESSIBILITY
---------------------------------- */
+================================ */
 
 .hotspot:focus{
     outline:2px solid #ff1018;
@@ -355,187 +392,541 @@ body{
 
 </head>
 
+
 <body>
 
 <div class="page">
 
-    <div class="buttons">
+<div class="buttons">
 
-        <!-- MAIN LANDING PAGE IMAGE -->
-
-        <img
-            src="landing-page.webp"
-            alt="S&K Specialist Graffiti Response - Professional graffiti removal and prevention"
-            class="hero-image"
-        >
-
-        <!-- =================================
-             SECTION TARGETS
-        ================================== -->
-
-        <div id="home" class="section-target"></div>
-
-        <div id="services" class="section-target"></div>
-
-        <div id="about" class="section-target"></div>
-
-        <div id="process-section" class="section-target"></div>
-
-        <div id="commercial-section" class="section-target"></div>
-
-        <div id="compliance-section" class="section-target"></div>
-
-        <div id="contact-section" class="section-target"></div>
+<img
+src="landing-page.webp"
+alt="S&K Specialist Graffiti Response - Professional graffiti removal and prevention"
+class="hero-image"
+>
 
 
-        <!-- =================================
-             HEADER NAVIGATION
-        ================================== -->
+<!-- ================================
+     HOME
+================================ -->
 
-        <!-- HOME -->
-
-        <a
-            class="hotspot home"
-            href="#home"
-            aria-label="Home">
-        </a>
+<a
+class="hotspot home"
+href="#"
+aria-label="Home">
+</a>
 
 
-        <!-- SERVICES -->
+<!-- ================================
+     SERVICES
+================================ -->
 
-        <a
-            class="hotspot services"
-            href="#services"
-            aria-label="Services">
-        </a>
-
-
-        <!-- ABOUT -->
-
-        <a
-            class="hotspot about"
-            href="#about"
-            aria-label="About S&K Specialist Graffiti Response">
-        </a>
+<a
+class="hotspot services"
+href="#services"
+aria-label="Services">
+</a>
 
 
-        <!-- OUR PROCESS -->
+<!-- ================================
+     ABOUT
+================================ -->
 
-        <a
-            class="hotspot process"
-            href="#process-section"
-            aria-label="Our Process">
-        </a>
-
-
-        <!-- COMMERCIAL -->
-
-        <a
-            class="hotspot commercial"
-            href="#commercial-section"
-            aria-label="Commercial Services">
-        </a>
+<a
+class="hotspot about"
+href="#about"
+aria-label="About S&K Specialist Graffiti Response">
+</a>
 
 
-        <!-- COMPLIANCE -->
+<!-- ================================
+     OUR PROCESS
+================================ -->
 
-        <a
-            class="hotspot compliance"
-            href="#compliance-section"
-            aria-label="Compliance">
-        </a>
-
-
-        <!-- CONTACT -->
-
-        <a
-            class="hotspot contact-nav"
-            href="#contact-section"
-            aria-label="Contact S&K Specialist Graffiti Response">
-        </a>
+<a
+class="hotspot process"
+href="#process"
+aria-label="Our Process">
+</a>
 
 
-        <!-- =================================
-             HEADER QUOTE
-        ================================== -->
+<!-- ================================
+     COMMERCIAL
+================================ -->
 
-        <a
-            class="hotspot header-quote"
-            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
-            aria-label="Request a quote">
-        </a>
-
-
-        <!-- =================================
-             PHONE
-        ================================== -->
-
-        <a
-            class="hotspot phone"
-            href="tel:07488296220"
-            aria-label="Call S&K Specialist Graffiti Response">
-        </a>
+<a
+class="hotspot commercial"
+href="#commercial"
+aria-label="Commercial Services">
+</a>
 
 
-        <!-- =================================
-             MAIN HERO QUOTE
-        ================================== -->
+<!-- ================================
+     COMPLIANCE
+================================ -->
 
-        <a
-            class="hotspot quote"
-            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
-            aria-label="Request a quote">
-        </a>
-
-
-        <!-- =================================
-             MAIN SEND PHOTO
-        ================================== -->
-
-        <a
-            class="hotspot photo"
-            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Photo"
-            aria-label="Send a photo">
-        </a>
+<a
+class="hotspot compliance"
+href="#compliance"
+aria-label="Compliance">
+</a>
 
 
-        <!-- =================================
-             WHATSAPP
-        ================================== -->
+<!-- ================================
+     CONTACT
+================================ -->
 
-        <a
-            class="hotspot whatsapp"
-            href="https://wa.me/447488296220?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20graffiti%20removal%20quote."
-            target="_blank"
-            rel="noopener"
-            aria-label="Contact S&K Specialist Graffiti Response on WhatsApp">
-        </a>
+<a
+class="hotspot contact-nav"
+href="#contact"
+aria-label="Contact S&K Specialist Graffiti Response">
+</a>
 
 
-        <!-- =================================
-             BOTTOM SEND PHOTO
-        ================================== -->
+<!-- ================================
+     HEADER QUOTE
+================================ -->
 
-        <a
-            class="hotspot bottom-photo"
-            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Photo"
-            aria-label="Send a photo">
-        </a>
+<a
+class="hotspot header-quote"
+href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
+aria-label="Request a quote">
+</a>
 
 
-        <!-- =================================
-             BOTTOM QUOTE
-        ================================== -->
+<!-- ================================
+     PHONE
+================================ -->
 
-        <a
-            class="hotspot bottom-quote"
-            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
-            aria-label="Request a quote">
-        </a>
+<a
+class="hotspot phone"
+href="tel:07488296220"
+aria-label="Call S&K Specialist Graffiti Response">
+</a>
 
-    </div>
+
+<!-- ================================
+     MAIN QUOTE
+================================ -->
+
+<a
+class="hotspot quote"
+href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
+aria-label="Request a quote">
+</a>
+
+
+<!-- ================================
+     MAIN PHOTO
+================================ -->
+
+<a
+class="hotspot photo"
+href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Photo"
+aria-label="Send a photo">
+</a>
+
+
+<!-- ================================
+     WHATSAPP
+================================ -->
+
+<a
+class="hotspot whatsapp"
+href="https://api.whatsapp.com/send?phone=447488296220&text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20graffiti%20removal%20quote."
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contact S&K Specialist Graffiti Response on WhatsApp">
+</a>
+
+
+<!-- ================================
+     BOTTOM PHOTO
+================================ -->
+
+<a
+class="hotspot bottom-photo"
+href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Photo"
+aria-label="Send a photo">
+</a>
+
+
+<!-- ================================
+     BOTTOM QUOTE
+================================ -->
+
+<a
+class="hotspot bottom-quote"
+href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request"
+aria-label="Request a quote">
+</a>
 
 </div>
 
+</div>
+
+
+<!-- ================================
+     MODAL
+================================ -->
+
+<div
+class="modal"
+id="infoModal">
+
+<div class="modal-box">
+
+<button
+class="close-modal"
+aria-label="Close">
+&times;
+</button>
+
+<div id="modalContent"></div>
+
+</div>
+
+</div>
+
+
+<script>
+
+const modal = document.getElementById("infoModal");
+
+const modalContent =
+document.getElementById("modalContent");
+
+const closeModal =
+document.querySelector(".close-modal");
+
+
+function showModal(title, content){
+
+    modalContent.innerHTML =
+        "<h2>" + title + "</h2>" +
+        content;
+
+    modal.classList.add("active");
+
+}
+
+
+function closeInfoModal(){
+
+    modal.classList.remove("active");
+
+}
+
+
+closeModal.addEventListener(
+    "click",
+    closeInfoModal
+);
+
+
+modal.addEventListener(
+    "click",
+    function(e){
+
+        if(e.target === modal){
+
+            closeInfoModal();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "keydown",
+    function(e){
+
+        if(e.key === "Escape"){
+
+            closeInfoModal();
+
+        }
+
+    }
+);
+
+
+/* ================================
+   SERVICES
+================================ */
+
+document.querySelector(".services")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        showModal(
+            'OUR <span>SERVICES</span>',
+            `
+            <p>
+            Professional graffiti removal, restoration and prevention for commercial, public sector and private clients.
+            </p>
+
+            <ul>
+                <li>Graffiti removal</li>
+                <li>Paint and marker removal</li>
+                <li>Surface restoration</li>
+                <li>Anti-graffiti protection</li>
+                <li>Emergency graffiti response</li>
+                <li>Commercial property cleaning</li>
+                <li>Public space graffiti removal</li>
+                <li>Before and after photographic reporting</li>
+            </ul>
+
+            <p>
+            Need graffiti removed quickly?
+            Send us a photo and we can provide an initial assessment.
+            </p>
+
+            <a
+            class="modal-button whatsapp-button"
+            href="https://api.whatsapp.com/send?phone=447488296220&text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20graffiti%20removal%20quote."
+            target="_blank"
+            rel="noopener noreferrer">
+            WhatsApp Us
+            </a>
+
+            <a
+            class="modal-button"
+            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request">
+            Request a Quote
+            </a>
+            `
+        );
+
+    }
+);
+
+
+/* ================================
+   ABOUT
+================================ */
+
+document.querySelector(".about")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        showModal(
+            'ABOUT <span>S&K</span>',
+            `
+            <p>
+            S&K Specialist Graffiti Response provides professional graffiti removal, restoration and preventative treatments across North Wales, Cheshire and the North West.
+            </p>
+
+            <p>
+            With over 20 years of Facilities Management experience, we bring a professional operational approach to specialist graffiti response.
+            </p>
+
+            <ul>
+                <li>20+ years Facilities Management experience</li>
+                <li>Professional graffiti removal training</li>
+                <li>BICS Registered</li>
+                <li>ILM Leadership & Management</li>
+                <li>IOSH Managing Safely</li>
+                <li>£5 Million Public Liability Insurance</li>
+                <li>Registered Waste Carrier</li>
+            </ul>
+            `
+        );
+
+    }
+);
+
+
+/* ================================
+   PROCESS
+================================ */
+
+document.querySelector(".process")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        showModal(
+            'OUR <span>PROCESS</span>',
+            `
+            <h3>01 — REMOVE</h3>
+
+            <p>
+            We identify the graffiti, assess the surface and select the correct removal treatment.
+            </p>
+
+            <h3>02 — RESTORE</h3>
+
+            <p>
+            We carefully treat the affected area to return the surface to an acceptable condition.
+            </p>
+
+            <h3>03 — PROTECT</h3>
+
+            <p>
+            Where appropriate, anti-graffiti protection can be applied to make future incidents easier and cheaper to remove.
+            </p>
+            `
+        );
+
+    }
+);
+
+
+/* ================================
+   COMMERCIAL
+================================ */
+
+document.querySelector(".commercial")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        showModal(
+            'COMMERCIAL <span>SERVICES</span>',
+            `
+            <p>
+            Specialist graffiti response for organisations responsible for buildings, estates and public spaces.
+            </p>
+
+            <ul>
+                <li>Commercial & industrial properties</li>
+                <li>Housing & social landlords</li>
+                <li>Local authorities & councils</li>
+                <li>Retail & leisure</li>
+                <li>Property management</li>
+                <li>Schools & education</li>
+                <li>Transport & infrastructure</li>
+            </ul>
+
+            <p>
+            We provide a professional, discreet service designed around your operational requirements.
+            </p>
+            `
+        );
+
+    }
+);
+
+
+/* ================================
+   COMPLIANCE
+================================ */
+
+document.querySelector(".compliance")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        showModal(
+            'PROFESSIONAL <span>COMPLIANCE</span>',
+            `
+            <p>
+            S&K Specialist Graffiti Response operates with a strong focus on safe working practices, documentation and responsible waste handling.
+            </p>
+
+            <ul>
+                <li>RAMS documentation</li>
+                <li>COSHH controls</li>
+                <li>Safety Data Sheets</li>
+                <li>Professional treatment methods</li>
+                <li>Responsible waste handling</li>
+                <li>Registered Waste Carrier</li>
+                <li>£5 Million Public Liability Insurance</li>
+            </ul>
+            `
+        );
+
+    }
+);
+
+
+/* ================================
+   CONTACT
+================================ */
+
+document.querySelector(".contact-nav")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        showModal(
+            'CONTACT <span>S&K</span>',
+            `
+            <p>
+            Need graffiti removed? Contact S&K Specialist Graffiti Response today.
+            </p>
+
+            <p>
+            <strong>24/7 Emergency Response</strong>
+            </p>
+
+            <p>
+            North Wales | Cheshire | North West
+            </p>
+
+            <a
+            class="modal-button"
+            href="tel:07488296220">
+            Call 07488 296220
+            </a>
+
+            <a
+            class="modal-button whatsapp-button"
+            href="https://api.whatsapp.com/send?phone=447488296220&text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20graffiti%20removal%20quote."
+            target="_blank"
+            rel="noopener noreferrer">
+            WhatsApp
+            </a>
+
+            <a
+            class="modal-button"
+            href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Enquiry">
+            Email Us
+            </a>
+            `
+        );
+
+    }
+);
+
+
+/* ================================
+   HOME
+================================ */
+
+document.querySelector(".home")
+.addEventListener(
+    "click",
+    function(e){
+
+        e.preventDefault();
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    }
+);
+
+</script>
+
 </body>
+
 </html>
