@@ -11,19 +11,21 @@
 <style>
 
 :root{
-    --red:#ed1117;
-    --dark:#080a0c;
-    --dark2:#111418;
+    --red:#ed1c24;
+    --red-dark:#b90008;
+    --black:#050505;
+    --dark:#101114;
+    --dark2:#181a1e;
+    --grey:#b9bdc4;
     --light:#f5f5f5;
-    --grey:#b8bdc4;
     --white:#ffffff;
     --max:1200px;
 }
 
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -48,63 +50,85 @@ img{
 }
 
 /* =========================
-   HEADER
+   TOP BAR
 ========================= */
 
-header{
-    background:#050607;
+.topbar{
+    background:#050505;
+    color:#fff;
+    padding:8px 25px;
+    font-size:13px;
+    border-bottom:1px solid #222;
+}
+
+.topbar-inner{
+    max-width:1400px;
+    margin:auto;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    gap:25px;
+}
+
+.topbar strong{
+    color:#fff;
+}
+
+.phone{
+    color:#fff;
+    font-weight:bold;
+}
+
+.phone span{
+    color:var(--red);
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar{
+    background:#070707;
     color:#fff;
     position:sticky;
     top:0;
     z-index:1000;
-    border-bottom:1px solid #272b30;
+    border-bottom:1px solid #292929;
 }
 
-.nav{
+.nav-inner{
     max-width:1400px;
     margin:auto;
-    min-height:92px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:10px 28px;
-    gap:25px;
+    min-height:82px;
+    padding:0 25px;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.logo-mark{
     font-weight:900;
-    font-size:34px;
-    line-height:.85;
     font-style:italic;
-    letter-spacing:-3px;
+    line-height:.82;
+    font-size:38px;
+    letter-spacing:-2px;
 }
 
-.logo-mark span{
+.logo .amp{
     color:var(--red);
 }
 
-.logo-text{
-    border-left:2px solid #444;
-    padding-left:12px;
-}
-
-.logo-text strong{
+.logo small{
     display:block;
-    font-size:15px;
+    color:#fff;
+    font-size:13px;
     letter-spacing:1px;
+    font-style:normal;
+    margin-top:7px;
 }
 
-.logo-text small{
-    display:block;
+.logo small span{
     color:var(--red);
-    font-weight:bold;
-    font-size:11px;
 }
 
 .nav-links{
@@ -113,76 +137,32 @@ header{
     gap:28px;
     font-size:13px;
     font-weight:bold;
+    text-transform:uppercase;
 }
 
 .nav-links a{
-    padding:35px 0;
-    position:relative;
+    padding:30px 0;
+    border-bottom:3px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a.active{
     color:var(--red);
+    border-bottom-color:var(--red);
 }
 
-.nav-links a.active:after{
-    content:"";
-    position:absolute;
-    bottom:22px;
-    left:0;
-    right:0;
-    height:3px;
-    background:var(--red);
-}
-
-.header-right{
-    display:flex;
-    align-items:center;
-    gap:20px;
-    white-space:nowrap;
-}
-
-.phone{
-    font-weight:bold;
-    font-size:14px;
-}
-
-.emergency{
-    font-size:12px;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+.quote-btn{
     background:var(--red);
     color:#fff;
-    padding:15px 25px;
-    font-weight:800;
+    padding:15px 24px;
+    font-weight:bold;
     text-transform:uppercase;
-    font-size:13px;
     border:none;
     cursor:pointer;
-    transition:.2s;
 }
 
-.btn:hover{
-    background:#bd0d12;
-    transform:translateY(-1px);
-}
-
-.btn-outline{
-    background:transparent;
-    border:2px solid #fff;
-}
-
-.btn-outline:hover{
-    background:#fff;
-    color:#111;
-}
-
-.mobile-menu{
-    display:none;
+.quote-btn:hover{
+    background:#ff2930;
 }
 
 /* =========================
@@ -190,41 +170,43 @@ header{
 ========================= */
 
 .hero{
-    min-height:520px;
+    min-height:570px;
     position:relative;
-    background:
-        linear-gradient(90deg,rgba(0,0,0,.9) 0%,rgba(0,0,0,.68) 38%,rgba(0,0,0,.15) 72%),
-        url("https://images.unsplash.com/photo-1603328203114-8b9c370b374d?auto=format&fit=crop&q=85&w=1800")
-        center/cover no-repeat;
-    color:#fff;
-}
-
-.hero-inner{
-    max-width:1400px;
-    margin:auto;
-    min-height:520px;
     display:flex;
     align-items:center;
-    padding:60px 32px;
+    overflow:hidden;
+
+    background:
+        linear-gradient(90deg,
+        rgba(0,0,0,.94) 0%,
+        rgba(0,0,0,.78) 38%,
+        rgba(0,0,0,.25) 72%,
+        rgba(0,0,0,.55) 100%),
+        url("https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=2000&q=85")
+        center/cover no-repeat;
 }
 
 .hero-content{
-    max-width:720px;
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:70px 40px;
+    color:#fff;
 }
 
-.kicker{
-    font-size:14px;
-    letter-spacing:3px;
+.hero-kicker{
+    font-size:15px;
+    letter-spacing:4px;
     font-weight:bold;
-    margin-bottom:12px;
+    margin-bottom:15px;
 }
 
 .hero h1{
-    font-size:60px;
-    line-height:.98;
+    font-size:64px;
+    line-height:.96;
     text-transform:uppercase;
+    max-width:750px;
     font-weight:900;
-    margin-bottom:15px;
 }
 
 .hero h1 span{
@@ -232,116 +214,158 @@ header{
 }
 
 .hero-location{
+    margin-top:20px;
     font-size:19px;
     font-weight:bold;
     letter-spacing:2px;
-    margin-bottom:15px;
 }
 
-.hero p{
-    font-size:17px;
+.hero-text{
     max-width:650px;
-    margin-bottom:25px;
+    margin-top:15px;
+    font-size:17px;
 }
 
 .hero-buttons{
     display:flex;
+    gap:14px;
+    margin-top:28px;
     flex-wrap:wrap;
-    gap:12px;
 }
+
+.btn{
+    display:inline-block;
+    padding:16px 25px;
+    font-weight:bold;
+    text-transform:uppercase;
+    border:2px solid var(--red);
+}
+
+.btn-red{
+    background:var(--red);
+    color:#fff;
+}
+
+.btn-outline{
+    background:transparent;
+    color:#fff;
+    border-color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* HERO SIDE CARDS */
 
 .hero-side{
-    margin-left:auto;
-    width:210px;
-    background:rgba(5,7,8,.9);
-    border:1px solid #555;
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width:220px;
+    background:rgba(0,0,0,.72);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.hero-side-item{
-    padding:20px;
+.hero-card{
+    padding:25px 20px;
     border-bottom:1px solid #444;
+    color:#fff;
 }
 
-.hero-side-item:last-child{
-    border-bottom:0;
-}
-
-.hero-side strong{
+.hero-card strong{
     display:block;
     font-size:15px;
 }
 
-.hero-side small{
-    color:#ddd;
+.hero-card span{
+    color:var(--red);
+    font-size:28px;
+    display:block;
+    margin-bottom:5px;
 }
 
 /* =========================
-   USP BAR
+   FEATURE BAR
 ========================= */
 
-.usp{
-    background:#0c0f12;
+.features{
+    background:#111317;
     color:#fff;
 }
 
-.usp-inner{
+.features-inner{
     max-width:1400px;
     margin:auto;
     display:grid;
     grid-template-columns:repeat(5,1fr);
 }
 
-.usp-item{
-    padding:20px 18px;
+.feature{
+    padding:25px 20px;
     border-right:1px solid #444;
-    display:flex;
-    gap:14px;
-    align-items:flex-start;
+    text-align:center;
 }
 
-.usp-icon{
-    font-size:30px;
+.feature:last-child{
+    border-right:none;
+}
+
+.feature-icon{
+    font-size:32px;
     color:#fff;
+    margin-bottom:8px;
 }
 
-.usp-item h3{
+.feature h3{
+    color:#fff;
     font-size:14px;
     text-transform:uppercase;
     margin-bottom:5px;
 }
 
-.usp-item p{
+.feature p{
+    color:#aaa;
     font-size:12px;
-    color:#ccc;
 }
 
 /* =========================
-   TRUST SECTION
+   EXPERIENCE
 ========================= */
 
-.trust{
-    max-width:1400px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1.1fr .9fr;
-    min-height:390px;
-}
-
-.van-image{
-    background:
-        linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.1)),
-        url("https://images.unsplash.com/photo-1617886322168-72b8865738b0?auto=format&fit=crop&q=85&w=1200")
-        center/cover no-repeat;
-    min-height:390px;
-}
-
-.trust-copy{
-    padding:35px;
+.experience{
+    padding:70px 25px;
     background:#fff;
 }
 
+.experience-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.05fr 1fr 1fr;
+    gap:0;
+    align-items:stretch;
+}
+
+.van-image{
+    min-height:420px;
+    background:
+        linear-gradient(135deg,rgba(0,0,0,.1),rgba(0,0,0,.3)),
+        url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d8?auto=format&fit=crop&w=1000&q=85")
+        center/cover no-repeat;
+}
+
+.experience-content{
+    padding:35px;
+    background:#f3f3f3;
+}
+
 .section-title{
-    font-size:26px;
+    font-size:28px;
     line-height:1.05;
     text-transform:uppercase;
     font-weight:900;
@@ -352,74 +376,93 @@ header{
     color:var(--red);
 }
 
-.trust-copy p{
+.experience-content p{
     font-size:15px;
     margin-bottom:15px;
 }
 
 .tick-list{
     list-style:none;
+    margin-top:15px;
 }
 
 .tick-list li{
-    margin:7px 0;
-    font-weight:bold;
+    margin:9px 0;
     font-size:14px;
 }
 
-.tick-list li:before{
+.tick-list li::before{
     content:"✓";
+    background:var(--red);
+    color:#fff;
+    width:20px;
+    height:20px;
     display:inline-flex;
     justify-content:center;
     align-items:center;
-    width:20px;
-    height:20px;
-    background:var(--red);
-    color:#fff;
     border-radius:50%;
     margin-right:9px;
-    font-size:12px;
+    font-weight:bold;
 }
+
+/* =========================
+   BEFORE / AFTER
+========================= */
 
 .before-after{
-    background:#f5f5f5;
-    padding:25px;
+    background:#f3f3f3;
+    padding:35px;
 }
 
-.before-after-grid{
+.before-after h2{
+    font-size:28px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+    font-weight:900;
+}
+
+.before-after h2 span{
+    color:var(--red);
+}
+
+.ba-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:8px;
 }
 
-.before-after figure{
+.ba-item{
     position:relative;
     overflow:hidden;
+    background:#ddd;
 }
 
-.before-after img{
+.ba-item img{
     width:100%;
-    height:220px;
+    height:250px;
     object-fit:cover;
 }
 
-.before-after figcaption{
-    background:#111;
-    color:#fff;
+.ba-label{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:10px;
     text-align:center;
-    padding:8px;
+    color:#fff;
     font-weight:bold;
-    font-size:13px;
+    background:#111;
 }
 
-.before-after figure:last-child figcaption{
+.ba-item.after .ba-label{
     background:var(--red);
 }
 
-.quote{
-    margin-top:15px;
+.testimonial{
+    margin-top:18px;
     font-style:italic;
-    font-size:13px;
+    font-size:14px;
 }
 
 /* =========================
@@ -428,46 +471,56 @@ header{
 
 .process{
     background:
-        linear-gradient(rgba(8,10,12,.94),rgba(8,10,12,.94)),
-        url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=85&w=1600")
+        linear-gradient(rgba(10,10,10,.94),rgba(10,10,10,.94)),
+        url("https://images.unsplash.com/photo-1580137189272-c9379f8864fd?auto=format&fit=crop&w=1800&q=80")
         center/cover;
     color:#fff;
+    padding:55px 25px;
 }
 
 .process-inner{
-    max-width:1400px;
+    max-width:1200px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(3,1fr) 1fr;
 }
 
-.process-item{
-    padding:30px;
-    border-right:1px solid #555;
+.process-step{
+    padding:15px 30px;
+    border-right:1px solid #444;
 }
 
-.number{
-    width:58px;
-    height:58px;
-    border:4px solid var(--red);
+.step-number{
+    width:55px;
+    height:55px;
+    border:5px solid var(--red);
     border-radius:50%;
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:20px;
     font-weight:900;
     margin-bottom:15px;
 }
 
-.process-item h3{
+.process-step h3{
     text-transform:uppercase;
-    font-size:20px;
+    font-size:22px;
     margin-bottom:8px;
 }
 
-.process-item p{
-    color:#ccc;
+.process-step p{
+    color:#bbb;
     font-size:14px;
+}
+
+.process-message{
+    padding:15px 30px;
+    display:flex;
+    align-items:center;
+    font-size:24px;
+    text-transform:uppercase;
+    font-weight:900;
+    font-style:italic;
 }
 
 /* =========================
@@ -475,40 +528,50 @@ header{
 ========================= */
 
 .sectors{
-    padding:45px 25px;
+    padding:60px 25px;
     background:#fff;
 }
 
 .sectors-inner{
-    max-width:1400px;
+    max-width:1200px;
     margin:auto;
+}
+
+.sectors-sub{
+    margin-bottom:25px;
 }
 
 .sector-grid{
     display:grid;
     grid-template-columns:repeat(7,1fr);
-    gap:8px;
-    margin-top:25px;
+    gap:7px;
 }
 
 .sector{
-    background:#101419;
+    background:#111317;
     color:#fff;
-    padding:25px 10px;
-    text-align:center;
-    min-height:105px;
+    min-height:120px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    font-weight:bold;
-    text-transform:uppercase;
-    font-size:11px;
+    text-align:center;
+    padding:12px;
+    transition:.2s;
+}
+
+.sector:hover{
+    background:var(--red);
 }
 
 .sector-icon{
     font-size:30px;
     margin-bottom:8px;
+}
+
+.sector strong{
+    font-size:12px;
+    text-transform:uppercase;
 }
 
 /* =========================
@@ -517,24 +580,24 @@ header{
 
 .photo-cta{
     min-height:330px;
-    color:#fff;
-    background:
-        linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.72),rgba(0,0,0,.35)),
-        url("https://images.unsplash.com/photo-1523726491678-bf852e717f6a?auto=format&fit=crop&q=85&w=1800")
-        center/cover;
     display:flex;
     align-items:center;
+    background:
+        linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.5)),
+        url("https://images.unsplash.com/photo-1526510747491-58f928ec870f?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    color:#fff;
+    padding:50px 25px;
 }
 
-.photo-cta-inner{
-    max-width:1400px;
+.photo-inner{
+    max-width:1200px;
     width:100%;
     margin:auto;
-    padding:55px 35px;
 }
 
 .photo-cta h2{
-    font-size:48px;
+    font-size:50px;
     line-height:.95;
     text-transform:uppercase;
     font-weight:900;
@@ -546,21 +609,19 @@ header{
 
 .photo-cta p{
     font-size:17px;
-    margin:12px 0 22px;
+    margin:15px 0 25px;
 }
 
-.cta-buttons{
+.photo-buttons{
     display:flex;
-    flex-wrap:wrap;
     gap:12px;
+    flex-wrap:wrap;
 }
 
 .whatsapp{
-    background:#16b95b;
-}
-
-.whatsapp:hover{
-    background:#0d8f45;
+    background:#19b84a;
+    color:#fff;
+    border-color:#19b84a;
 }
 
 /* =========================
@@ -568,8 +629,8 @@ header{
 ========================= */
 
 .services{
-    padding:55px 25px;
-    background:#f4f4f4;
+    padding:70px 25px;
+    background:#fff;
 }
 
 .services-inner{
@@ -577,35 +638,104 @@ header{
     margin:auto;
 }
 
+.services-header{
+    max-width:750px;
+    margin-bottom:35px;
+}
+
 .service-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:20px;
-    margin-top:30px;
 }
 
-.service-card{
-    background:#fff;
+.service{
+    border:1px solid #ddd;
     padding:30px;
-    border-top:5px solid var(--red);
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    background:#fafafa;
+    position:relative;
+    overflow:hidden;
 }
 
-.service-card span{
+.service::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:5px;
+    height:100%;
+    background:var(--red);
+}
+
+.service-number{
     color:var(--red);
     font-size:14px;
     font-weight:bold;
+    margin-bottom:8px;
 }
 
-.service-card h3{
+.service h3{
     text-transform:uppercase;
     font-size:21px;
-    margin:8px 0;
+    margin-bottom:10px;
 }
 
-.service-card p{
+.service p{
     color:#555;
     font-size:14px;
+}
+
+/* =========================
+   COMPLIANCE
+========================= */
+
+.compliance{
+    background:#111317;
+    color:#fff;
+    padding:70px 25px;
+}
+
+.compliance-inner{
+    max-width:1200px;
+    margin:auto;
+}
+
+.compliance-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.compliance h2{
+    font-size:42px;
+    line-height:1;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.compliance h2 span{
+    color:var(--red);
+}
+
+.compliance p{
+    color:#bbb;
+    margin-bottom:25px;
+}
+
+.credentials{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.credential{
+    background:#1d2025;
+    padding:18px 12px;
+    text-align:center;
+    font-size:13px;
+    font-weight:bold;
+    border:1px solid #333;
 }
 
 /* =========================
@@ -613,9 +743,8 @@ header{
 ========================= */
 
 .contact{
-    background:#0b0d0f;
-    color:#fff;
-    padding:60px 25px;
+    padding:70px 25px;
+    background:#f2f2f2;
 }
 
 .contact-inner{
@@ -623,13 +752,14 @@ header{
     margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:60px;
 }
 
 .contact h2{
-    font-size:48px;
+    font-size:44px;
     line-height:.95;
     text-transform:uppercase;
+    margin-bottom:20px;
 }
 
 .contact h2 span{
@@ -641,43 +771,69 @@ header{
 }
 
 .contact-detail{
-    margin:12px 0;
+    margin-bottom:18px;
 }
 
 .contact-detail strong{
-    color:var(--red);
-    margin-right:8px;
+    display:block;
+    text-transform:uppercase;
+    font-size:12px;
+    color:#777;
 }
 
-.form{
+.contact-detail a{
+    font-size:19px;
+    font-weight:bold;
+}
+
+form{
     background:#fff;
-    color:#111;
-    padding:30px;
+    padding:35px;
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
-.form h3{
+form h3{
     text-transform:uppercase;
     font-size:25px;
     margin-bottom:20px;
 }
 
-.form input,
-.form select,
-.form textarea{
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-size:12px;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
     width:100%;
     padding:13px;
     border:1px solid #ccc;
-    margin-bottom:12px;
     font-family:inherit;
+    font-size:14px;
 }
 
-.form textarea{
-    min-height:110px;
+.form-group textarea{
+    min-height:100px;
     resize:vertical;
 }
 
-.form button{
+.submit{
     width:100%;
+    padding:16px;
+    border:0;
+    background:var(--red);
+    color:#fff;
+    font-weight:bold;
+    text-transform:uppercase;
+    cursor:pointer;
 }
 
 /* =========================
@@ -685,232 +841,204 @@ header{
 ========================= */
 
 footer{
-    background:#050607;
+    background:#050505;
     color:#fff;
-    padding:35px 25px;
-    border-top:1px solid #333;
 }
 
-.footer-inner{
+.footer-main{
     max-width:1200px;
     margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:30px;
+    padding:45px 25px;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:50px;
 }
 
-.footer-brand strong{
-    font-size:20px;
+.footer-logo{
+    font-size:34px;
+    font-weight:900;
+    font-style:italic;
 }
 
-.footer-brand span{
+.footer-logo span{
     color:var(--red);
+}
+
+footer h4{
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#aaa;
+    font-size:14px;
+}
+
+footer a:hover{
+    color:#fff;
 }
 
 .footer-links{
     display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    font-size:13px;
+    flex-direction:column;
+    gap:7px;
 }
 
 .footer-bottom{
-    max-width:1200px;
-    margin:25px auto 0;
-    padding-top:20px;
-    border-top:1px solid #333;
-    color:#999;
+    border-top:1px solid #222;
+    padding:20px 25px;
+    text-align:center;
+    color:#777;
     font-size:12px;
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE
 ========================= */
 
 @media(max-width:1000px){
 
     .nav-links{
-        display:none;
-    }
-
-    .header-right .emergency{
-        display:none;
-    }
-
-    .mobile-menu{
-        display:block;
-        font-size:25px;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .hero-side{
-        display:none;
-    }
-
-    .usp-inner{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .trust{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .van-image{
-        min-height:350px;
-    }
-
-    .before-after{
-        grid-column:1 / -1;
-    }
-
-    .process-inner{
-        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+        font-size:10px;
     }
 
     .sector-grid{
         grid-template-columns:repeat(4,1fr);
     }
 
+    .experience-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-inner{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-message{
+        grid-column:span 2;
+    }
+
 }
 
-@media(max-width:700px){
+@media(max-width:750px){
 
-    .nav{
-        min-height:75px;
-        padding:10px 15px;
+    .topbar-inner{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:8px 18px;
     }
 
-    .logo-mark{
-        font-size:28px;
+    .nav-inner{
+        min-height:70px;
     }
 
-    .logo-text{
+    .logo{
+        font-size:29px;
+    }
+
+    .nav-links{
         display:none;
     }
 
-    .phone{
-        font-size:12px;
+    .nav-inner .quote-btn{
+        padding:11px 13px;
+        font-size:11px;
     }
 
-    .header-right .btn{
-        display:none;
+    .hero{
+        min-height:650px;
     }
 
-    .hero,
-    .hero-inner{
-        min-height:620px;
-    }
-
-    .hero-inner{
-        padding:45px 20px;
-        align-items:flex-end;
+    .hero-content{
+        padding:45px 22px;
     }
 
     .hero h1{
-        font-size:41px;
+        font-size:43px;
     }
 
     .hero-location{
         font-size:14px;
-        letter-spacing:1px;
     }
 
-    .hero p{
-        font-size:15px;
+    .hero-side{
+        display:none;
     }
 
-    .hero-buttons{
-        flex-direction:column;
-        align-items:stretch;
+    .features-inner{
+        grid-template-columns:1fr 1fr;
     }
 
-    .btn{
-        width:100%;
+    .feature{
+        border-bottom:1px solid #444;
     }
 
-    .usp-inner{
+    .ba-grid{
         grid-template-columns:1fr;
-    }
-
-    .usp-item{
-        border-right:0;
-        border-bottom:1px solid #333;
-    }
-
-    .trust{
-        grid-template-columns:1fr;
-    }
-
-    .van-image{
-        min-height:300px;
-    }
-
-    .trust-copy{
-        padding:28px 20px;
-    }
-
-    .before-after{
-        padding:20px;
-    }
-
-    .before-after img{
-        height:180px;
     }
 
     .process-inner{
         grid-template-columns:1fr;
     }
 
-    .process-item{
-        border-right:0;
-        border-bottom:1px solid #444;
-    }
-
-    .sector-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .photo-cta h2{
-        font-size:38px;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr;
-    }
-
-    .contact-inner{
-        grid-template-columns:1fr;
-    }
-
-    .contact h2{
-        font-size:39px;
-    }
-
-    .footer-inner{
-        flex-direction:column;
-    }
-
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width:420px){
-
-    .hero h1{
-        font-size:35px;
+    .process-message{
+        grid-column:auto;
     }
 
     .sector-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .before-after-grid{
+    .service-grid{
         grid-template-columns:1fr;
+    }
+
+    .compliance-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .credentials{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-inner{
+        grid-template-columns:1fr;
+    }
+
+    .footer-main{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .photo-cta h2{
+        font-size:38px;
+    }
+
+}
+
+@media(max-width:450px){
+
+    .hero h1{
+        font-size:37px;
+    }
+
+    .features-inner{
+        grid-template-columns:1fr;
+    }
+
+    .sector-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .credentials{
+        grid-template-columns:1fr;
+    }
+
+    .contact h2{
+        font-size:36px;
     }
 
 }
@@ -920,82 +1048,78 @@ footer{
 
 <body>
 
-<header>
+<!-- =========================
+     TOP BAR
+========================= -->
 
-<div class="nav">
+<div class="topbar">
+    <div class="topbar-inner">
+        <div>☎ <strong>24/7 EMERGENCY RESPONSE</strong></div>
+        <div class="phone"><span>☎</span> 07488 296220</div>
+    </div>
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header class="navbar">
+
+<div class="nav-inner">
 
 <a href="#home" class="logo">
-
-<div class="logo-mark">
-S<span>&</span>K
-</div>
-
-<div class="logo-text">
-<strong>SPECIALIST</strong>
-<small>GRAFFITI RESPONSE</small>
-</div>
-
+    S<span class="amp">&amp;</span>K
+    <small>SPECIALIST <span>GRAFFITI RESPONSE</span></small>
 </a>
 
 <nav class="nav-links">
-
-<a href="#home" class="active">HOME</a>
-<a href="#services">SERVICES</a>
-<a href="#about">ABOUT</a>
-<a href="#process">OUR PROCESS</a>
-<a href="#commercial">COMMERCIAL</a>
-<a href="#compliance">COMPLIANCE</a>
-<a href="#contact">CONTACT</a>
-
+    <a href="#home" class="active">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#process">Our Process</a>
+    <a href="#sectors">Commercial</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<div class="header-right">
-
-<div class="emergency">☎ 24/7 EMERGENCY RESPONSE</div>
-
-<div class="phone">07488 296220</div>
-
-<a href="#contact" class="btn">REQUEST A QUOTE</a>
-
-</div>
-
-<div class="mobile-menu">☰</div>
+<a href="#contact" class="quote-btn">Request a Quote</a>
 
 </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
-<div class="hero-inner">
-
 <div class="hero-content">
 
-<div class="kicker">
+<div class="hero-kicker">
 COMMERCIAL GRAFFITI REMOVAL SPECIALISTS
 </div>
 
 <h1>
-PROFESSIONAL<br>
-<span>GRAFFITI REMOVAL</span><br>
+PROFESSIONAL
+<span>GRAFFITI REMOVAL</span>
 &amp; PREVENTION
 </h1>
 
 <div class="hero-location">
-NORTH WALES &nbsp;|&nbsp; CHESHIRE &nbsp;|&nbsp; NORTH WEST
+NORTH WALES &nbsp; | &nbsp; CHESHIRE &nbsp; | &nbsp; NORTH WEST
 </div>
 
-<p>
+<p class="hero-text">
 Rapid response. Specialist treatment. Proven results.
 Keeping your sites, properties and public spaces graffiti free.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#contact" class="btn">
+<a href="#contact" class="btn btn-red">
 REQUEST A QUOTE →
 </a>
 
@@ -1007,23 +1131,27 @@ REQUEST A QUOTE →
 
 </div>
 
+
 <div class="hero-side">
 
-<div class="hero-side-item">
-<strong>◷ &nbsp; 24/7</strong>
-<small>EMERGENCY RESPONSE</small>
+<div class="hero-card">
+<span>◷</span>
+<strong>24/7</strong>
+Emergency Response
 </div>
 
-<div class="hero-side-item">
-<strong>✓ &nbsp; £5 MILLION</strong>
-<small>PUBLIC LIABILITY INSURANCE</small>
+<div class="hero-card">
+<span>✓</span>
+<strong>£5 MILLION</strong>
+Public Liability
 </div>
 
-<div class="hero-side-item">
-<strong>⌖ &nbsp; LOCAL RESPONSE</strong>
-<small>NORTH WALES<br>CHESHIRE<br>NORTH WEST</small>
-</div>
-
+<div class="hero-card">
+<span>⌖</span>
+<strong>LOCAL</strong>
+North Wales<br>
+Cheshire<br>
+North West
 </div>
 
 </div>
@@ -1031,81 +1159,61 @@ REQUEST A QUOTE →
 </section>
 
 
-<!-- USP -->
+<!-- =========================
+     FEATURES
+========================= -->
 
-<section class="usp">
+<section class="features">
 
-<div class="usp-inner">
+<div class="features-inner">
 
-<div class="usp-item">
-
-<div class="usp-icon">⚗</div>
-
-<div>
+<div class="feature">
+<div class="feature-icon">⚗</div>
 <h3>Specialist Treatment</h3>
 <p>Surface specific solutions using professional products.</p>
 </div>
 
-</div>
-
-<div class="usp-item">
-
-<div class="usp-icon">ϟ</div>
-
-<div>
+<div class="feature">
+<div class="feature-icon">ϟ</div>
 <h3>Rapid Response</h3>
 <p>Fast, reliable and discreet service when you need it most.</p>
 </div>
 
-</div>
-
-<div class="usp-item">
-
-<div class="usp-icon">♢</div>
-
-<div>
+<div class="feature">
+<div class="feature-icon">♢</div>
 <h3>Surface Protection</h3>
 <p>Anti-graffiti coatings to help reduce future incidents.</p>
 </div>
 
-</div>
-
-<div class="usp-item">
-
-<div class="usp-icon">☷</div>
-
-<div>
+<div class="feature">
+<div class="feature-icon">☷</div>
 <h3>Professional Compliance</h3>
 <p>RAMS, COSHH, SDS and full documentation.</p>
 </div>
 
-</div>
-
-<div class="usp-item">
-
-<div class="usp-icon">♧</div>
-
-<div>
+<div class="feature">
+<div class="feature-icon">♧</div>
 <h3>Responsible Waste</h3>
 <p>Registered Waste Carrier – 00824939.</p>
 </div>
 
 </div>
 
-</div>
-
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
-<section id="about">
+<section class="experience" id="about">
 
-<div class="trust">
+<div class="experience-grid">
 
-<div class="van-image"></div>
+<div class="van-image">
+</div>
 
-<div class="trust-copy">
+<div class="experience-content">
 
 <h2 class="section-title">
 EXPERIENCE YOU CAN <span>TRUST</span>
@@ -1136,33 +1244,43 @@ removal and prevention.
 </div>
 
 
+<!-- BEFORE AND AFTER -->
+
 <div class="before-after">
 
-<h2 class="section-title">
-BEFORE &amp; <span>AFTER RESULTS</span>
+<h2>
+BEFORE &amp; <span>AFTER</span>
 </h2>
 
-<div class="before-after-grid">
+<div class="ba-grid">
 
-<figure>
+<div class="ba-item">
 
-<img src="https://images.unsplash.com/photo-1601647027864-2d0521ffe66c?auto=format&fit=crop&q=85&w=900" alt="Graffiti covered wall">
+<img
+src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=900&q=85"
+alt="Graffiti before removal">
 
-<figcaption>BEFORE</figcaption>
-
-</figure>
-
-<figure>
-
-<img src="https://images.unsplash.com/photo-1603328203114-8b9c370b374d?auto=format&fit=crop&q=85&w=900" alt="Clean wall after graffiti removal">
-
-<figcaption>AFTER</figcaption>
-
-</figure>
+<div class="ba-label">
+BEFORE
+</div>
 
 </div>
 
-<p class="quote">
+<div class="ba-item after">
+
+<img
+src="https://images.unsplash.com/photo-1590845947676-fa2576f401d2?auto=format&fit=crop&w=900&q=85"
+alt="Clean wall after graffiti removal">
+
+<div class="ba-label">
+AFTER
+</div>
+
+</div>
+
+</div>
+
+<p class="testimonial">
 “Professional service, great communication and excellent results.
 Highly recommended.”
 <br><br>
@@ -1176,15 +1294,17 @@ Highly recommended.”
 </section>
 
 
-<!-- PROCESS -->
+<!-- =========================
+     PROCESS
+========================= -->
 
 <section class="process" id="process">
 
 <div class="process-inner">
 
-<div class="process-item">
+<div class="process-step">
 
-<div class="number">01</div>
+<div class="step-number">01</div>
 
 <h3>Remove</h3>
 
@@ -1195,9 +1315,10 @@ for the surface.
 
 </div>
 
-<div class="process-item">
 
-<div class="number">02</div>
+<div class="process-step">
+
+<div class="step-number">02</div>
 
 <h3>Restore</h3>
 
@@ -1207,30 +1328,24 @@ Careful treatment to return surfaces to an acceptable condition.
 
 </div>
 
-<div class="process-item">
 
-<div class="number">03</div>
+<div class="process-step">
+
+<div class="step-number">03</div>
 
 <h3>Protect</h3>
 
 <p>
-Anti-graffiti coatings to make future incidents easier
-and cheaper to remove.
+Anti-graffiti coatings to make future incidents easier and
+cheaper to remove.
 </p>
 
 </div>
 
-<div class="process-item">
 
-<div class="number">04</div>
-
-<h3>Respond</h3>
-
-<p>
-Rapid response for commercial premises, public spaces,
-managed property and infrastructure.
-</p>
-
+<div class="process-message">
+MORE THAN A CLEANER.<br>
+A SAFER, BRIGHTER TOMORROW.
 </div>
 
 </div>
@@ -1238,9 +1353,11 @@ managed property and infrastructure.
 </section>
 
 
-<!-- SECTORS -->
+<!-- =========================
+     SECTORS
+========================= -->
 
-<section class="sectors" id="commercial">
+<section class="sectors" id="sectors">
 
 <div class="sectors-inner">
 
@@ -1248,46 +1365,47 @@ managed property and infrastructure.
 BUILT FOR <span>PROPERTY TEAMS</span>
 </h2>
 
-<p>
+<p class="sectors-sub">
 A specialist contractor supporting commercial, public sector
 and private clients.
 </p>
+
 
 <div class="sector-grid">
 
 <div class="sector">
 <div class="sector-icon">▥</div>
-Commercial<br>&amp; Industrial
+<strong>Commercial<br>&amp; Industrial</strong>
 </div>
 
 <div class="sector">
 <div class="sector-icon">⌂</div>
-Housing &amp;<br>Social Landlords
+<strong>Housing &amp;<br>Social Landlords</strong>
 </div>
 
 <div class="sector">
 <div class="sector-icon">♜</div>
-Local Authorities<br>&amp; Councils
+<strong>Local Authorities<br>&amp; Councils</strong>
 </div>
 
 <div class="sector">
 <div class="sector-icon">▤</div>
-Retail &amp;<br>Leisure
+<strong>Retail &amp;<br>Leisure</strong>
 </div>
 
 <div class="sector">
 <div class="sector-icon">▥</div>
-Property<br>Management
+<strong>Property<br>Management</strong>
 </div>
 
 <div class="sector">
 <div class="sector-icon">⌑</div>
-Schools &amp;<br>Education
+<strong>Schools &amp;<br>Education</strong>
 </div>
 
 <div class="sector">
 <div class="sector-icon">▣</div>
-Transport &amp;<br>Infrastructure
+<strong>Transport &amp;<br>Infrastructure</strong>
 </div>
 
 </div>
@@ -1297,11 +1415,13 @@ Transport &amp;<br>Infrastructure
 </section>
 
 
-<!-- PHOTO CTA -->
+<!-- =========================
+     PHOTO CTA
+========================= -->
 
 <section class="photo-cta">
 
-<div class="photo-cta-inner">
+<div class="photo-inner">
 
 <h2>
 GRAFFITI?<br>
@@ -1312,9 +1432,11 @@ GRAFFITI?<br>
 Get a fast, no obligation assessment and quotation.
 </p>
 
-<div class="cta-buttons">
+<div class="photo-buttons">
 
-<a href="https://wa.me/447488296220" class="btn whatsapp">
+<a
+href="https://wa.me/447488296220"
+class="btn whatsapp">
 ☏ SEND ON WHATSAPP
 </a>
 
@@ -1322,7 +1444,7 @@ Get a fast, no obligation assessment and quotation.
 📷 SEND A PHOTO
 </a>
 
-<a href="#contact" class="btn">
+<a href="#contact" class="btn btn-red">
 REQUEST A QUOTE →
 </a>
 
@@ -1333,39 +1455,48 @@ REQUEST A QUOTE →
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section class="services" id="services">
 
 <div class="services-inner">
+
+<div class="services-header">
 
 <h2 class="section-title">
 SPECIALIST <span>SERVICES</span>
 </h2>
 
 <p>
-Professional graffiti removal, restoration and surface protection
-designed for commercial and public environments.
-</p>
-
-<div class="service-grid">
-
-<div class="service-card">
-
-<span>01 — REMOVAL</span>
-
-<h3>Graffiti Removal</h3>
-
-<p>
-Professional removal of spray paint, marker pen and other graffiti
-from brick, concrete, masonry and other suitable surfaces.
+Professional graffiti removal, restoration and surface
+protection designed for commercial and public environments.
 </p>
 
 </div>
 
-<div class="service-card">
 
-<span>02 — RESTORATION</span>
+<div class="service-grid">
+
+
+<div class="service">
+
+<div class="service-number">01 — REMOVAL</div>
+
+<h3>Graffiti Removal</h3>
+
+<p>
+Professional removal of spray paint, marker pen and other
+graffiti from brick, concrete, masonry and other suitable surfaces.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02 — RESTORATION</div>
 
 <h3>Surface Restoration</h3>
 
@@ -1376,9 +1507,10 @@ to the surface, substrate and type of graffiti.
 
 </div>
 
-<div class="service-card">
 
-<span>03 — PROTECTION</span>
+<div class="service">
+
+<div class="service-number">03 — PROTECTION</div>
 
 <h3>Anti-Graffiti Coatings</h3>
 
@@ -1389,22 +1521,24 @@ faster and more cost-effective to remove.
 
 </div>
 
-<div class="service-card">
 
-<span>04 — EMERGENCY</span>
+<div class="service">
+
+<div class="service-number">04 — EMERGENCY</div>
 
 <h3>Reactive Response</h3>
 
 <p>
-Rapid response for unwanted graffiti affecting commercial premises,
-public areas, managed property and infrastructure.
+Rapid response for unwanted graffiti affecting commercial
+premises, public areas, managed property and infrastructure.
 </p>
 
 </div>
 
-<div class="service-card">
 
-<span>05 — COMMERCIAL</span>
+<div class="service">
+
+<div class="service-number">05 — COMMERCIAL</div>
 
 <h3>Planned Programmes</h3>
 
@@ -1415,9 +1549,10 @@ facilities teams, landlords and organisations with multiple locations.
 
 </div>
 
-<div class="service-card">
 
-<span>06 — DOCUMENTATION</span>
+<div class="service">
+
+<div class="service-number">06 — DOCUMENTATION</div>
 
 <h3>Professional Compliance</h3>
 
@@ -1435,30 +1570,68 @@ reporting to support responsible contractor management.
 </section>
 
 
-<!-- COMPLIANCE -->
+<!-- =========================
+     COMPLIANCE
+========================= -->
 
-<section class="process" id="compliance">
+<section class="compliance" id="compliance">
 
-<div class="photo-cta-inner">
+<div class="compliance-inner">
 
-<h2 style="font-size:42px;">
+<div class="compliance-grid">
+
+<div>
+
+<h2>
 PROFESSIONAL<br>
-<span style="color:var(--red);">COMPLIANCE</span>
+<span>COMPLIANCE</span>
 </h2>
 
-<p style="max-width:700px;margin-top:15px;">
+<p>
 A professional service built around safe systems of work,
 appropriate products and clear documentation.
 </p>
 
-<div class="tick-list" style="margin-top:20px;">
+<p>
+We understand the requirements of professional facilities
+and property teams and provide documentation to support
+safe and compliant delivery.
+</p>
 
-<div>✓ BICS Registered</div>
-<div>✓ ILM Leadership &amp; Management</div>
-<div>✓ IOSH Managing Safely</div>
-<div>✓ Specialist Training</div>
-<div>✓ Registered Waste Carrier</div>
-<div>✓ £5m Public Liability Insurance</div>
+<a href="#contact" class="btn btn-red">
+DISCUSS YOUR REQUIREMENTS →
+</a>
+
+</div>
+
+
+<div class="credentials">
+
+<div class="credential">
+BICS<br>REGISTERED
+</div>
+
+<div class="credential">
+ILM<br>LEADERSHIP
+</div>
+
+<div class="credential">
+IOSH<br>MANAGING SAFELY
+</div>
+
+<div class="credential">
+SPECIALIST<br>TRAINING
+</div>
+
+<div class="credential">
+WASTE<br>CARRIER
+</div>
+
+<div class="credential">
+£5M PUBLIC<br>LIABILITY
+</div>
+
+</div>
 
 </div>
 
@@ -1467,82 +1640,140 @@ appropriate products and clear documentation.
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contact">
 
 <div class="contact-inner">
 
+
 <div>
 
 <h2>
 GET YOUR<br>
-<span>GRAFFITI</span><br>
-SORTED.
+<span>GRAFFITI SORTED.</span>
 </h2>
 
-<p style="margin-top:20px;">
+<p>
 Send us a photograph of the graffiti, tell us where it is
 and we'll provide a fast assessment and quotation.
 </p>
 
+
 <div class="contact-details">
 
 <div class="contact-detail">
-<strong>PHONE</strong> 07488 296220
+<strong>Phone</strong>
+<a href="tel:07488296220">
+07488 296220
+</a>
 </div>
 
 <div class="contact-detail">
-<strong>EMAIL</strong>
+<strong>Email</strong>
+<a href="mailto:info@skspecialistgraffitiresponse.co.uk">
 info@skspecialistgraffitiresponse.co.uk
+</a>
 </div>
 
 <div class="contact-detail">
-<strong>AREA</strong>
+<strong>Area</strong>
 North Wales | Cheshire | North West
 </div>
 
 <div class="contact-detail">
-<strong>RESPONSE</strong>
+<strong>Response</strong>
 24/7 Emergency Response
 </div>
 
 </div>
 
+<a
+href="https://wa.me/447488296220"
+class="btn whatsapp">
+☏ MESSAGE US ON WHATSAPP
+</a>
+
 </div>
 
 
-<div class="form">
-
-<h3>Request a Quote</h3>
-
-<form action="mailto:info@skspecialistgraffitiresponse.co.uk"
+<form
+action="mailto:info@skspecialistgraffitiresponse.co.uk"
 method="post"
 enctype="text/plain">
 
-<input type="text" name="Name" placeholder="Your Name" required>
+<h3>Request a Quote</h3>
 
-<input type="text" name="Company" placeholder="Company / Organisation">
 
-<input type="tel" name="Telephone" placeholder="Telephone Number" required>
+<div class="form-group">
+<label>Your Name</label>
+<input
+type="text"
+name="Name"
+placeholder="Your name"
+required>
+</div>
 
-<input type="email" name="Email" placeholder="Email Address" required>
+
+<div class="form-group">
+<label>Company / Organisation</label>
+<input
+type="text"
+name="Company"
+placeholder="Company or organisation">
+</div>
+
+
+<div class="form-group">
+<label>Telephone Number</label>
+<input
+type="tel"
+name="Telephone"
+placeholder="Telephone number"
+required>
+</div>
+
+
+<div class="form-group">
+<label>Email Address</label>
+<input
+type="email"
+name="Email"
+placeholder="Email address"
+required>
+</div>
+
+
+<div class="form-group">
+<label>What do you need help with?</label>
 
 <select name="Service">
 
-<option value="">Select Service</option>
-
 <option>Graffiti Removal</option>
 <option>Emergency Response</option>
-<option>Surface Restoration</option>
 <option>Anti-Graffiti Protection</option>
-<option>Planned Graffiti Programme</option>
+<option>Commercial Programme</option>
+<option>Surface Restoration</option>
+<option>Other</option>
 
 </select>
 
-<textarea name="Message" placeholder="Tell us about the graffiti or site..."></textarea>
+</div>
 
-<button type="submit" class="btn">
+
+<div class="form-group">
+<label>Tell us about the graffiti</label>
+
+<textarea
+name="Message"
+placeholder="Location, surface, size of graffiti etc."></textarea>
+
+</div>
+
+
+<button class="submit" type="submit">
 REQUEST MY QUOTE →
 </button>
 
@@ -1550,30 +1781,41 @@ REQUEST MY QUOTE →
 
 </div>
 
-</div>
-
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<div class="footer-inner">
+<div class="footer-main">
 
-<div class="footer-brand">
-
-<strong>S&amp;K <span>SPECIALIST</span></strong>
 
 <div>
+
+<div class="footer-logo">
+S<span>&amp;</span>K SPECIALIST
+</div>
+
+<p>
 GRAFFITI RESPONSE
+</p>
+
+<br>
+
+<p>
+Professional graffiti removal and reactive response across
+North Wales, Cheshire and the North West.
+</p>
+
 </div>
 
-<small>
-Remove | Restore | Protect
-</small>
 
-</div>
+<div>
+
+<h4>Quick Links</h4>
 
 <div class="footer-links">
 
@@ -1588,14 +1830,48 @@ Remove | Restore | Protect
 
 </div>
 
+
+<div>
+
+<h4>Contact</h4>
+
+<div class="footer-links">
+
+<a href="tel:07488296220">
+07488 296220
+</a>
+
+<a href="mailto:info@skspecialistgraffitiresponse.co.uk">
+info@skspecialistgraffitiresponse.co.uk
+</a>
+
+<a href="#contact">
+North Wales
+</a>
+
+<a href="#contact">
+Cheshire
+</a>
+
+<a href="#contact">
+North West
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
 <div class="footer-bottom">
 
 © 2026 S&amp;K Specialist Graffiti Response Ltd.
 All rights reserved.
 
-&nbsp; | &nbsp;
+<br>
 
-North Wales | Cheshire | North West
+REMOVE | RESTORE | PROTECT
 
 </div>
 
