@@ -59,10 +59,11 @@ body{
 .hotspot{
     position:absolute;
     display:block;
-    z-index:20;
+    z-index:9999;
     text-decoration:none;
     cursor:pointer;
     background:transparent;
+    pointer-events:auto;
 }
 
 /* ================================
@@ -924,6 +925,28 @@ document.querySelector(".home")
 
     }
 );
+
+
+// Ensure .buttons has an explicit height that matches the hero image so percentage-based hotspot sizes work
+(function(){
+  const heroImage = document.querySelector('.hero-image');
+  const buttons = document.querySelector('.buttons');
+
+  function setButtonsHeight(){
+    if(heroImage && buttons){
+      buttons.style.height = heroImage.getBoundingClientRect().height + 'px';
+    }
+  }
+
+  if(heroImage){
+    if(heroImage.complete){
+      setButtonsHeight();
+    } else {
+      heroImage.addEventListener('load', setButtonsHeight);
+    }
+    window.addEventListener('resize', setButtonsHeight);
+  }
+})();
 
 </script>
 
