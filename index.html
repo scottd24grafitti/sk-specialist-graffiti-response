@@ -6,14 +6,14 @@
 
 <title>S&K Specialist Graffiti Response | 24/7 Graffiti Removal</title>
 
-<meta name="description" content="S&K Specialist Graffiti Response provides professional 24/7 graffiti removal, emergency response and surface protection across North Wales, Cheshire and the North West.">
+<meta name="description" content="S&K Specialist Graffiti Response provides professional graffiti removal, surface restoration and anti-graffiti protection across North Wales, Cheshire and the North West.">
 
 <style>
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -22,19 +22,70 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #080a0d;
-    color: #fff;
-    line-height: 1.6;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.5;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+:root {
+    --red: #ed1c24;
+    --dark: #08090b;
+    --dark2: #121417;
+    --light: #f4f4f4;
+    --grey: #777;
 }
+
+/* =========================
+   GENERAL
+========================= */
 
 .container {
-    width: min(1150px, 92%);
+    width: 92%;
+    max-width: 1200px;
     margin: auto;
+}
+
+.red {
+    color: var(--red);
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 28px;
+    background: var(--red);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    border-radius: 2px;
+    transition: .25s ease;
+    border: 2px solid var(--red);
+}
+
+.btn:hover {
+    background: #c81018;
+    border-color: #c81018;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 16px 28px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    border: 2px solid white;
+    border-radius: 2px;
+    margin-left: 8px;
+    transition: .25s ease;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #111;
 }
 
 /* =========================
@@ -42,15 +93,16 @@ a {
 ========================= */
 
 header {
+    background: #070809;
+    color: white;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(8,10,13,0.97);
-    border-bottom: 1px solid #272c32;
+    border-bottom: 1px solid #292929;
 }
 
-.nav {
-    min-height: 76px;
+.navbar {
+    min-height: 92px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -58,67 +110,80 @@ header {
 }
 
 .logo {
-    font-size: 21px;
+    text-decoration: none;
+    color: white;
+    line-height: .85;
+    font-style: italic;
     font-weight: 900;
-    letter-spacing: 1px;
+    min-width: 190px;
 }
 
-.logo span {
-    display: block;
-    color: #89919b;
-    font-size: 9px;
-    letter-spacing: 2px;
-    margin-top: -3px;
+.logo-main {
+    font-size: 45px;
+    letter-spacing: -4px;
+}
+
+.logo-main span {
+    color: var(--red);
+}
+
+.logo-sub {
+    font-size: 17px;
+    letter-spacing: -1px;
+}
+
+.logo-tag {
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .5px;
+    margin-top: 4px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 26px;
+    gap: 28px;
 }
 
 nav a {
-    color: #c4c9cf;
-    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
     font-weight: 700;
+    text-transform: uppercase;
+    padding: 35px 0;
+    border-bottom: 3px solid transparent;
 }
 
-nav a:hover {
-    color: #fff;
+nav a:hover,
+nav a.active {
+    color: var(--red);
+    border-bottom-color: var(--red);
 }
 
-.nav-button {
-    background: #fff;
-    color: #080a0d !important;
-    padding: 11px 18px;
-    border-radius: 5px;
-}
-
-/* =========================
-   EMERGENCY BAR
-========================= */
-
-.emergency-bar {
-    background: #171b20;
-    border-bottom: 1px solid #30363d;
-}
-
-.emergency-inner {
-    min-height: 42px;
+.header-right {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 12px;
-    font-size: 13px;
+    gap: 18px;
+}
+
+.phone {
+    color: white;
+    text-decoration: none;
     font-weight: 800;
+    font-size: 14px;
 }
 
-.emergency-inner span {
-    color: #aeb5bd;
+.emergency {
+    font-size: 11px;
+    color: #ddd;
+    white-space: nowrap;
 }
 
-.emergency-inner a {
-    color: #fff;
+.header-btn {
+    padding: 13px 20px;
+    font-size: 12px;
 }
 
 /* =========================
@@ -126,331 +191,218 @@ nav a:hover {
 ========================= */
 
 .hero {
-    min-height: 720px;
+    min-height: 530px;
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
     overflow: hidden;
 
     background:
-        linear-gradient(
-            90deg,
-            #080a0d 0%,
-            rgba(8,10,13,.97) 38%,
-            rgba(8,10,13,.75) 65%,
-            rgba(8,10,13,.92) 100%
-        ),
-        radial-gradient(
-            circle at 80% 40%,
-            #414850 0%,
-            #1b2026 35%,
-            #080a0d 70%
-        );
-}
+        linear-gradient(90deg,
+        rgba(0,0,0,.93) 0%,
+        rgba(0,0,0,.78) 38%,
+        rgba(0,0,0,.35) 72%,
+        rgba(0,0,0,.72) 100%),
+        url("https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=1800&q=85");
 
-.hero:after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(
-            135deg,
-            transparent 48%,
-            rgba(255,255,255,.025) 49%,
-            transparent 50%
-        );
-    background-size: 35px 35px;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    color: white;
+    width: 62%;
+    padding: 70px 0;
 }
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    border: 1px solid #454c54;
-    padding: 8px 13px;
-    border-radius: 4px;
-    color: #d0d4d8;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
+.eyebrow {
+    font-size: 15px;
     text-transform: uppercase;
-    margin-bottom: 22px;
-}
-
-.hero-badge:before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    background: #fff;
-    border-radius: 50%;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 8px;
 }
 
 .hero h1 {
-    font-size: clamp(45px, 7vw, 84px);
-    line-height: .95;
-    letter-spacing: -4px;
-    margin-bottom: 27px;
+    font-size: clamp(42px, 5vw, 70px);
+    line-height: .96;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
 }
 
 .hero h1 span {
-    color: #aeb5bd;
+    color: var(--red);
 }
 
-.hero p {
-    color: #bdc3ca;
-    font-size: 19px;
-    max-width: 690px;
-    margin-bottom: 35px;
+.hero-location {
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
 }
 
-.buttons {
+.hero-text {
+    max-width: 620px;
+    font-size: 17px;
+    color: #e5e5e5;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: 13px;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 24px;
-    border-radius: 5px;
-    font-weight: 900;
-    border: 1px solid #fff;
-    transition: .2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.btn-primary {
-    background: #fff;
-    color: #080a0d;
-}
-
-.btn-secondary {
-    background: transparent;
-    border-color: #505760;
-    color: #fff;
+    gap: 10px;
 }
 
 /* =========================
-   TRUST
+   TRUST STRIP
 ========================= */
 
-.trust {
-    background: #15191e;
-    border-top: 1px solid #292f36;
-    border-bottom: 1px solid #292f36;
+.trust-strip {
+    background: #101214;
+    color: white;
 }
 
 .trust-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .trust-item {
-    padding: 24px 18px;
-    border-right: 1px solid #292f36;
+    padding: 25px 18px;
+    border-right: 1px solid #444;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
 }
 
-.trust-item:last-child {
-    border-right: none;
+.trust-icon {
+    font-size: 30px;
+    color: white;
 }
 
-.trust-item strong {
-    display: block;
+.trust-item h3 {
     font-size: 14px;
-    margin-bottom: 3px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
 }
 
-.trust-item span {
-    color: #8e969f;
+.trust-item p {
+    color: #bbb;
     font-size: 12px;
 }
 
 /* =========================
-   GENERAL SECTIONS
+   EXPERIENCE
 ========================= */
 
-section {
-    padding: 100px 0;
+.experience {
+    padding: 65px 0;
+    background: white;
 }
 
-.section-header {
-    max-width: 760px;
-    margin-bottom: 55px;
-}
-
-.section-label {
-    color: #858d96;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 11px;
-    font-weight: 900;
-    margin-bottom: 15px;
-}
-
-.section-header h2 {
-    font-size: clamp(35px, 5vw, 56px);
-    line-height: 1.03;
-    letter-spacing: -1.5px;
-    margin-bottom: 18px;
-}
-
-.section-header p {
-    color: #aab1b9;
-    font-size: 17px;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services {
-    background: #0e1115;
-}
-
-.service-grid {
+.experience-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    min-height: 390px;
 }
 
-.service {
-    background: #171b20;
-    border: 1px solid #2a3037;
+.van-image {
+    background:
+        linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
+        url("https://images.unsplash.com/photo-1609521263047-f8f205293f24?auto=format&fit=crop&w=1000&q=85");
+    background-size: cover;
+    background-position: center;
+    min-height: 390px;
+}
+
+.experience-content {
     padding: 35px;
-    min-height: 260px;
-    transition: .25s ease;
+    background: #f4f4f4;
 }
 
-.service:hover {
-    border-color: #606872;
-    transform: translateY(-4px);
+.experience-content h2,
+.before-after h2 {
+    font-size: 27px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 14px;
 }
 
-.service-number {
-    color: #707982;
-    font-size: 11px;
+.experience-content p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.tick-list {
+    list-style: none;
+}
+
+.tick-list li {
+    margin: 7px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tick-list li::before {
+    content: "✓";
+    background: var(--red);
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin-right: 9px;
     font-weight: 900;
-    letter-spacing: 2px;
-    margin-bottom: 42px;
 }
 
-.service h3 {
-    font-size: 25px;
-    margin-bottom: 12px;
+.before-after {
+    padding: 35px;
 }
 
-.service p {
-    color: #a6adb5;
-}
-
-/* =========================
-   COMMERCIAL
-========================= */
-
-.commercial {
-    background: #e9ebed;
-    color: #101318;
-}
-
-.commercial .section-label {
-    color: #666d75;
-}
-
-.commercial .section-header p {
-    color: #535a62;
-}
-
-.commercial-grid {
+.before-after-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 65px;
-    align-items: start;
+    gap: 5px;
 }
 
-.commercial-list {
-    display: grid;
-    gap: 12px;
+.ba {
+    height: 235px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.commercial-list div {
-    background: #fff;
-    border: 1px solid #d4d8dc;
-    padding: 18px 20px;
-    font-weight: 800;
+.ba.before {
+    background-image:
+        url("https://images.unsplash.com/photo-1529958030586-3aae4ca485ff?auto=format&fit=crop&w=800&q=85");
 }
 
-.commercial-list div:before {
-    content: "✓";
-    margin-right: 12px;
+.ba.after {
+    background-image:
+        url("https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=800&q=85");
+}
+
+.ba-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: white;
     font-weight: 900;
+    background: rgba(0,0,0,.85);
 }
 
-.commercial-copy {
-    color: #535a62;
-    font-size: 18px;
-}
-
-/* =========================
-   24/7 RESPONSE
-========================= */
-
-.response {
-    background: #080a0d;
-}
-
-.response-box {
-    border: 1px solid #343a42;
-    padding: 55px;
-    display: grid;
-    grid-template-columns: 1.2fr .8fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.response-box h2 {
-    font-size: clamp(38px, 5vw, 60px);
-    line-height: 1;
-    letter-spacing: -2px;
-}
-
-.response-box p {
-    color: #a8afb7;
-    margin-top: 20px;
-    max-width: 650px;
-}
-
-.response-call {
-    background: #171b20;
-    border: 1px solid #333941;
-    padding: 30px;
-}
-
-.response-call small {
-    display: block;
-    color: #7f8790;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 10px;
-    font-weight: 900;
-    margin-bottom: 7px;
-}
-
-.response-call a {
-    display: block;
-    font-size: 25px;
-    font-weight: 900;
-    margin-bottom: 20px;
+.ba.after .ba-label {
+    background: var(--red);
 }
 
 /* =========================
@@ -458,222 +410,159 @@ section {
 ========================= */
 
 .process {
-    background: #101318;
+    background:
+        linear-gradient(rgba(10,10,10,.95),rgba(10,10,10,.95)),
+        url("https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1800&q=85");
+    background-size: cover;
+    color: white;
+    padding: 45px 0;
 }
 
 .process-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr) 230px;
+    gap: 20px;
+    align-items: center;
 }
 
-.step {
-    border-top: 2px solid #454c54;
-    padding-top: 22px;
+.process-step {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-right: 1px solid #555;
+    padding-right: 20px;
 }
 
-.step-number {
-    color: #737b84;
-    font-size: 11px;
-    letter-spacing: 2px;
+.number {
+    min-width: 55px;
+    height: 55px;
+    border: 4px solid var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 900;
-    margin-bottom: 35px;
 }
 
-.step h3 {
+.process-step h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.process-step p {
+    color: #bbb;
+    font-size: 12px;
+}
+
+.process-tagline {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+/* =========================
+   SECTORS
+========================= */
+
+.sectors {
+    padding: 50px 0;
+    background: #f5f5f5;
+}
+
+.section-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.section-intro {
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.sector-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 7px;
+}
+
+.sector {
+    background: #111418;
+    color: white;
+    padding: 25px 10px;
+    text-align: center;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: .2s ease;
+}
+
+.sector:hover {
+    background: var(--red);
+    transform: translateY(-3px);
+}
+
+.sector-icon {
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
-.step p {
-    color: #989fa8;
-    font-size: 14px;
-}
-
-/* =========================
-   COMPLIANCE
-========================= */
-
-.compliance {
-    background: #15191e;
-}
-
-.compliance-box {
-    border: 1px solid #30363e;
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-}
-
-.compliance-box h2 {
-    font-size: 40px;
-    line-height: 1.05;
-}
-
-.compliance-box p {
-    color: #a7aeb6;
-    margin-top: 18px;
-}
-
-.compliance-items {
-    display: grid;
-    gap: 11px;
-}
-
-.compliance-items div {
-    padding: 16px;
-    background: #0d1014;
-    border: 1px solid #292f36;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-/* =========================
-   INSURANCE
-========================= */
-
-.insurance {
-    background: #e9ebed;
-    color: #101318;
-}
-
-.insurance-inner {
-    display: grid;
-    grid-template-columns: .7fr 1.3fr;
-    gap: 65px;
-    align-items: center;
-}
-
-.insurance-number {
-    font-size: clamp(65px, 9vw, 105px);
-    line-height: .85;
-    font-weight: 900;
-    letter-spacing: -5px;
-}
-
-.insurance-number span {
-    display: block;
-    font-size: 17px;
-    letter-spacing: 2px;
-    margin-top: 16px;
-}
-
-.insurance-copy h2 {
-    font-size: 42px;
-    line-height: 1.05;
-    margin-bottom: 15px;
-}
-
-.insurance-copy p {
-    color: #555c64;
-    font-size: 17px;
-}
-
-/* =========================
-   COVERAGE
-========================= */
-
-.coverage {
-    background: #0e1115;
-}
-
-.coverage-inner {
-    text-align: center;
-    max-width: 850px;
-    margin: auto;
-}
-
-.coverage-inner h2 {
-    font-size: clamp(38px, 6vw, 65px);
-    line-height: 1;
-    margin-bottom: 20px;
-}
-
-.coverage-inner p {
-    color: #aeb4bc;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-
-.locations {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 9px;
-}
-
-.location {
-    border: 1px solid #3b424a;
-    padding: 10px 16px;
-    color: #c4c9cf;
-    font-size: 13px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact {
-    background: #e9ebed;
-    color: #0d1014;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
-}
-
-.contact h2 {
-    font-size: clamp(38px, 6vw, 65px);
-    line-height: .97;
-    letter-spacing: -2px;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    color: #555c64;
-    font-size: 17px;
-    margin-bottom: 30px;
-}
-
-.contact-card {
-    background: #fff;
-    padding: 35px;
-    border: 1px solid #d4d8dc;
-}
-
-.contact-card small {
-    display: block;
-    color: #7a8189;
+.sector h3 {
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 10px;
-    font-weight: 900;
-    margin-bottom: 7px;
 }
 
-.contact-card a {
-    display: block;
-    font-size: 20px;
-    font-weight: 900;
-    margin-bottom: 25px;
-    color: #11151a;
-}
+/* =========================
+   CTA
+========================= */
 
-.contact-buttons {
+.cta {
+    color: white;
+    min-height: 330px;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    align-items: center;
+
+    background:
+        linear-gradient(90deg,
+        rgba(0,0,0,.94),
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.85)),
+        url("https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+    background-position: center;
 }
 
-.contact-btn {
-    background: #11151a;
-    color: #fff;
-    padding: 14px 19px;
-    border-radius: 5px;
-    font-weight: 900;
+.cta-content {
+    width: 65%;
+}
+
+.cta h2 {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: .9;
+    text-transform: uppercase;
+}
+
+.cta h2 span {
+    color: var(--red);
+}
+
+.cta p {
+    font-size: 17px;
+    margin: 15px 0 25px;
+}
+
+.whatsapp {
+    background: #16a34a;
+    border-color: #16a34a;
+}
+
+.whatsapp:hover {
+    background: #12863d;
 }
 
 /* =========================
@@ -681,135 +570,177 @@ section {
 ========================= */
 
 footer {
-    background: #07090c;
-    padding: 45px 0;
-    border-top: 1px solid #252a30;
+    background: #070809;
+    color: white;
+}
+
+.footer-main {
+    padding: 30px 0;
+    border-bottom: 1px solid #333;
 }
 
 .footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+    gap: 35px;
+}
+
+footer h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+footer p,
+footer a {
+    color: #aaa;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding: 18px 0;
     display: flex;
     justify-content: space-between;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 20px;
+    color: #777;
+    font-size: 11px;
 }
 
-.footer-brand {
+.footer-logo {
+    color: white;
+    font-size: 28px;
     font-weight: 900;
-    letter-spacing: 1px;
+    font-style: italic;
 }
 
-.footer-brand span {
-    display: block;
-    color: #747c85;
-    font-size: 10px;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-
-.footer-info {
-    color: #777f88;
-    font-size: 12px;
-    text-align: right;
+.footer-logo span {
+    color: var(--red);
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media (max-width: 800px) {
+.mobile-menu {
+    display: none;
+}
 
-    nav a:not(.nav-button) {
+@media (max-width: 1000px) {
+
+    nav {
+        display: none;
+    }
+
+    .header-right .emergency {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+        font-size: 30px;
+        color: white;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .van-image {
+        min-height: 300px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-tagline {
+        display: none;
+    }
+
+    .sector-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .navbar {
+        min-height: 80px;
+    }
+
+    .logo-main {
+        font-size: 38px;
+    }
+
+    .logo-sub {
+        font-size: 14px;
+    }
+
+    .logo-tag {
+        font-size: 10px;
+    }
+
+    .phone {
+        font-size: 11px;
+    }
+
+    .header-btn {
         display: none;
     }
 
     .hero {
         min-height: 650px;
+        background-position: 65% center;
     }
 
-    .hero h1 {
-        letter-spacing: -2.5px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .trust-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .trust-item:nth-child(2) {
-        border-right: none;
-    }
-
-    .service-grid,
-    .commercial-grid,
-    .response-box,
-    .compliance-box,
-    .insurance-inner,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .process-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
-    }
-
-    .response-box,
-    .compliance-box {
-        padding: 30px;
-        gap: 35px;
-    }
-
-    .insurance-inner {
-        gap: 35px;
-    }
-
-    .contact-grid {
-        gap: 35px;
-    }
-
-    section {
-        padding: 75px 0;
-    }
-}
-
-@media (max-width: 500px) {
-
-    .nav {
-        min-height: 68px;
-    }
-
-    .logo {
-        font-size: 17px;
-    }
-
-    .nav-button {
-        padding: 9px 12px;
-        font-size: 12px;
-    }
-
-    .emergency-inner {
-        font-size: 11px;
-        text-align: center;
-    }
-
-    .hero {
-        min-height: 620px;
-    }
-
-    .hero h1 {
-        font-size: 47px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn {
+    .hero-content {
         width: 100%;
+        padding: 50px 0;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-location {
+        font-size: 13px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .btn,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
     }
 
     .trust-grid {
@@ -818,34 +749,67 @@ footer {
 
     .trust-item {
         border-right: none;
-        border-bottom: 1px solid #292f36;
+        border-bottom: 1px solid #333;
     }
 
-    .service-grid {
+    .experience {
+        padding: 35px 0;
+    }
+
+    .experience-content,
+    .before-after {
+        padding: 25px 15px;
+    }
+
+    .before-after-images {
         grid-template-columns: 1fr;
     }
 
-    .service {
-        padding: 28px;
-        min-height: auto;
+    .ba {
+        height: 240px;
+    }
+
+    .process {
+        padding: 35px 0;
     }
 
     .process-grid {
         grid-template-columns: 1fr;
     }
 
-    .commercial-grid {
-        gap: 30px;
+    .process-step {
+        border-right: none;
+        border-bottom: 1px solid #444;
+        padding: 15px 0;
     }
 
-    .insurance-number {
-        font-size: 75px;
+    .sector-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .footer-info {
-        text-align: left;
+    .sector {
+        min-height: 110px;
     }
 
+    .cta {
+        min-height: 500px;
+    }
+
+    .cta-content {
+        width: 100%;
+    }
+
+    .cta h2 {
+        font-size: 45px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
 }
 
 </style>
@@ -853,717 +817,475 @@ footer {
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
-    <div class="container nav">
+<div class="container navbar">
 
-        <a href="#" class="logo">
-            S&K
-            <span>SPECIALIST GRAFFITI RESPONSE</span>
-        </a>
+<a href="#home" class="logo">
+    <div class="logo-main">S<span>&</span>K</div>
+    <div class="logo-sub">SPECIALIST</div>
+    <div class="logo-tag">GRAFFITI RESPONSE</div>
+</a>
 
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#commercial">Commercial</a>
-            <a href="#compliance">Compliance</a>
-            <a href="#contact" class="nav-button">Request a Quote</a>
-        </nav>
+<nav>
+    <a href="#home" class="active">Home</a>
+    <a href="#services">Services</a>
+    <a href="#process">Our Process</a>
+    <a href="#commercial">Commercial</a>
+    <a href="#compliance">Compliance</a>
+    <a href="#contact">Contact</a>
+</nav>
 
+<div class="header-right">
+
+    <div>
+        <div class="emergency">☎ 24/7 EMERGENCY RESPONSE</div>
+        <a class="phone" href="tel:07488296220">07488 296220</a>
     </div>
+
+    <a href="#contact" class="btn header-btn">Request a Quote</a>
+
+</div>
+
+<div class="mobile-menu">☰</div>
+
+</div>
 
 </header>
 
 
-<!-- 24/7 BAR -->
+<!-- =========================
+     HERO
+========================= -->
 
-<div class="emergency-bar">
+<section class="hero" id="home">
 
-    <div class="container emergency-inner">
+<div class="container hero-content">
 
-        <span>24/7 EMERGENCY GRAFFITI RESPONSE</span>
+<div class="eyebrow">
+Commercial Graffiti Removal Specialists
+</div>
 
-        <a href="tel:07488296220">
-            07488 296220
-        </a>
+<h1>
+Professional<br>
+<span>Graffiti Removal</span><br>
+& Prevention
+</h1>
 
-    </div>
+<div class="hero-location">
+North Wales &nbsp; | &nbsp; Cheshire &nbsp; | &nbsp; North West
+</div>
+
+<p class="hero-text">
+Rapid response. Specialist treatment. Proven results.<br>
+Keeping your sites, properties and public spaces graffiti free.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn">
+Request a Quote →
+</a>
+
+<a href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Enquiry" class="btn-outline">
+📷 Send Us a Photo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TRUST STRIP
+========================= -->
+
+<section class="trust-strip" id="services">
+
+<div class="container trust-grid">
+
+<div class="trust-item">
+<div class="trust-icon">⚗</div>
+<div>
+<h3>Specialist Treatment</h3>
+<p>Surface specific solutions using professional products.</p>
+</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-icon">ϟ</div>
+<div>
+<h3>Rapid Response</h3>
+<p>Fast, reliable and discreet service when you need it most.</p>
+</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-icon">♢</div>
+<div>
+<h3>Surface Protection</h3>
+<p>Anti-graffiti coatings help reduce future incidents.</p>
+</div>
+</div>
+
+<div class="trust-item" id="compliance">
+<div class="trust-icon">☑</div>
+<div>
+<h3>Professional Compliance</h3>
+<p>RAMS, COSHH, SDS and full documentation.</p>
+</div>
+</div>
+
+<div class="trust-item">
+<div class="trust-icon">♧</div>
+<div>
+<h3>Responsible Waste</h3>
+<p>Registered Waste Carrier (NRW) – 00824939.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section class="experience" id="commercial">
+
+<div class="container experience-grid">
+
+<div class="van-image"></div>
+
+<div class="experience-content">
+
+<h2>
+Experience You Can <span class="red">Trust</span>
+</h2>
+
+<p>
+With over 20 years' experience in Facilities Management,
+including senior operational management across commercial
+environments, S&K Specialist Graffiti Response brings a
+professional, facilities-management approach to graffiti
+removal and prevention.
+</p>
+
+<ul class="tick-list">
+
+<li>20+ years in Facilities Management</li>
+<li>Managed 300+ sites and 400+ staff</li>
+<li>BICS Registered</li>
+<li>ILM Leadership & Management</li>
+<li>IOSH Managing Safely</li>
+<li>Specialist Graffiti Removal Training</li>
+<li>Registered Waste Carrier (NRW) – 00824939</li>
+<li>£5 Million Public Liability Insurance</li>
+<li>Fully Insured</li>
+
+</ul>
+
+</div>
+
+<div class="before-after">
+
+<h2>
+Before & <span class="red">After</span> Results
+</h2>
+
+<div class="before-after-images">
+
+<div class="ba before">
+<div class="ba-label">BEFORE</div>
+</div>
+
+<div class="ba after">
+<div class="ba-label">AFTER</div>
+</div>
+
+</div>
+
+<p style="margin-top:18px;font-style:italic;color:#555;">
+“Professional service, great communication and excellent results.
+Highly recommended.”
+</p>
+
+<p style="margin-top:5px;font-weight:bold;">
+— Facilities Manager
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section class="process" id="process">
+
+<div class="container process-grid">
+
+<div class="process-step">
+
+<div class="number">01</div>
+
+<div>
+<h3>Remove</h3>
+<p>
+Professional graffiti removal using the correct treatment for the surface.
+</p>
+</div>
 
 </div>
 
 
-<!-- HERO -->
+<div class="process-step">
 
-<section class="hero">
+<div class="number">02</div>
 
-    <div class="container">
-
-        <div class="hero-content">
-
-            <div class="hero-badge">
-                24/7 Emergency Response
-            </div>
-
-            <h1>
-                Graffiti removal.
-                <span>Done properly.</span>
-            </h1>
-
-            <p>
-                Specialist graffiti removal and reactive response for
-                commercial properties, facilities teams, housing providers,
-                public-facing sites and private customers across North Wales,
-                Cheshire and the North West.
-            </p>
-
-            <div class="buttons">
-
-                <a class="btn btn-primary"
-                   href="https://wa.me/447488296220">
-                    Send Us a Photo
-                </a>
-
-                <a class="btn btn-secondary"
-                   href="#contact">
-                    Request a Quote
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- TRUST -->
-
-<div class="trust">
-
-    <div class="container trust-grid">
-
-        <div class="trust-item">
-            <strong>24/7 Response</strong>
-            <span>Emergency graffiti response</span>
-        </div>
-
-        <div class="trust-item">
-            <strong>Commercial Focus</strong>
-            <span>Property & facilities support</span>
-        </div>
-
-        <div class="trust-item">
-            <strong>£5M Insured</strong>
-            <span>Public liability insurance</span>
-        </div>
-
-        <div class="trust-item">
-            <strong>Professional Standards</strong>
-            <span>RAMS & COSHH documentation</span>
-        </div>
-
-    </div>
+<div>
+<h3>Restore</h3>
+<p>
+Careful treatment to return surfaces to an acceptable condition.
+</p>
+</div>
 
 </div>
 
 
-<!-- SERVICES -->
+<div class="process-step">
 
-<section class="services" id="services">
+<div class="number">03</div>
 
-    <div class="container">
+<div>
+<h3>Protect</h3>
+<p>
+Anti-graffiti coatings make future incidents easier and cheaper to remove.
+</p>
+</div>
 
-        <div class="section-header">
-
-            <div class="section-label">
-                Our services
-            </div>
-
-            <h2>
-                Specialist treatment for difficult surfaces.
-            </h2>
-
-            <p>
-                We assess the graffiti, the surface and the surrounding
-                environment before selecting an appropriate treatment.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="service-grid">
+<div class="process-tagline">
+More than a cleaner.<br>
+A safer, brighter<br>
+tomorrow.
+</div>
 
-            <div class="service">
-
-                <div class="service-number">
-                    01 / REMOVAL
-                </div>
-
-                <h3>
-                    Graffiti Removal
-                </h3>
-
-                <p>
-                    Professional removal of spray paint, marker and other
-                    unwanted markings, with the treatment selected according
-                    to the surface and graffiti type.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <div class="service-number">
-                    02 / RESPONSE
-                </div>
-
-                <h3>
-                    24/7 Reactive Response
-                </h3>
-
-                <p>
-                    Rapid specialist response for fresh graffiti and unwanted
-                    markings across commercial, public-facing and managed
-                    properties.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <div class="service-number">
-                    03 / PROTECTION
-                </div>
-
-                <h3>
-                    Anti-Graffiti Protection
-                </h3>
-
-                <p>
-                    Protective treatments for vulnerable surfaces and
-                    locations experiencing repeated graffiti incidents.
-                </p>
-
-            </div>
-
-
-            <div class="service">
-
-                <div class="service-number">
-                    04 / RESTORATION
-                </div>
-
-                <h3>
-                    Surface Restoration
-                </h3>
-
-                <p>
-                    Specialist treatment of porous, painted and sensitive
-                    surfaces, with the process adapted to the substrate.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- COMMERCIAL -->
+<!-- =========================
+     SECTORS
+========================= -->
 
-<section class="commercial" id="commercial">
+<section class="sectors">
 
-    <div class="container">
+<div class="container">
 
-        <div class="commercial-grid">
+<h2 class="section-title">
+Built For <span class="red">Property Teams</span>
+</h2>
 
-            <div>
-
-                <div class="section-label">
-                    Built for business
-                </div>
-
-                <div class="section-header">
-
-                    <h2>
-                        A specialist contractor for property teams.
-                    </h2>
-
-                    <p>
-                        S&K provides a professional graffiti response service
-                        for customers who need reliable support across
-                        individual properties or multiple locations.
-                    </p>
-
-                </div>
-
-            </div>
+<p class="section-intro">
+A specialist contractor supporting commercial, public sector and private clients.
+</p>
 
 
-            <div class="commercial-list">
+<div class="sector-grid">
 
-                <div>
-                    Facilities Management
-                </div>
+<div class="sector">
+<div class="sector-icon">▦</div>
+<h3>Commercial<br>& Industrial</h3>
+</div>
 
-                <div>
-                    Housing & Property Management
-                </div>
+<div class="sector">
+<div class="sector-icon">⌂</div>
+<h3>Housing & Social<br>Landlords</h3>
+</div>
 
-                <div>
-                    Retail & Commercial Premises
-                </div>
+<div class="sector">
+<div class="sector-icon">♜</div>
+<h3>Local Authorities<br>& Councils</h3>
+</div>
 
-                <div>
-                    Industrial & Distribution Sites
-                </div>
+<div class="sector">
+<div class="sector-icon">▱</div>
+<h3>Retail & Leisure</h3>
+</div>
 
-                <div>
-                    Public-Facing Property
-                </div>
+<div class="sector">
+<div class="sector-icon">▥</div>
+<h3>Property<br>Management</h3>
+</div>
 
-                <div>
-                    Multi-Site Requirements
-                </div>
+<div class="sector">
+<div class="sector-icon">⌑</div>
+<h3>Schools &<br>Education</h3>
+</div>
 
-            </div>
+<div class="sector">
+<div class="sector-icon">▣</div>
+<h3>Transport &<br>Infrastructure</h3>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
-<!-- 24/7 RESPONSE -->
+<!-- =========================
+     CONTACT CTA
+========================= -->
 
-<section class="response">
+<section class="cta" id="contact">
 
-    <div class="container">
+<div class="container cta-content">
 
-        <div class="response-box">
+<h2>
+Graffiti?<br>
+<span>Send Us A Photo.</span>
+</h2>
 
-            <div>
+<p>
+Get a fast, no obligation assessment and quotation.
+</p>
 
-                <div class="section-label">
-                    Emergency response
-                </div>
+<div>
 
-                <h2>
-                    Graffiti doesn't keep
-                    office hours.
-                </h2>
+<a href="https://wa.me/447488296220?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%20would%20like%20a%20quote."
+class="btn whatsapp">
+☘ Send on WhatsApp
+</a>
 
-                <p>
-                    That's why S&K provides a 24/7 emergency graffiti
-                    response service. When unwanted graffiti appears,
-                    we're ready to respond around the clock.
-                </p>
+<a href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote"
+class="btn-outline">
+📷 Send A Photo
+</a>
 
-            </div>
+<a href="tel:07488296220"
+class="btn">
+Request A Quote →
+</a>
 
+</div>
 
-            <div class="response-call">
-
-                <small>
-                    24/7 Response Line
-                </small>
-
-                <a href="tel:07488296220">
-                    07488 296220
-                </a>
-
-                <a class="contact-btn"
-                   href="https://wa.me/447488296220">
-                    WhatsApp Us
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- PROCESS -->
-
-<section class="process">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                Our approach
-            </div>
-
-            <h2>
-                Simple process. Controlled outcome.
-            </h2>
-
-            <p>
-                From the first photograph through to completed work,
-                we keep the process straightforward.
-            </p>
-
-        </div>
-
-
-        <div class="process-grid">
-
-            <div class="step">
-
-                <div class="step-number">
-                    01 / ASSESS
-                </div>
-
-                <h3>
-                    Send us a photo
-                </h3>
-
-                <p>
-                    Tell us where the graffiti is, what surface it is on
-                    and approximately how large it is.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    02 / PLAN
-                </div>
-
-                <h3>
-                    We assess the job
-                </h3>
-
-                <p>
-                    We consider the substrate, graffiti type and
-                    appropriate treatment method.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    03 / RESPOND
-                </div>
-
-                <h3>
-                    We complete the work
-                </h3>
-
-                <p>
-                    The appropriate removal process is carried out using
-                    controlled working practices.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <div class="step-number">
-                    04 / REPORT
-                </div>
-
-                <h3>
-                    Documented completion
-                </h3>
-
-                <p>
-                    Before-and-after photographic reporting can provide
-                    a clear record of completed work.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- COMPLIANCE -->
-
-<section class="compliance" id="compliance">
-
-    <div class="container">
-
-        <div class="compliance-box">
-
-            <div>
-
-                <div class="section-label">
-                    Professional standards
-                </div>
-
-                <h2>
-                    Professional.
-                    Controlled.
-                    Documented.
-                </h2>
-
-                <p>
-                    Our working approach is designed around appropriate
-                    products, controlled application, health and safety
-                    considerations and responsible waste handling.
-                </p>
-
-            </div>
-
-
-            <div class="compliance-items">
-
-                <div>
-                    RAMS – Risk Assessments & Method Statements
-                </div>
-
-                <div>
-                    COSHH Assessments
-                </div>
-
-                <div>
-                    Safety Data Sheets
-                </div>
-
-                <div>
-                    Product Usage Information
-                </div>
-
-                <div>
-                    Training Records
-                </div>
-
-                <div>
-                    Waste Documentation
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- INSURANCE -->
-
-<section class="insurance">
-
-    <div class="container">
-
-        <div class="insurance-inner">
-
-            <div>
-
-                <div class="insurance-number">
-                    £5M
-                    <span>PUBLIC LIABILITY INSURANCE</span>
-                </div>
-
-            </div>
-
-
-            <div class="insurance-copy">
-
-                <h2>
-                    Confidence for commercial customers.
-                </h2>
-
-                <p>
-                    S&K Specialist Graffiti Response carries £5 million
-                    public liability insurance, supporting our work across
-                    commercial, property and public-facing environments.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- COVERAGE -->
-
-<section class="coverage">
-
-    <div class="container">
-
-        <div class="coverage-inner">
-
-            <div class="section-label">
-                Coverage
-            </div>
-
-            <h2>
-                North Wales.
-                Cheshire.
-                North West.
-            </h2>
-
-            <p>
-                Supporting commercial, property and facilities customers
-                across the region.
-            </p>
-
-            <div class="locations">
-
-                <div class="location">
-                    North Wales
-                </div>
-
-                <div class="location">
-                    Cheshire
-                </div>
-
-                <div class="location">
-                    North West
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-    <div class="container">
-
-        <div class="contact-grid">
-
-            <div>
-
-                <div class="section-label">
-                    Get in touch
-                </div>
-
-                <h2>
-                    Got graffiti?
-                    Send us a photo.
-                </h2>
-
-                <p>
-                    Send us photographs of the graffiti together with the
-                    location, surface type and approximate size. We'll use
-                    this information to make an initial assessment and
-                    discuss the most appropriate response.
-                </p>
-
-                <div class="buttons">
-
-                    <a class="btn contact-btn"
-                       href="https://wa.me/447488296220">
-                        WhatsApp Us
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="contact-card">
-
-                <small>
-                    24/7 Response
-                </small>
-
-                <a href="tel:07488296220">
-                    07488 296220
-                </a>
-
-
-                <small>
-                    Email
-                </small>
-
-                <a href="mailto:info@skspecialistgraffitiresponse.co.uk">
-                    info@skspecialistgraffitiresponse.co.uk
-                </a>
-
-
-                <small>
-                    Coverage
-                </small>
-
-                <a href="#coverage">
-                    North Wales • Cheshire • North West
-                </a>
-
-
-                <div class="contact-buttons">
-
-                    <a class="contact-btn"
-                       href="https://wa.me/447488296220">
-                        Send a WhatsApp
-                    </a>
-
-                    <a class="contact-btn"
-                       href="mailto:info@skspecialistgraffitiresponse.co.uk">
-                        Email Us
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-    <div class="container footer-grid">
+<div class="container footer-main">
 
-        <div class="footer-brand">
+<div class="footer-grid">
 
-            S&K SPECIALIST GRAFFITI RESPONSE
+<div>
 
-            <span>
-                Specialist Graffiti Removal • Prevention • Surface Protection
-            </span>
+<div class="footer-logo">
+S<span>&</span>K
+</div>
 
-        </div>
+<p style="margin-top:10px;">
+S&K Specialist Graffiti Response Ltd
+</p>
+
+<p>
+Remove | Restore | Protect
+</p>
+
+</div>
 
 
-        <div class="footer-info">
+<div>
 
-            © 2026 S&K Specialist Graffiti Response<br>
-            24/7 Emergency Response<br>
-            North Wales • Cheshire • North West
+<h3>Contact</h3>
 
-        </div>
+<p>
+<a href="tel:07488296220">
+07488 296220
+</a>
+</p>
 
-    </div>
+<p>
+<a href="mailto:info@skspecialistgraffitiresponse.co.uk">
+info@skspecialistgraffitiresponse.co.uk
+</a>
+</p>
+
+</div>
+
+
+<div>
+
+<h3>Coverage</h3>
+
+<p>North Wales</p>
+<p>Cheshire</p>
+<p>North West</p>
+
+</div>
+
+
+<div>
+
+<h3>Company</h3>
+
+<p>
+24/7 Emergency Response
+</p>
+
+<p>
+Registered Waste Carrier
+</p>
+
+<p>
+NRW – 00824939
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="container footer-bottom">
+
+<div>
+© 2026 S&K Specialist Graffiti Response Ltd. All rights reserved.
+</div>
+
+<div>
+A Cleaner. Safer. Brighter Tomorrow.
+</div>
+
+</div>
 
 </footer>
+
 
 </body>
 </html>
