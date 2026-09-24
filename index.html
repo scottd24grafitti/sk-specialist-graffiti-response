@@ -10,6 +10,23 @@
 
   gtag('config', 'AW-18440361257');
 </script>
+ <!-- Event snippet for Contact conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18440361257/wPmfCLzk94MdEKmqhtlE',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>S&K Specialist Graffiti Response | North Wales, Cheshire & North West</title>
@@ -145,8 +162,8 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <p class="lead" style="margin:0 auto 18px">Need graffiti removed? Contact S&amp;K Specialist Graffiti Response today.</p>
 <p><strong>Fast Response</strong><br>North Wales | Cheshire | North West</p>
 <div class="buttons" style="margin-top:20px">
-<a class="btn btn-red" href="tel:07346816190">☎ Call 07346 816190</a>
-<a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20graffiti%20removal%20quote." target="_blank" rel="noopener">💬 WhatsApp</a>
+<a class="btn btn-red" href="tel:07346816190">📞 Call 07346 816190</a>
+<a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20graffiti%20removal%20quote."onclick="return gtag_report_conversion(this.href);" target="_blank" rel="noopener">💬 WhatsApp</a>
 <a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Enquiry">✉ Email Us</a>
 </div>
 </section>
