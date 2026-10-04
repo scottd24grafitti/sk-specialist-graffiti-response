@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Graffiti Removal Service</title>
+  <desc id="desc">Placeholder graphic for a professional graffiti removal service in Wrexham and North Wales.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1a1d22"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect x="60" y="60" width="1080" height="680" rx="24" fill="#111316" stroke="#2d3238"/>
+  <rect x="120" y="130" width="960" height="500" rx="18" fill="#050608" stroke="#e50914" stroke-width="6"/>
+  <path d="M170 560 L500 180 L680 360 L1030 140" stroke="#e50914" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M190 380 L360 520 L500 370 L710 530" stroke="#fff" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <rect x="170" y="610" width="360" height="60" rx="12" fill="#e50914"/>
+  <text x="205" y="650" fill="#ffffff" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">GRAFFITI REMOVAL</text>
+</svg>
