@@ -30,8 +30,8 @@ function gtag_report_conversion(url) {
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Graffiti Removal, Gutter Cleaning & Pressure Washing | North Wales & Cheshire</title>
-<meta name="description" content="Professional graffiti removal, gutter cleaning and pressure washing services across North Wales, Cheshire, Wrexham and the North West. Fast response, free quotations.">
+<title>Graffiti Removal, Gutter Cleaning & Pressure Washing | North Wales, Cheshire & Wrexham</title>
+<meta name="description" content="Professional graffiti removal, gutter cleaning and pressure washing services across Wrexham, North Wales, Cheshire and the North West. Free quotations available.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -45,12 +45,12 @@ body{font-family:Arial,Helvetica,sans-serif;background:#050608;color:#fff;line-h
 .hero-cta p{color:#ddd;font-size:clamp(15px,2.5vw,19px);margin-bottom:8px}
 .hero-tagline{color:#aaa;font-size:clamp(13px,2vw,16px);margin-bottom:17px}
 .buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:16px;color:#fff;border:1px solid #333;transition:.2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:16px;color:#fff;border:1px solid #333;transition:.2s;text-decoration:none;cursor:pointer}
 .btn-red{background:#e50914;border-color:#e50914}.btn-green{background:#16a34a;border-color:#16a34a}.btn-dark{background:#17191d}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
 nav{position:sticky;top:0;z-index:50;background:rgba(5,6,8,.97);border-top:1px solid #292b30;border-bottom:1px solid #292b30;overflow-x:auto}
 nav ul{display:flex;justify-content:center;gap:4px;list-style:none;min-width:max-content;padding:8px}
-nav a{color:#fff;padding:9px 12px;border-radius:5px;font-weight:700;font-size:14px}
+nav a{color:#fff;padding:9px 12px;border-radius:5px;font-weight:700;font-size:14px;text-decoration:none;display:block}
 nav a:hover{background:#e50914}
 section{padding:48px 20px;border-bottom:1px solid #25272b}
 section h2{font-size:clamp(25px,5vw,38px);margin-bottom:12px;text-transform:uppercase}
@@ -58,12 +58,15 @@ section h2 span{color:#e50914}
 .lead{color:#ddd;font-size:17px;max-width:800px}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
 .card{background:#111316;border:1px solid #292c31;border-radius:10px;padding:20px}
-.card h3{margin-bottom:7px;font-size:20px}.card p,.card li{color:#d5d5d5}.card ul{padding-left:20px}
-.service-card{display:flex;flex-direction:column}
-.service-card img{width:100%;height:200px;object-fit:cover;border-radius:8px 8px 0 0;margin:-20px -20px 15px -20px}
-.service-card h3{color:#e50914;font-size:22px;margin-bottom:10px}
-.service-card p{flex:1;margin-bottom:15px}
-.service-price{color:#e50914;font-weight:700;font-size:18px;margin-bottom:15px}
+.card h3{margin-bottom:7px;font-size:20px;color:#e50914}.card p,.card li{color:#d5d5d5}.card ul{padding-left:20px}
+.service-card{display:flex;flex-direction:column;position:relative;overflow:hidden;background:linear-gradient(135deg,#1a1d22 0%,#111316 100%);border:2px solid #292c31;transition:all .3s ease}
+.service-card:hover{border-color:#e50914;transform:translateY(-4px);box-shadow:0 8px 20px rgba(229,9,20,0.2)}
+.service-card-img{width:100%;height:220px;background:#1a1d22;display:flex;align-items:center;justify-content:center;color:#666;font-size:14px;margin:-20px -20px 15px -20px;font-style:italic;position:relative}
+.service-card-img img{width:100%;height:100%;object-fit:cover}
+.service-card h3{color:#e50914;font-size:24px;margin-bottom:10px;margin-top:0}
+.service-card .lead{font-size:15px;max-width:100%;flex:1;margin-bottom:15px}
+.service-price{color:#e50914;font-weight:700;font-size:20px;margin-bottom:15px}
+.service-price.hidden{display:none}
 .results{margin-top:28px}
 .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .result-card{background:#111316;border:1px solid #292c31;border-radius:10px;overflow:hidden}
@@ -77,14 +80,32 @@ section h2 span{color:#e50914}
 .step strong{display:block;color:#e50914;font-size:18px;margin-bottom:5px}
 .compliance-list{columns:2;padding-left:20px;margin-top:18px}
 .contact{text-align:center}
+.form-section{background:#111316;border:1px solid #292c31;border-radius:10px;padding:30px;margin-top:24px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;margin-bottom:8px;font-weight:700;color:#e50914}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #292c31;border-radius:6px;background:#050608;color:#fff;font-family:Arial,sans-serif;font-size:16px}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:#e50914;box-shadow:0 0 8px rgba(229,9,20,0.3)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-submit{background:#e50914;border:none;cursor:pointer;font-weight:700;font-size:16px;min-height:50px;padding:12px 24px;border-radius:8px;color:#fff;transition:.2s}
+.form-submit:hover{filter:brightness(1.1);transform:translateY(-2px)}
+.whatsapp-sticky{position:fixed;bottom:20px;right:20px;z-index:40;display:none}
+.whatsapp-sticky.show{display:flex}
+.whatsapp-sticky a{width:60px;height:60px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:all .3s;text-decoration:none}
+.whatsapp-sticky a:hover{transform:scale(1.1);box-shadow:0 6px 16px rgba(22,163,74,0.4)}
 footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 @media(max-width:700px){
  .cards,.steps{grid-template-columns:1fr}
+ .form-row{grid-template-columns:1fr}
  .result-grid{grid-template-columns:1fr;max-width:520px;margin:auto}
  .compliance-list{columns:1}
  nav a{font-size:13px;padding:8px 10px}
  .btn{width:100%;max-width:360px}
+ .btn-small{width:100%;max-width:none;font-size:14px}
  .hero-cta{padding-top:20px}
+ .form-section{padding:20px}
+ .service-card-img{height:160px}
+ .whatsapp-sticky a{width:56px;height:56px;font-size:26px}
 }
 </style>
 </head>
@@ -100,132 +121,92 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
     <div class="buttons">
       <a class="btn btn-red" href="tel:07346816190" onclick="return gtag_report_conversion(this.href);">☎ Call 07346 816190</a>
       <a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp Quote</a>
-      <a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Free Quote Request" onclick="return gtag_report_conversion(this.href);">✉ Request a Quote</a>
+      <a class="btn btn-dark" href="#quote">✉ Quick Quote Form</a>
     </div>
   </div>
 </header>
 
 <nav aria-label="Main navigation"><ul>
-<li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#graffiti">Graffiti Removal</a></li><li><a href="#gutters">Gutter Cleaning</a></li><li><a href="#pressure">Pressure Washing</a></li><li><a href="#contact">Contact</a></li>
+<li><a href="#home">Home</a></li><li><a href="graffiti-removal.html">Graffiti Removal</a></li><li><a href="gutter-cleaning.html">Gutter Cleaning</a></li><li><a href="pressure-washing.html">Pressure Washing</a></li><li><a href="#quote">Quote</a></li><li><a href="#contact">Contact</a></li>
 </ul></nav>
 
 <section id="services">
 <h2>Our <span>Services</span></h2>
-<p class="lead">Professional cleaning and removal services for residential and commercial properties across North Wales, Cheshire, Wrexham, Liverpool and the North West.</p>
+<p class="lead">Professional cleaning and property maintenance services for residential and commercial properties across Wrexham, North Wales, Cheshire, Liverpool, Merseyside, Shropshire and the North West.</p>
 <div class="cards">
 <div class="card service-card">
+<div class="service-card-img"><img src="graffiti-service.jpg" alt="Professional graffiti removal service in Wrexham and North Wales"></div>
 <h3>Graffiti Removal</h3>
-<p>Professional removal of paint, marker and unwanted graffiti from commercial buildings, shop fronts, residential properties, public spaces and suitable surfaces. Specialist knowledge, professional products and reliable response.</p>
-<a class="btn btn-red" href="#graffiti">Get a Free Quote</a>
+<p class="lead">Expert graffiti removal from commercial buildings, shops, residential properties and public spaces. Fast, professional response across the region.</p>
+<a class="btn btn-red" href="graffiti-removal.html">Learn More</a>
 </div>
 <div class="card service-card">
+<div class="service-card-img"><img src="gutter-service.jpg" alt="Professional gutter cleaning service for homes and businesses in North Wales"></div>
 <h3>Gutter Cleaning</h3>
-<p>Keep gutters clear of leaves, moss and debris to prevent blockages, overflowing water and property damage. Professional gutter cleaning for residential and commercial properties.</p>
+<p class="lead">Keep gutters clear of leaves, moss and debris to prevent costly water damage. Professional cleaning for residential and commercial properties.</p>
 <p class="service-price">From £60</p>
-<a class="btn btn-red" href="#gutters">Get a Free Quote</a>
+<a class="btn btn-red" href="gutter-cleaning.html">Learn More</a>
 </div>
 <div class="card service-card">
+<div class="service-card-img"><img src="pressure-washing.jpg" alt="Professional pressure washing for driveways, patios and outdoor spaces in Cheshire"></div>
 <h3>Pressure Washing</h3>
-<p>Professional pressure washing for driveways, patios, paths, concrete and block paving. Transform the appearance of outdoor spaces with our specialist equipment and expertise.</p>
+<p class="lead">Transform driveways, patios and outdoor surfaces with professional pressure washing. Dramatic results for residential and commercial properties.</p>
 <p class="service-price">From £60</p>
-<a class="btn btn-red" href="#pressure">Get a Free Quote</a>
+<a class="btn btn-red" href="pressure-washing.html">Learn More</a>
 </div>
 </div>
 </section>
 
-<section id="graffiti">
-<h2>Professional <span>Graffiti Removal</span></h2>
-<p class="lead">Specialist graffiti removal services across Wrexham, North Wales, Cheshire, Liverpool, Merseyside, Shropshire and the wider North West.</p>
-<div class="cards">
-<div class="card">
-<h3>Commercial Buildings</h3>
-<p>Fast, discreet graffiti removal for shops, offices, retail and industrial properties. Minimise disruption and restore your property quickly.</p>
-</div>
-<div class="card">
-<h3>Residential Properties</h3>
-<p>Professional graffiti removal for houses, fences and garden walls. Safe working practices and careful surface treatment.</p>
-</div>
-<div class="card">
-<h3>Public Spaces</h3>
-<p>Community area graffiti removal for councils, housing associations and property managers. Reliable response across the region.</p>
-</div>
-<div class="card">
-<h3>Anti-Graffiti Protection</h3>
-<p>Protective treatments to make future graffiti incidents easier and more cost-effective to remove. Professional application and proven results.</p>
-</div>
-</div>
-<p style="margin-top:24px; text-align:center"><a class="btn btn-red" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20graffiti%20removal%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">Get a Free Graffiti Removal Quote</a></p>
-</section>
+<section id="quote">
+<h2>Free <span>Quotation</span></h2>
+<p class="lead" style="max-width:100%;text-align:center;margin-bottom:24px">Get a free quote for any of our services. Just select what you need and provide a few details.</p>
+<div class="form-section">
+<form id="quoteForm" name="quoteForm" method="POST" action="https://formspree.io/f/xvglpqeo" style="display:none">
+  <input type="hidden" name="_subject" value="New Quote Request from Website">
+  <input type="hidden" name="_captcha" value="false">
+</form>
 
-<section id="gutters">
-<h2>Professional <span>Gutter Cleaning</span></h2>
-<p class="lead">Keep gutters clear and prevent costly water damage. Professional gutter cleaning for residential and commercial properties across Wrexham, North Wales, Cheshire and the North West.</p>
-<div class="cards">
-<div class="card">
-<h3>Why Gutter Cleaning Matters</h3>
-<ul>
-<li>Prevents blockages and water overflow</li>
-<li>Protects property from damp and water damage</li>
-<li>Extends gutter lifespan</li>
-<li>Maintains property appearance</li>
-<li>Professional, safe working at height</li>
-</ul>
-</div>
-<div class="card">
-<h3>Residential & Commercial</h3>
-<p>We clean gutters for:</p>
-<ul>
-<li>Houses and bungalows</li>
-<li>Apartment buildings</li>
-<li>Commercial properties</li>
-<li>Shops and business premises</li>
-<li>Industrial buildings</li>
-</ul>
-</div>
-<div class="card">
-<h3>Gutter Cleaning Service</h3>
-<p><strong style="color:#e50914; font-size:20px">From £60</strong></p>
-<p>Professional removal of leaves, moss, debris and blockages. Competitive pricing with free quotations.</p>
-<p style="margin-top:10px">Prices vary depending on property size and gutter condition. Contact us for a free estimate tailored to your property.</p>
-</div>
-</div>
-<p style="margin-top:24px; text-align:center"><a class="btn btn-red" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20gutter%20cleaning%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">Get a Free Gutter Cleaning Quote</a></p>
-</section>
+<form id="quoteFormVisual" onsubmit="return submitQuoteForm(event)">
+  <div class="form-group">
+    <label for="service">Select Service *</label>
+    <select id="service" name="service" required>
+      <option value="">Choose a service...</option>
+      <option value="Graffiti Removal">Graffiti Removal</option>
+      <option value="Gutter Cleaning">Gutter Cleaning</option>
+      <option value="Pressure Washing">Pressure Washing</option>
+    </select>
+  </div>
 
-<section id="pressure">
-<h2>Professional <span>Pressure Washing</span></h2>
-<p class="lead">Transform outdoor spaces with professional pressure washing. Driveways, patios and hard surfaces across Wrexham, North Wales, Cheshire and the North West.</p>
-<div class="cards">
-<div class="card">
-<h3>Suitable Surfaces</h3>
-<p>We pressure wash:</p>
-<ul>
-<li>Driveways and car parks</li>
-<li>Patios and decking areas</li>
-<li>Paths and walkways</li>
-<li>Concrete and block paving</li>
-<li>Other suitable hard surfaces</li>
-</ul>
+  <div class="form-group">
+    <label for="postcode">Postcode / Location *</label>
+    <input type="text" id="postcode" name="postcode" placeholder="e.g., LL13 8AA" required>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="name">Your Name *</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="07346 816190" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Tell us about the work needed *</label>
+    <textarea id="description" name="description" placeholder="Describe the area to be cleaned, any specific issues, or what you'd like done..." required></textarea>
+  </div>
+
+  <button type="submit" class="form-submit">Send Quote Request</button>
+  <p style="color:#aaa;font-size:14px;margin-top:12px">We'll respond to your quote request within 24 hours during business days.</p>
+</form>
 </div>
-<div class="card">
-<h3>Professional Results</h3>
-<p>Professional pressure washing makes a dramatic difference to:</p>
-<ul>
-<li>Property curb appeal</li>
-<li>First impressions</li>
-<li>Outdoor space usability</li>
-<li>Surface longevity</li>
-<li>Health and safety</li>
-</ul>
-</div>
-<div class="card">
-<h3>Pressure Washing Service</h3>
-<p><strong style="color:#e50914; font-size:20px">From £60</strong></p>
-<p>Professional equipment and experienced operators. Competitive pricing with free quotations.</p>
-<p style="margin-top:10px">Prices vary depending on surface area and condition. Contact us for a free estimate for your property.</p>
-</div>
-</div>
-<p style="margin-top:24px; text-align:center"><a class="btn btn-red" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20pressure%20washing%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">Get a Free Pressure Washing Quote</a></p>
 </section>
 
 <section id="about">
@@ -237,7 +218,7 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <p>Over 20 years of Facilities Management experience, bringing a strong operational and professional approach to specialist property maintenance and response services.</p>
 </div>
 <div class="card">
-<h3>Qualifications &amp; Protection</h3>
+<h3>Qualifications &amp; Standards</h3>
 <ul>
 <li>Professional graffiti removal training</li>
 <li>BICS Registered</li>
@@ -289,11 +270,68 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <div class="buttons" style="margin-top:20px">
 <a class="btn btn-red" href="tel:07346816190" onclick="return gtag_report_conversion(this.href);">📞 Call 07346 816190</a>
 <a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp Us</a>
-<a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Free Quote Request" onclick="return gtag_report_conversion(this.href);">✉ Email Us</a>
+<a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Free Quote Request">✉ Email Us</a>
 </div>
 </section>
 
 <footer>S&amp;K Specialist Graffiti Response Ltd<br>Graffiti Removal | Gutter Cleaning | Pressure Washing<br>07346 816190 | info@skspecialistgraffitiresponse.co.uk</footer>
 </div>
+
+<div class="whatsapp-sticky" id="whatsappSticky">
+  <a href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" title="Contact us on WhatsApp">💬</a>
+</div>
+
+<script>
+function submitQuoteForm(event) {
+  event.preventDefault();
+  
+  const formData = {
+    service: document.getElementById('service').value,
+    postcode: document.getElementById('postcode').value,
+    name: document.getElementById('name').value,
+    phone: document.getElementById('phone').value,
+    email: document.getElementById('email').value,
+    description: document.getElementById('description').value
+  };
+  
+  // Send to email via link
+  const emailBody = encodeURIComponent(`New Quote Request\n\nService: ${formData.service}\nPostcode: ${formData.postcode}\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nDetails:\n${formData.description}`);
+  window.location.href = `mailto:info@skspecialistgraffitiresponse.co.uk?subject=Quote Request - ${formData.service}&body=${emailBody}`;
+  
+  // Also log conversion
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18440361257/wPmfCLzk94MdEKmqhtlE'
+    });
+  }
+  
+  return false;
+}
+
+// Show/hide WhatsApp sticky button based on scroll
+window.addEventListener('scroll', function() {
+  const sticky = document.getElementById('whatsappSticky');
+  if (window.scrollY > 300) {
+    sticky.classList.add('show');
+  } else {
+    sticky.classList.remove('show');
+  }
+});
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  // Pre-fill form for mobile users
+  if (window.innerWidth <= 700) {
+    const quoteBtn = document.querySelector('a[href="#quote"]');
+    if (quoteBtn) {
+      quoteBtn.addEventListener('click', function(e) {
+        setTimeout(() => {
+          document.getElementById('service').focus();
+        }, 100);
+      });
+    }
+  }
+});
+</script>
 </body>
 </html>
