@@ -45,7 +45,7 @@ body{font-family:Arial,Helvetica,sans-serif;background:#050608;color:#fff;line-h
 .hero-cta p{color:#ddd;font-size:clamp(15px,2.5vw,19px);margin-bottom:8px}
 .hero-tagline{color:#aaa;font-size:clamp(13px,2vw,16px);margin-bottom:17px}
 .buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:16px;color:#fff;border:1px solid #333;transition:.2s;text-decoration:none;cursor:pointer}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:16px;color:#fff;border:1px solid #333;transition:.2s}
 .btn-red{background:#e50914;border-color:#e50914}.btn-green{background:#16a34a;border-color:#16a34a}.btn-dark{background:#17191d}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
 nav{position:sticky;top:0;z-index:50;background:rgba(5,6,8,.97);border-top:1px solid #292b30;border-bottom:1px solid #292b30;overflow-x:auto}
@@ -61,7 +61,7 @@ section h2 span{color:#e50914}
 .card h3{margin-bottom:7px;font-size:20px;color:#e50914}.card p,.card li{color:#d5d5d5}.card ul{padding-left:20px}
 .service-card{display:flex;flex-direction:column;position:relative;overflow:hidden;background:linear-gradient(135deg,#1a1d22 0%,#111316 100%);border:2px solid #292c31;transition:all .3s ease}
 .service-card:hover{border-color:#e50914;transform:translateY(-4px);box-shadow:0 8px 20px rgba(229,9,20,0.2)}
-.service-card-img{width:100%;height:220px;background:#1a1d22;display:flex;align-items:center;justify-content:center;color:#666;font-size:14px;margin:-20px -20px 15px -20px;font-style:italic;position:relative}
+.service-card-img{width:100%;height:220px;background:#1a1d22;display:flex;align-items:center;justify-content:center;color:#666;font-size:14px;margin:-20px -20px 15px -20px;font-style:italic;position:relative;overflow:hidden}
 .service-card-img img{width:100%;height:100%;object-fit:cover}
 .service-card h3{color:#e50914;font-size:24px;margin-bottom:10px;margin-top:0}
 .service-card .lead{font-size:15px;max-width:100%;flex:1;margin-bottom:15px}
@@ -91,7 +91,7 @@ section h2 span{color:#e50914}
 .form-submit:hover{filter:brightness(1.1);transform:translateY(-2px)}
 .whatsapp-sticky{position:fixed;bottom:20px;right:20px;z-index:40;display:none}
 .whatsapp-sticky.show{display:flex}
-.whatsapp-sticky a{width:60px;height:60px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 12px rgba(0,0,0,0.3);transition:all .3s;text-decoration:none}
+.whatsapp-sticky a{width:60px;height:60px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;box-shadow:0 4px 12px rgba(0,0,0,0.3);text-decoration:none}
 .whatsapp-sticky a:hover{transform:scale(1.1);box-shadow:0 6px 16px rgba(22,163,74,0.4)}
 footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 @media(max-width:700px){
@@ -120,7 +120,7 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
     <p class="hero-tagline">See it. Snap it. We'll quote it.</p>
     <div class="buttons">
       <a class="btn btn-red" href="tel:07346816190" onclick="return gtag_report_conversion(this.href);">☎ Call 07346 816190</a>
-      <a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp Quote</a>
+      <a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp</a>
       <a class="btn btn-dark" href="#quote">✉ Quick Quote Form</a>
     </div>
   </div>
@@ -132,23 +132,23 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 
 <section id="services">
 <h2>Our <span>Services</span></h2>
-<p class="lead">Professional cleaning and property maintenance services for residential and commercial properties across Wrexham, North Wales, Cheshire, Liverpool, Merseyside, Shropshire and the North West.</p>
+<p class="lead">Professional cleaning and property maintenance services for residential and commercial properties across Wrexham, North Wales, Cheshire, Liverpool, Merseyside, Shropshire and the wider North West.</p>
 <div class="cards">
 <div class="card service-card">
-<div class="service-card-img"><img src="graffiti-service.jpg" alt="Professional graffiti removal service in Wrexham and North Wales"></div>
+<div class="service-card-img"><img src="graffiti-service.jpg.PNG" alt="Professional graffiti removal service in Wrexham and North Wales"></div>
 <h3>Graffiti Removal</h3>
 <p class="lead">Expert graffiti removal from commercial buildings, shops, residential properties and public spaces. Fast, professional response across the region.</p>
 <a class="btn btn-red" href="graffiti-removal.html">Learn More</a>
 </div>
 <div class="card service-card">
-<div class="service-card-img"><img src="gutter-service.jpg" alt="Professional gutter cleaning service for homes and businesses in North Wales"></div>
+<div class="service-card-img"><img src="gutter-service.jpg.PNG" alt="Professional gutter cleaning service for homes and businesses in North Wales"></div>
 <h3>Gutter Cleaning</h3>
 <p class="lead">Keep gutters clear of leaves, moss and debris to prevent costly water damage. Professional cleaning for residential and commercial properties.</p>
 <p class="service-price">From £60</p>
 <a class="btn btn-red" href="gutter-cleaning.html">Learn More</a>
 </div>
 <div class="card service-card">
-<div class="service-card-img"><img src="pressure-washing.jpg" alt="Professional pressure washing for driveways, patios and outdoor spaces in Cheshire"></div>
+<div class="service-card-img"><img src="pressure-washing.jpg.PNG" alt="Professional pressure washing for driveways, patios and outdoor spaces in Cheshire"></div>
 <h3>Pressure Washing</h3>
 <p class="lead">Transform driveways, patios and outdoor surfaces with professional pressure washing. Dramatic results for residential and commercial properties.</p>
 <p class="service-price">From £60</p>
@@ -269,7 +269,7 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <p><strong>Fast Response • Professional Service • Free Quotations</strong><br>Wrexham | North Wales | Cheshire | Liverpool | Shropshire | North West</p>
 <div class="buttons" style="margin-top:20px">
 <a class="btn btn-red" href="tel:07346816190" onclick="return gtag_report_conversion(this.href);">📞 Call 07346 816190</a>
-<a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp Us</a>
+<a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp</a>
 <a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Free Quote Request">✉ Email Us</a>
 </div>
 </section>
@@ -294,11 +294,9 @@ function submitQuoteForm(event) {
     description: document.getElementById('description').value
   };
   
-  // Send to email via link
-  const emailBody = encodeURIComponent(`New Quote Request\n\nService: ${formData.service}\nPostcode: ${formData.postcode}\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nDetails:\n${formData.description}`);
+  const emailBody = encodeURIComponent(`New Quote Request\n\nService: ${formData.service}\nPostcode: ${formData.postcode}\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\n\nProject Details:\n${formData.description}`);
   window.location.href = `mailto:info@skspecialistgraffitiresponse.co.uk?subject=Quote Request - ${formData.service}&body=${emailBody}`;
   
-  // Also log conversion
   if (typeof gtag !== 'undefined') {
     gtag('event', 'conversion', {
       'send_to': 'AW-18440361257/wPmfCLzk94MdEKmqhtlE'
@@ -308,7 +306,6 @@ function submitQuoteForm(event) {
   return false;
 }
 
-// Show/hide WhatsApp sticky button based on scroll
 window.addEventListener('scroll', function() {
   const sticky = document.getElementById('whatsappSticky');
   if (window.scrollY > 300) {
@@ -318,9 +315,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-  // Pre-fill form for mobile users
   if (window.innerWidth <= 700) {
     const quoteBtn = document.querySelector('a[href="#quote"]');
     if (quoteBtn) {
