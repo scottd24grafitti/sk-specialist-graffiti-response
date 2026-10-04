@@ -30,8 +30,8 @@ function gtag_report_conversion(url) {
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S&K Specialist Graffiti Response | North Wales, Cheshire & North West</title>
-<meta name="description" content="Professional graffiti removal, restoration and anti-graffiti protection across North Wales, Cheshire and the North West. Fast response and free quotations.">
+<title>Graffiti Removal, Gutter Cleaning & Pressure Washing | North Wales & Cheshire</title>
+<meta name="description" content="Professional graffiti removal, gutter cleaning and pressure washing services across North Wales, Cheshire, Wrexham and the North West. Fast response, free quotations.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -42,7 +42,8 @@ body{font-family:Arial,Helvetica,sans-serif;background:#050608;color:#fff;line-h
 .hero-cta{padding:20px 14px 26px;text-align:center;background:#050608}
 .hero-cta h1{font-size:clamp(25px,5vw,42px);line-height:1.1;text-transform:uppercase;margin-bottom:8px}
 .hero-cta h1 span{color:#e50914}
-.hero-cta p{color:#ddd;font-size:clamp(15px,2.5vw,19px);margin-bottom:17px}
+.hero-cta p{color:#ddd;font-size:clamp(15px,2.5vw,19px);margin-bottom:8px}
+.hero-tagline{color:#aaa;font-size:clamp(13px,2vw,16px);margin-bottom:17px}
 .buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:16px;color:#fff;border:1px solid #333;transition:.2s}
 .btn-red{background:#e50914;border-color:#e50914}.btn-green{background:#16a34a;border-color:#16a34a}.btn-dark{background:#17191d}
@@ -55,9 +56,14 @@ section{padding:48px 20px;border-bottom:1px solid #25272b}
 section h2{font-size:clamp(25px,5vw,38px);margin-bottom:12px;text-transform:uppercase}
 section h2 span{color:#e50914}
 .lead{color:#ddd;font-size:17px;max-width:800px}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:24px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:24px}
 .card{background:#111316;border:1px solid #292c31;border-radius:10px;padding:20px}
 .card h3{margin-bottom:7px;font-size:20px}.card p,.card li{color:#d5d5d5}.card ul{padding-left:20px}
+.service-card{display:flex;flex-direction:column}
+.service-card img{width:100%;height:200px;object-fit:cover;border-radius:8px 8px 0 0;margin:-20px -20px 15px -20px}
+.service-card h3{color:#e50914;font-size:22px;margin-bottom:10px}
+.service-card p{flex:1;margin-bottom:15px}
+.service-price{color:#e50914;font-weight:700;font-size:18px;margin-bottom:15px}
 .results{margin-top:28px}
 .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .result-card{background:#111316;border:1px solid #292c31;border-radius:10px;overflow:hidden}
@@ -86,39 +92,172 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <div class="page">
 
 <header class="hero" id="home">
-  <img src="landing-page.webp" alt="S&K Specialist Graffiti Response - professional graffiti removal">
+  <img src="landing-page.webp" alt="S&K Specialist Graffiti Response - professional graffiti removal, gutter cleaning and pressure washing">
   <div class="hero-cta">
-    <h1>Professional <span>Graffiti Removal</span></h1>
-    <p>Fast, effective and professional response across North Wales, Cheshire and the North West.</p>
+    <h1>Cleaner Spaces. <span>Brighter Communities.</span></h1>
+    <p>Professional graffiti removal, gutter cleaning and pressure washing across North Wales, Cheshire and the North West.</p>
+    <p class="hero-tagline">See it. Snap it. We'll quote it.</p>
     <div class="buttons">
       <a class="btn btn-red" href="tel:07346816190" onclick="return gtag_report_conversion(this.href);">☎ Call 07346 816190</a>
-      <a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20graffiti%20removal%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp</a>
-      <a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Quote Request" onclick="return gtag_report_conversion(this.href);">✉ Request a Quote</a>
+      <a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp Quote</a>
+      <a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Free Quote Request" onclick="return gtag_report_conversion(this.href);">✉ Request a Quote</a>
     </div>
   </div>
 </header>
 
 <nav aria-label="Main navigation"><ul>
-<li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li><li><a href="#results">Results</a></li><li><a href="#process">Process</a></li><li><a href="#commercial">Commercial</a></li><li><a href="#compliance">Compliance</a></li><li><a href="#contact">Contact</a></li>
+<li><a href="#home">Home</a></li><li><a href="#services">Services</a></li><li><a href="#graffiti">Graffiti Removal</a></li><li><a href="#gutters">Gutter Cleaning</a></li><li><a href="#pressure">Pressure Washing</a></li><li><a href="#contact">Contact</a></li>
 </ul></nav>
 
 <section id="services">
 <h2>Our <span>Services</span></h2>
-<p class="lead">Professional graffiti removal, restoration and prevention for commercial, public sector and private clients.</p>
+<p class="lead">Professional cleaning and removal services for residential and commercial properties across North Wales, Cheshire, Wrexham, Liverpool and the North West.</p>
 <div class="cards">
-<div class="card"><h3>Graffiti Removal</h3><p>Professional removal of paint, marker and unwanted graffiti from a range of surfaces.</p></div>
-<div class="card"><h3>Surface Restoration</h3><p>Careful treatment designed to restore affected surfaces while minimising unnecessary damage.</p></div>
-<div class="card"><h3>Anti-Graffiti Protection</h3><p>Protective treatments can make future graffiti incidents easier and more cost-effective to remove.</p></div>
-<div class="card"><h3>Emergency Response</h3><p>Fast, discreet response for businesses, landlords, public spaces and property managers.</p></div>
+<div class="card service-card">
+<h3>Graffiti Removal</h3>
+<p>Professional removal of paint, marker and unwanted graffiti from commercial buildings, shop fronts, residential properties, public spaces and suitable surfaces. Specialist knowledge, professional products and reliable response.</p>
+<a class="btn btn-red" href="#graffiti">Get a Free Quote</a>
 </div>
+<div class="card service-card">
+<h3>Gutter Cleaning</h3>
+<p>Keep gutters clear of leaves, moss and debris to prevent blockages, overflowing water and property damage. Professional gutter cleaning for residential and commercial properties.</p>
+<p class="service-price">From £60</p>
+<a class="btn btn-red" href="#gutters">Get a Free Quote</a>
+</div>
+<div class="card service-card">
+<h3>Pressure Washing</h3>
+<p>Professional pressure washing for driveways, patios, paths, concrete and block paving. Transform the appearance of outdoor spaces with our specialist equipment and expertise.</p>
+<p class="service-price">From £60</p>
+<a class="btn btn-red" href="#pressure">Get a Free Quote</a>
+</div>
+</div>
+</section>
+
+<section id="graffiti">
+<h2>Professional <span>Graffiti Removal</span></h2>
+<p class="lead">Specialist graffiti removal services across Wrexham, North Wales, Cheshire, Liverpool, Merseyside, Shropshire and the wider North West.</p>
+<div class="cards">
+<div class="card">
+<h3>Commercial Buildings</h3>
+<p>Fast, discreet graffiti removal for shops, offices, retail and industrial properties. Minimise disruption and restore your property quickly.</p>
+</div>
+<div class="card">
+<h3>Residential Properties</h3>
+<p>Professional graffiti removal for houses, fences and garden walls. Safe working practices and careful surface treatment.</p>
+</div>
+<div class="card">
+<h3>Public Spaces</h3>
+<p>Community area graffiti removal for councils, housing associations and property managers. Reliable response across the region.</p>
+</div>
+<div class="card">
+<h3>Anti-Graffiti Protection</h3>
+<p>Protective treatments to make future graffiti incidents easier and more cost-effective to remove. Professional application and proven results.</p>
+</div>
+</div>
+<p style="margin-top:24px; text-align:center"><a class="btn btn-red" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20graffiti%20removal%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">Get a Free Graffiti Removal Quote</a></p>
+</section>
+
+<section id="gutters">
+<h2>Professional <span>Gutter Cleaning</span></h2>
+<p class="lead">Keep gutters clear and prevent costly water damage. Professional gutter cleaning for residential and commercial properties across Wrexham, North Wales, Cheshire and the North West.</p>
+<div class="cards">
+<div class="card">
+<h3>Why Gutter Cleaning Matters</h3>
+<ul>
+<li>Prevents blockages and water overflow</li>
+<li>Protects property from damp and water damage</li>
+<li>Extends gutter lifespan</li>
+<li>Maintains property appearance</li>
+<li>Professional, safe working at height</li>
+</ul>
+</div>
+<div class="card">
+<h3>Residential & Commercial</h3>
+<p>We clean gutters for:</p>
+<ul>
+<li>Houses and bungalows</li>
+<li>Apartment buildings</li>
+<li>Commercial properties</li>
+<li>Shops and business premises</li>
+<li>Industrial buildings</li>
+</ul>
+</div>
+<div class="card">
+<h3>Gutter Cleaning Service</h3>
+<p><strong style="color:#e50914; font-size:20px">From £60</strong></p>
+<p>Professional removal of leaves, moss, debris and blockages. Competitive pricing with free quotations.</p>
+<p style="margin-top:10px">Prices vary depending on property size and gutter condition. Contact us for a free estimate tailored to your property.</p>
+</div>
+</div>
+<p style="margin-top:24px; text-align:center"><a class="btn btn-red" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20gutter%20cleaning%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">Get a Free Gutter Cleaning Quote</a></p>
+</section>
+
+<section id="pressure">
+<h2>Professional <span>Pressure Washing</span></h2>
+<p class="lead">Transform outdoor spaces with professional pressure washing. Driveways, patios and hard surfaces across Wrexham, North Wales, Cheshire and the North West.</p>
+<div class="cards">
+<div class="card">
+<h3>Suitable Surfaces</h3>
+<p>We pressure wash:</p>
+<ul>
+<li>Driveways and car parks</li>
+<li>Patios and decking areas</li>
+<li>Paths and walkways</li>
+<li>Concrete and block paving</li>
+<li>Other suitable hard surfaces</li>
+</ul>
+</div>
+<div class="card">
+<h3>Professional Results</h3>
+<p>Professional pressure washing makes a dramatic difference to:</p>
+<ul>
+<li>Property curb appeal</li>
+<li>First impressions</li>
+<li>Outdoor space usability</li>
+<li>Surface longevity</li>
+<li>Health and safety</li>
+</ul>
+</div>
+<div class="card">
+<h3>Pressure Washing Service</h3>
+<p><strong style="color:#e50914; font-size:20px">From £60</strong></p>
+<p>Professional equipment and experienced operators. Competitive pricing with free quotations.</p>
+<p style="margin-top:10px">Prices vary depending on surface area and condition. Contact us for a free estimate for your property.</p>
+</div>
+</div>
+<p style="margin-top:24px; text-align:center"><a class="btn btn-red" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20pressure%20washing%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">Get a Free Pressure Washing Quote</a></p>
 </section>
 
 <section id="about">
 <h2>About <span>S&amp;K</span></h2>
-<p class="lead">S&amp;K Specialist Graffiti Response provides professional graffiti removal, restoration and preventative treatments across North Wales, Cheshire and the North West.</p>
+<p class="lead">S&amp;K Specialist Graffiti Response provides professional graffiti removal, gutter cleaning, pressure washing and preventative treatments across Wrexham, North Wales, Cheshire, Liverpool, Merseyside, Shropshire and the wider North West.</p>
 <div class="cards">
-<div class="card"><h3>Experience You Can Trust</h3><p>Over 20 years of Facilities Management experience, bringing a strong operational and professional approach to specialist graffiti response.</p></div>
-<div class="card"><h3>Qualifications &amp; Protection</h3><ul><li>Professional graffiti removal training</li><li>BICS Registered</li><li>ILM Leadership &amp; Management</li><li>IOSH Managing Safely</li></ul></div>
+<div class="card">
+<h3>Experience You Can Trust</h3>
+<p>Over 20 years of Facilities Management experience, bringing a strong operational and professional approach to specialist property maintenance and response services.</p>
+</div>
+<div class="card">
+<h3>Qualifications &amp; Protection</h3>
+<ul>
+<li>Professional graffiti removal training</li>
+<li>BICS Registered</li>
+<li>ILM Leadership &amp; Management</li>
+<li>IOSH Managing Safely</li>
+<li>RAMS documentation</li>
+<li>COSHH controls</li>
+</ul>
+</div>
+<div class="card">
+<h3>Safe &amp; Professional</h3>
+<ul>
+<li>Safety Data Sheets</li>
+<li>Professional treatment methods</li>
+<li>Responsible waste handling</li>
+<li>Registered Waste Carrier</li>
+<li>Fast, discreet response</li>
+<li>Free quotations</li>
+</ul>
+</div>
 </div>
 </section>
 
@@ -127,7 +266,7 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <p class="lead">See the difference professional graffiti removal can make.</p>
 <div class="results">
 <figure class="result-card triptych">
-<img src="before-during-after.png" alt="Graffiti removal before, during and after progression">
+<img src="before-during-after.png" alt="Graffiti removal before, during and after progression showing brick wall restoration">
 <figcaption>BEFORE &nbsp; | &nbsp; DURING &nbsp; | &nbsp; AFTER</figcaption>
 </figure>
 <p class="result-note">Real S&amp;K graffiti-removal progression: the same brick wall before treatment, during removal and after the graffiti has been removed.</p>
@@ -137,39 +276,24 @@ footer{text-align:center;padding:24px 15px;color:#aaa;font-size:14px}
 <section id="process">
 <h2>Our <span>Process</span></h2>
 <div class="steps">
-<div class="card"><strong>01 — REMOVE</strong><p>We identify the graffiti, assess the surface and select the correct removal treatment.</p></div>
-<div class="card"><strong>02 — RESTORE</strong><p>We carefully treat the affected area to return the surface to an acceptable condition.</p></div>
-<div class="card"><strong>03 — PROTECT</strong><p>Where appropriate, anti-graffiti protection can make future incidents easier and cheaper to remove.</p></div>
+<div class="card"><strong>01 — ASSESS</strong><p>We identify the issue, assess the surface and select the correct treatment method for your specific needs.</p></div>
+<div class="card"><strong>02 — TREAT</strong><p>We carefully apply professional treatments to remove graffiti, clean gutters or pressure wash surfaces, minimising unnecessary damage.</p></div>
+<div class="card"><strong>03 — PROTECT</strong><p>Where appropriate, we apply protective treatments to make future maintenance easier and more cost-effective.</p></div>
 </div>
-</section>
-
-<section id="commercial">
-<h2>Commercial <span>Services</span></h2>
-<p class="lead">Specialist graffiti response for organisations responsible for buildings, estates and public spaces.</p>
-<div class="cards">
-<div class="card"><h3>Who We Support</h3><ul><li>Commercial &amp; industrial properties</li><li>Housing &amp; social landlords</li><li>Local authorities &amp; councils</li><li>Retail &amp; leisure</li></ul></div>
-<div class="card"><h3>Operational Sites</h3><ul><li>Property management</li><li>Schools &amp; education</li><li>Transport &amp; infrastructure</li><li>Public spaces</li></ul></div>
-</div>
-</section>
-
-<section id="compliance">
-<h2>Professional <span>Compliance</span></h2>
-<p class="lead">S&amp;K Specialist Graffiti Response operates with a strong focus on safe working practices, documentation and responsible waste handling.</p>
-<ul class="compliance-list"><li>RAMS documentation</li><li>COSHH controls</li><li>Safety Data Sheets</li><li>Professional treatment methods</li><li>Responsible waste handling</li><li>Registered Waste Carrier</li></ul>
 </section>
 
 <section id="contact" class="contact">
 <h2>Contact <span>S&amp;K</span></h2>
-<p class="lead" style="margin:0 auto 18px">Need graffiti removed? Contact S&amp;K Specialist Graffiti Response today.</p>
-<p><strong>Fast Response</strong><br>North Wales | Cheshire | North West</p>
+<p class="lead" style="margin:0 auto 18px">Need graffiti removed, gutters cleaned or pressure washing? Contact S&amp;K Specialist Response today for a free quotation.</p>
+<p><strong>Fast Response • Professional Service • Free Quotations</strong><br>Wrexham | North Wales | Cheshire | Liverpool | Shropshire | North West</p>
 <div class="buttons" style="margin-top:20px">
 <a class="btn btn-red" href="tel:07346816190" onclick="return gtag_report_conversion(this.href);">📞 Call 07346 816190</a>
-<a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20graffiti%20removal%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp</a>
-<a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Graffiti Removal Enquiry" onclick="return gtag_report_conversion(this.href);">✉ Email Us</a>
+<a class="btn btn-green" href="https://wa.me/447346816190?text=Hi%20S%26K%20Specialist%20Graffiti%20Response%2C%20I%27d%20like%20to%20request%20a%20free%20quote." target="_blank" onclick="return gtag_report_conversion(this.href);">💬 WhatsApp Us</a>
+<a class="btn btn-dark" href="mailto:info@skspecialistgraffitiresponse.co.uk?subject=Free Quote Request" onclick="return gtag_report_conversion(this.href);">✉ Email Us</a>
 </div>
 </section>
 
-<footer>S&amp;K Specialist Graffiti Response Ltd<br>Remove | Restore | Protect<br>07346 816190</footer>
+<footer>S&amp;K Specialist Graffiti Response Ltd<br>Graffiti Removal | Gutter Cleaning | Pressure Washing<br>07346 816190 | info@skspecialistgraffitiresponse.co.uk</footer>
 </div>
 </body>
 </html>
